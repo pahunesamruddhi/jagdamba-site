@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jagdamba — Logo Explorations · 3 Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,650;14..32,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fdfdfc;--grey:#f6f5f2;--hair:rgba(25,27,31,.12);--ink:#191b1f;--ink60:#5d6066;--ink40:#94969b;
+--char:#1d1f24;--org:#e8521d;--deep:#c2410c;--mono:"JetBrains Mono",monospace;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--white);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;padding:clamp(1.5rem,5vw,5rem)}
+h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:500;letter-spacing:-.035em;line-height:1.05}
+h1 em{font-style:normal;color:var(--org)}
+.lede{color:var(--ink60);max-width:62ch;margin-top:1rem}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.label{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink60)}
+.label::before{content:"";width:8px;height:8px;background:var(--org)}
+.dir{margin-top:4.5rem;border-top:1px solid var(--hair);padding-top:2.2rem}
+.dir-head{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;align-items:baseline;margin-bottom:.6rem}
+.dir-head h2{font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:600;letter-spacing:-.03em}
+.story{color:var(--ink60);max-width:66ch;margin:.4rem 0 1.8rem}
+.grid{display:grid;gap:1rem}
+@media(min-width:900px){.grid{grid-template-columns:1.4fr 1fr 1fr}}
+.tile{border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;min-height:230px;padding:2rem;position:relative}
+.tile.dark{background:var(--char)}
+.tile .tag{position:absolute;top:.7rem;left:.9rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink40)}
+.tile.dark .tag{color:#84868c}
+.smallrow{display:flex;align-items:center;gap:1.6rem}
+.usage{margin-top:1rem;font-size:.85rem;color:var(--ink60);max-width:78ch}
+.usage b{color:var(--ink);font-weight:600}
+.lock{display:flex;align-items:center;gap:14px}
+.wm{font-weight:650;letter-spacing:-.025em;color:var(--ink)}
+.dark .wm{color:#fdfdfc}
+.wm .dot{color:var(--org)}
+.rec{margin-top:4.5rem;border:1px solid var(--hair);border-left:3px solid var(--org);border-radius:0 3px 3px 0;background:var(--grey);padding:1.4rem 1.8rem;max-width:880px}
+.rec b{font-weight:600}
+.note{margin-top:2.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink40);max-width:90ch;line-height:1.9}
+/* C hover demo: platen presses */
+.c-demo:hover .platen{transform:translateY(7px)}
+.platen{transition:transform .5s var(--ease)}
+</style>
+</head>
+<body>
+
+<p class="label">Identity exploration · Jagdamba</p>
+<h1 style="margin-top:1rem">Three marks for a <em>veteran</em>.</h1>
+<p class="lede">Each direction is built from the brand strategy — engineered force, twenty years, import-substitute confidence — in the Heavy Industry Modern language: geometric construction, ink + signal orange, nothing decorative. All three share the same wordmark typography (Inter SemiBold, tight tracking, sentence-feel) so the site's existing identity evolves rather than resets.</p>
+
+<!-- ================= DIRECTION A ================= -->
+<section class="dir">
+  <div class="dir-head"><span class="mono" style="color:var(--deep)">Direction A</span><h2>The Pressmark</h2></div>
+  <p class="story">The J becomes the machine: a square frame (the press body), the letter's stem as the descending ram, an orange cylinder cap driving it. Literal enough for a fabricator to read instantly, abstract enough to last thirty years. Strongest as an all-purpose industrial mark — stencils, machine plates, embroidery.</p>
+  <div class="grid">
+    <div class="tile"><span class="tag">Primary lockup</span>
+      <div class="lock">
+        <svg width="72" height="72" viewBox="0 0 64 64" aria-label="Pressmark">
+          <rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="5"/>
+          <rect x="33" y="9" width="12" height="8" fill="#e8521d"/>
+          <path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="6"/>
+        </svg>
+        <span class="wm" style="font-size:34px">Jagdamba</span>
+      </div>
+    </div>
+    <div class="tile dark"><span class="tag">Reversed</span>
+      <div class="lock">
+        <svg width="58" height="58" viewBox="0 0 64 64">
+          <rect x="4" y="4" width="56" height="56" fill="none" stroke="#fdfdfc" stroke-width="5"/>
+          <rect x="33" y="9" width="12" height="8" fill="#e8521d"/>
+          <path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#fdfdfc" stroke-width="6"/>
+        </svg>
+        <span class="wm" style="font-size:27px">Jagdamba</span>
+      </div>
+    </div>
+    <div class="tile"><span class="tag">Mark · small sizes</span>
+      <div class="smallrow">
+        <svg width="64" height="64" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="5"/><rect x="33" y="9" width="12" height="8" fill="#e8521d"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="6"/></svg>
+        <svg width="32" height="32" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="6"/><rect x="33" y="9" width="12" height="8" fill="#e8521d"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="7"/></svg>
+        <svg width="18" height="18" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="8"/><path d="M39 14v25a11 11 0 0 1 -22 0" fill="none" stroke="#e8521d" stroke-width="9"/></svg>
+      </div>
+    </div>
+  </div>
+  <p class="usage"><b>Use when:</b> you want one mark everywhere — site favicon, machine nameplates, stationery, embroidered uniforms. <b>Watch-out:</b> at very small sizes the orange cap merges with the frame; the 16px variant drops the cap and inks the J orange instead (shown).</p>
+</section>
+
+<!-- ================= DIRECTION B ================= -->
+<section class="dir">
+  <div class="dir-head"><span class="mono" style="color:var(--deep)">Direction B</span><h2>The Tonnage Seal</h2></div>
+  <p class="story">A certification stamp — the visual language of inspection plates and pressure-test certificates. "JAGDAMBA · HYDROPNEUMATIC" rings a bold J, with EST 2006 carried like a hallmark. This is the most "veteran" of the three: it borrows authority from the marks engineers already trust. Excellent as a quality seal beside the wordmark, on test reports, packaging and the machines themselves.</p>
+  <div class="grid">
+    <div class="tile"><span class="tag">Primary lockup</span>
+      <div class="lock">
+        <svg width="92" height="92" viewBox="0 0 120 120" aria-label="Tonnage seal">
+          <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#191b1f" stroke-width="3"/>
+          <circle cx="60" cy="60" r="33" fill="none" stroke="#191b1f" stroke-width="2"/>
+          <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="3"/>
+          <text font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="3.4" fill="#191b1f" font-weight="500"><textPath href="#ring">JAGDAMBA · HYDROPNEUMATIC · EST 2006 ·</textPath></text>
+          <text x="60" y="72" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#191b1f">J</text>
+          <rect x="52" y="78" width="16" height="3.5" fill="#e8521d"/>
+        </svg>
+        <span class="wm" style="font-size:32px">Jagdamba</span>
+      </div>
+    </div>
+    <div class="tile dark"><span class="tag">Reversed</span>
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <defs><path id="ring2" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+        <circle cx="60" cy="60" r="56" fill="none" stroke="#fdfdfc" stroke-width="3"/>
+        <circle cx="60" cy="60" r="33" fill="none" stroke="#fdfdfc" stroke-width="2"/>
+        <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="3"/>
+        <text font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="3.4" fill="#fdfdfc" font-weight="500"><textPath href="#ring2">JAGDAMBA · HYDROPNEUMATIC · EST 2006 ·</textPath></text>
+        <text x="60" y="72" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#fdfdfc">J</text>
+        <rect x="52" y="78" width="16" height="3.5" fill="#e8521d"/>
+      </svg>
+    </div>
+    <div class="tile"><span class="tag">As a hallmark · small</span>
+      <div class="smallrow">
+        <svg width="72" height="72" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="none" stroke="#191b1f" stroke-width="4"/><circle cx="60" cy="60" r="33" fill="none" stroke="#191b1f" stroke-width="2.5"/><path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="4"/><text x="60" y="73" text-anchor="middle" font-family="Inter" font-weight="800" font-size="38" fill="#191b1f">J</text></svg>
+        <svg width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#191b1f" stroke-width="7"/><path d="M60,60 m-54,0 a54,54 0 0,1 54,-54" fill="none" stroke="#e8521d" stroke-width="7"/><text x="60" y="76" text-anchor="middle" font-family="Inter" font-weight="800" font-size="46" fill="#191b1f">J</text></svg>
+      </div>
+    </div>
+  </div>
+  <p class="usage"><b>Use when:</b> authority is the message — test certificates, "Jagdamba-built" plates on machines, expo backdrops, the footer seal of the website. <b>Watch-out:</b> ring text dies below ~48px; small sizes drop the text ring (shown). Best paired with Direction A or C as the everyday mark rather than standing alone.</p>
+</section>
+
+<!-- ================= DIRECTION C ================= -->
+<section class="dir">
+  <div class="dir-head"><span class="mono" style="color:var(--deep)">Direction C</span><h2>The Daylight Wordmark</h2></div>
+  <p class="story">Pure typography under load. The wordmark sits on a heavy ink baseline — the press bed — while an orange platen bar hovers above it. The gap between bar and letters is the "daylight" of a press: the working space where force is applied. Quietly clever, extremely versatile, and the closest evolution of the site's current identity. (Hover the primary lockup: the platen strokes down.)</p>
+  <div class="grid">
+    <div class="tile"><span class="tag">Primary lockup · hover me</span>
+      <svg class="c-demo" width="320" height="100" viewBox="0 0 320 100" aria-label="Daylight wordmark">
+        <rect class="platen" x="6" y="8" width="116" height="9" fill="#e8521d"/>
+        <text x="4" y="66" font-family="Inter" font-weight="650" font-size="44" letter-spacing="-1.4" fill="#191b1f">Jagdamba</text>
+        <rect x="6" y="80" width="232" height="9" fill="#191b1f"/>
+      </svg>
+    </div>
+    <div class="tile dark"><span class="tag">Reversed</span>
+      <svg width="270" height="90" viewBox="0 0 320 100">
+        <rect x="6" y="8" width="116" height="9" fill="#e8521d"/>
+        <text x="4" y="66" font-family="Inter" font-weight="650" font-size="44" letter-spacing="-1.4" fill="#fdfdfc">Jagdamba</text>
+        <rect x="6" y="80" width="232" height="9" fill="#fdfdfc"/>
+      </svg>
+    </div>
+    <div class="tile"><span class="tag">Monogram · small sizes</span>
+      <div class="smallrow">
+        <svg width="56" height="56" viewBox="0 0 64 64"><rect x="8" y="6" width="30" height="7" fill="#e8521d"/><text x="8" y="46" font-family="Inter" font-weight="650" font-size="34" fill="#191b1f">J</text><rect x="8" y="52" width="48" height="7" fill="#191b1f"/></svg>
+        <svg width="30" height="30" viewBox="0 0 64 64"><rect x="8" y="4" width="32" height="9" fill="#e8521d"/><text x="8" y="48" font-family="Inter" font-weight="650" font-size="38" fill="#191b1f">J</text><rect x="8" y="54" width="48" height="9" fill="#191b1f"/></svg>
+      </div>
+    </div>
+  </div>
+  <p class="usage"><b>Use when:</b> the brand should feel modern-corporate first, industrial second — letterheads, the website masthead, proposals to large OEMs. <b>Watch-out:</b> the concept needs the two bars; never use the bare wordmark without at least the baseline, or the idea evaporates.</p>
+</section>
+
+<div class="rec">
+  <p class="label" style="margin-bottom:.6rem">Recommendation</p>
+  <p><b>System, not single mark:</b> adopt <b>A (Pressmark)</b> as the primary mark + wordmark for everyday use, <b>B (Tonnage Seal)</b> as the certification device on machines, test reports and expo material, and keep <b>C's daylight bars</b> as a typographic motif for headings and document covers. That's exactly how veteran industrial houses behave — one workhorse mark, one seal of authority, one typographic signature.</p>
+</div>
+
+<p class="note">PRODUCTION NOTES — These are concept SVGs using live webfont text for review; before trademark filing or print, convert all type to outlines and re-balance optically. Clear space: height of the orange element on all sides. Minimum sizes: A — 16 px (capless variant); B — 28 px (textless variant); C — 90 px wide (J-monogram below that). Colours: ink #191B1F, signal orange #E8521D, paper #FDFDFC; single-colour versions reproduce in ink only. The current site already uses the orange-square + "Jagdamba" nav lockup — Direction A and C are drop-in evolutions of it.</p>
+
+</body>
+</html>

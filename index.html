@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jagdamba — Hydraulic presses, cylinders & power packs. Engineered in India since 2006.</title>
+<meta name="description" content="Shree Jagdamba Hydropneumatic builds hydraulic presses from 25 to 650 tons, cylinders, power packs and manifold blocks — designed, manufactured and serviced from Nagpur, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===================================================================
+   JAGDAMBA · HEAVY INDUSTRY MODERN
+   Calm authority. One grotesk at extreme size contrast, sentence case.
+   95% white & warm grey; orange (#e8521d) as a scarce signature.
+   The mesh: CAD edge-line 3D + matching line-drawn iconography.
+   =================================================================== */
+:root{
+  --white:#fdfdfc;
+  --grey-50:#f6f5f2;
+  --grey-100:#edecE8;
+  --grey-150:#e3e1db;
+  --ink:#191b1f;
+  --ink-60:#5d6066;
+  --ink-40:#94969b;
+  --charcoal:#1d1f24;
+  --charcoal-2:#26282e;
+  --org:#e8521d;
+  --org-deep:#c2410c;
+  --hair:rgba(25,27,31,.12);
+  --hair-soft:rgba(25,27,31,.07);
+
+  --font:"Inter",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+
+  --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2.25rem;--s6:3.5rem;--s7:5.5rem;--s8:8.5rem;
+
+  --t-xs:.75rem;
+  --t-sm:clamp(.84rem,.8rem + .15vw,.92rem);
+  --t-base:clamp(1rem,.95rem + .25vw,1.13rem);
+  --t-lg:clamp(1.18rem,1.05rem + .6vw,1.55rem);
+  --t-xl:clamp(1.6rem,1.3rem + 1.4vw,2.5rem);
+  --t-2xl:clamp(2.1rem,1.5rem + 2.8vw,4rem);
+  --t-3xl:clamp(2.7rem,1.6rem + 5.2vw,6.4rem);
+
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pad:clamp(1.25rem,5vw,6rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--font);font-size:var(--t-base);
+  line-height:1.65;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--org);color:#fff}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+h1,h2,h3{font-weight:500;letter-spacing:-.035em;line-height:1.04}
+.mono{font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.container{padding-inline:var(--pad);max-width:1560px;margin-inline:auto}
+:focus-visible{outline:2px solid var(--org);outline-offset:3px}
+section{position:relative}
+
+/* labels: the only uppercase element — tiny mono with orange tick */
+.label{display:flex;align-items:center;gap:.65rem;font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-60);margin-bottom:var(--s4)}
+.label::before{content:"";width:8px;height:8px;background:var(--org)}
+
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);
+  padding-inline:var(--pad);background:transparent;transition:background .4s var(--ease),box-shadow .4s}
+.nav.solid{background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
+.brand .sq{width:11px;height:11px;background:var(--org);flex:none}
+.nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
+.nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:#fff;font-size:.88rem;font-weight:550;
+  padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s,transform .35s var(--ease)}
+.btn:hover{background:var(--org-deep)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-quiet{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem .25rem;min-height:46px;border-bottom:1.5px solid var(--ink);transition:color .25s,border-color .25s}
+.btn-quiet:hover{color:var(--org-deep);border-color:var(--org)}
+.nav .btn{margin-left:auto}
+@media(min-width:1060px){.nav-links{display:flex}.nav .btn{margin-left:0}}
+.burger{margin-left:auto;width:46px;height:46px;display:grid;place-items:center}
+.burger span{display:block;width:20px;height:1.5px;background:var(--ink);margin:3px 0;transition:transform .3s var(--ease)}
+@media(min-width:1060px){.burger{display:none}}
+.burger.x span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.burger.x span:nth-child(2){transform:translateY(-4.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:110;background:var(--white);display:flex;flex-direction:column;justify-content:center;padding-inline:var(--pad);gap:0;transform:translateY(-102%);transition:transform .6s var(--ease)}
+.mnav.open{transform:none}
+.mnav a{font-size:clamp(1.7rem,7vw,2.4rem);font-weight:500;letter-spacing:-.03em;border-bottom:1px solid var(--hair);padding:1.1rem 0;display:flex;justify-content:space-between;align-items:baseline}
+.mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
+
+/* ============ HERO — immersive full-bleed stage ============ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:110px var(--pad) 90px;overflow:hidden;isolation:isolate}
+/* stage backdrop: faint radial floor light + hairline gridlines */
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+   radial-gradient(46% 38% at 82% 78%, rgba(232,82,29,.07), transparent 70%),
+   radial-gradient(56% 48% at 83% 70%, rgba(25,27,31,.05), transparent 72%)}
+#scene{position:absolute;inset:0;z-index:1}
+@media(min-width:900px){#scene{
+  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0,#000 22%);
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0,#000 22%)}}
+.hero-copy{position:relative;z-index:3;max-width:760px;pointer-events:none}
+.hero-copy a{pointer-events:auto}
+.hero h1{font-size:clamp(2.9rem,1.6rem + 7vw,7.6rem);font-weight:500}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.05em;margin-bottom:-.05em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(115%)}
+.hero h1 em{font-style:normal;color:var(--org)}
+.hero-sub{margin-top:var(--s5);max-width:42ch;font-size:var(--t-lg);line-height:1.55;color:var(--ink-60);font-weight:450}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s4);margin-top:var(--s5);align-items:center}
+.hero-foot{margin-top:var(--s6);display:flex;gap:var(--s5);flex-wrap:wrap;color:var(--ink-40);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em}
+.hero-foot span b{color:var(--ink);font-weight:500}
+/* figure caption + live cycle counter, bottom-left */
+.hero-cap{position:absolute;left:var(--pad);bottom:1.6rem;z-index:3;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--ink-40);display:flex;gap:1.6rem;flex-wrap:wrap;align-items:baseline}
+.hero-cap b{color:var(--org-deep);font-weight:500}
+.hero-cap .hint{color:var(--ink-40)}
+@media(max-width:759px){.hero-cap .hint{display:none}}
+/* 3D dimension callouts — positioned each frame from world space */
+.callout{position:absolute;z-index:2;pointer-events:none;font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;color:var(--ink-60);opacity:0;transition:opacity .6s;white-space:nowrap}
+.callout::before{content:"";position:absolute;top:50%;width:46px;height:1px;background:var(--ink-40)}
+.callout.L{transform:translate(-100%,-50%);padding-right:58px;text-align:right}
+.callout.L::before{right:0}
+.callout.R{transform:translateY(-50%);padding-left:58px}
+.callout.R::before{left:0}
+.callout i{font-style:normal;display:block;color:var(--ink-40);font-size:.62rem}
+.callout b{color:var(--org-deep);font-weight:500}
+.callout .dot{position:absolute;top:50%;width:5px;height:5px;border-radius:50%;background:var(--org);transform:translateY(-50%)}
+.callout.L .dot{right:-3px}.callout.R .dot{left:-3px}
+.hero.ready .callout{opacity:1}
+@media(max-width:899px){.callout{display:none}.callout.co-hint{display:block}}
+.co-hint b{color:var(--org)}
+.co-hint .dot{animation:pulse 1.8s var(--ease) infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,82,29,.45)}50%{box-shadow:0 0 0 7px rgba(232,82,29,0)}}
+.co-hint.done{opacity:0!important;transition:opacity .5s}
+.scroll-cue{position:absolute;left:50%;transform:translateX(-50%);bottom:1.6rem;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40)}
+.scroll-cue::after{content:"";width:1px;height:40px;background:linear-gradient(var(--ink-40),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:1199px){.scroll-cue{display:none}}
+/* mobile: press sits behind copy, soft-faded for legibility */
+@media(max-width:899px){
+  .hero{justify-content:flex-end;padding-bottom:110px}
+  #scene{opacity:.85}
+  .hero-copy{background:linear-gradient(transparent, rgba(253,253,252,.6) 22%, rgba(253,253,252,.92) 60%);
+    margin-inline:calc(var(--pad) * -1);padding:4.5rem var(--pad) 0;max-width:none}
+}
+
+/* ============ PROOF ============ */
+.proof{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);max-width:1560px;margin-inline:auto}
+@media(min-width:880px){.proof-grid{grid-template-columns:repeat(4,1fr)}}
+.proof-cell{padding:var(--s6) var(--pad) var(--s6) var(--pad);border-right:1px solid var(--hair-soft)}
+.proof-cell:last-child{border-right:none}
+@media(min-width:880px){.proof-cell{padding-inline:clamp(1.5rem,3vw,3.5rem)}}
+.proof-cell .num{font-size:var(--t-2xl);font-weight:500;letter-spacing:-.04em;line-height:1}
+.proof-cell .num em{font-style:normal;color:var(--org);font-size:.42em;font-weight:550;margin-left:.18em;vertical-align:.62em;letter-spacing:0}
+.proof-cell .lbl{margin-top:var(--s3);font-size:var(--t-sm);color:var(--ink-60);max-width:20ch;line-height:1.55}
+
+/* ============ INTRO STATEMENT ============ */
+.intro{padding-block:var(--s8)}
+.intro-grid{display:grid;gap:var(--s5)}
+@media(min-width:980px){.intro-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,7rem);align-items:start}}
+.intro h2{font-size:var(--t-2xl)}
+.intro h2 em{font-style:normal;color:var(--org)}
+.intro-copy p{color:var(--ink-60);max-width:52ch}
+.intro-copy p+p{margin-top:var(--s4)}
+.intro-copy strong{color:var(--ink);font-weight:600}
+.intro-copy .btn-quiet{margin-top:var(--s5)}
+
+/* ============ PRODUCTS ============ */
+.products{padding-bottom:var(--s8)}
+.prod-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s5)}
+.prod-head h2{font-size:var(--t-xl)}
+.prod-head .mono{color:var(--ink-40)}
+.prod-row{display:grid;gap:var(--s3) var(--s5);padding:var(--s5) 0;border-top:1px solid var(--hair);align-items:center;
+  grid-template-columns:1fr;transition:padding-left .45s var(--ease)}
+@media(min-width:980px){.prod-row{grid-template-columns:56px 88px minmax(0,1fr) minmax(0,1.15fr) auto}}
+.prod-row:last-of-type{border-bottom:1px solid var(--hair)}
+.prod-num{font-family:var(--mono);font-size:.74rem;color:var(--ink-40);transition:color .3s}
+.prod-ico{width:72px;height:72px;display:none}
+@media(min-width:980px){.prod-ico{display:block}}
+.prod-ico svg{width:100%;height:100%;fill:none;stroke:var(--ink-40);stroke-width:1.1;transition:stroke .3s}
+.prod-ico svg .o{stroke:var(--org)}
+.prod-title{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;line-height:1.05;display:flex;align-items:baseline;gap:.7rem}
+.prod-title .arr{font-size:.62em;color:var(--org);opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .45s var(--ease)}
+.prod-desc{color:var(--ink-60);font-size:var(--t-sm);line-height:1.6;max-width:48ch}
+.prod-spec{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--ink-40);text-align:left;line-height:2;white-space:nowrap}
+@media(min-width:980px){.prod-spec{text-align:right}}
+.prod-spec b{color:var(--org-deep);font-weight:500}
+.prod-row:hover{padding-left:.9rem}
+.prod-row:hover .prod-num{color:var(--org)}
+.prod-row:hover .prod-ico svg{stroke:var(--ink)}
+.prod-row:hover .prod-title .arr{opacity:1;transform:none}
+
+/* ---- hover photo preview (desktop) + inline thumbs (mobile) ---- */
+.products{position:relative}
+.float-prev{position:absolute;z-index:5;width:300px;aspect-ratio:4/3;margin:0;pointer-events:none;
+  border:1px solid var(--hair);border-radius:3px;background:
+  repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px);
+  box-shadow:0 24px 60px rgba(25,27,31,.16);display:none;place-items:end start;overflow:hidden;
+  opacity:0;transform:scale(.97);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.float-prev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.float-prev .fp-cap{position:relative;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--ink-40);background:rgba(253,253,252,.92);padding:.4rem .7rem;border-top-right-radius:3px}
+@media(min-width:1080px) and (pointer:fine){.float-prev{display:grid}}
+.float-prev.on{opacity:1;transform:scale(1)}
+.prod-thumb{display:none}
+@media(max-width:1079px){
+  .prod-thumb{display:grid;place-items:center;aspect-ratio:4/3;max-width:340px;border:1px solid var(--hair);border-radius:3px;margin-bottom:.6rem;
+    background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px);
+    font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--ink-40)}
+}
+
+/* ============ CONFIGURATOR — charcoal band ============ */
+.config{background:var(--charcoal);color:#eceae6;padding-block:var(--s8)}
+.config .label{color:#9b9da3}
+.cfg-head{display:grid;gap:var(--s4);margin-bottom:var(--s6)}
+@media(min-width:980px){.cfg-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}}
+.cfg-head h2{font-size:var(--t-2xl);color:#fff}
+.cfg-head p{color:#9b9da3;max-width:44ch;font-size:var(--t-sm);line-height:1.7}
+.cfg-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:var(--s5)}
+.cfg-tab{font-size:.85rem;font-weight:500;padding:.7rem 1.2rem;border-radius:2px;color:#b9bbc0;border:1px solid rgba(236,234,230,.22);min-height:44px;transition:all .25s}
+.cfg-tab[aria-selected="true"]{background:#fff;border-color:#fff;color:var(--ink)}
+.cfg-tab:hover:not([aria-selected="true"]){border-color:rgba(236,234,230,.55);color:#fff}
+.cfg-body{display:grid;gap:var(--s6)}
+@media(min-width:1020px){.cfg-body{grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr)}}
+.ton-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#9b9da3;margin-bottom:var(--s3)}
+.ton-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.ton-chip{font-family:var(--mono);font-size:.8rem;min-width:58px;min-height:44px;padding:.55rem .7rem;border:1px solid rgba(236,234,230,.22);border-radius:2px;color:#d8d6d2;transition:all .2s}
+.ton-chip[aria-pressed="true"]{background:var(--org);border-color:var(--org);color:#fff}
+.ton-chip:hover:not([aria-pressed="true"]){border-color:rgba(236,234,230,.6)}
+.cfg-note{font-size:.78rem;color:#84868c;margin-top:var(--s5);max-width:40ch;line-height:1.75}
+/* spec card */
+.spec-card{background:var(--white);color:var(--ink);border-radius:3px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.spec-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--s3);padding:var(--s5);border-bottom:1px solid var(--hair)}
+.spec-fam{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);margin-bottom:.55rem}
+.spec-model{font-size:var(--t-xl);font-weight:600;letter-spacing:-.03em;line-height:1}
+.spec-cap{text-align:right}
+.spec-cap .v{font-size:var(--t-xl);font-weight:600;letter-spacing:-.03em;color:var(--org);line-height:1}
+.spec-cap .u{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-40)}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr}
+@media(min-width:640px){.spec-grid{grid-template-columns:repeat(3,1fr)}}
+.spec-cell{padding:var(--s4) var(--s5);border-right:1px solid var(--hair-soft);border-bottom:1px solid var(--hair-soft)}
+.spec-cell .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40)}
+.spec-cell .v{font-size:var(--t-lg);font-weight:550;margin-top:.3rem;letter-spacing:-.02em}
+.spec-cell .v small{font-size:.55em;font-weight:500;color:var(--ink-40)}
+.gauge-row{display:flex;align-items:center;gap:var(--s3);padding:var(--s4) var(--s5)}
+.gauge{flex:1;height:3px;background:var(--grey-150);position:relative;border-radius:2px}
+.gauge-fill{position:absolute;inset:0 auto 0 0;width:10%;background:var(--org);border-radius:2px;transition:width .8s var(--ease)}
+.gauge-row .mono{color:var(--ink-40);letter-spacing:.04em;white-space:nowrap}
+
+/* ============ ENGINEERING ============ */
+.eng{padding-block:var(--s8)}
+.eng-top{display:grid;gap:var(--s5);margin-bottom:var(--s7)}
+@media(min-width:980px){.eng-top{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,7rem)}}
+.eng-top h2{font-size:var(--t-2xl)}
+.eng-top p{color:var(--ink-60);max-width:46ch}
+.eng-grid{display:grid;gap:0;border-top:1px solid var(--hair)}
+@media(min-width:720px){.eng-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1180px){.eng-grid{grid-template-columns:repeat(4,1fr)}}
+.eng-card{padding:var(--s5) var(--s4) var(--s5) 0;border-bottom:1px solid var(--hair)}
+@media(min-width:720px){.eng-card{border-right:1px solid var(--hair-soft);padding-inline:var(--s4)}
+  .eng-card:first-child{padding-left:0}.eng-card:last-child{border-right:none}}
+.eng-card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--org-deep)}
+.eng-card h3{font-size:var(--t-lg);font-weight:550;letter-spacing:-.02em;margin:var(--s3) 0;line-height:1.25}
+.eng-card p{color:var(--ink-60);font-size:var(--t-sm);line-height:1.7}
+
+/* ---- engineering: disciplines left, schematic right (sticky) ---- */
+.eng-flex{display:grid;gap:var(--s6)}
+@media(min-width:1080px){.eng-flex{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(2.5rem,5vw,6rem);align-items:start}}
+.eng-flex .eng-grid{grid-template-columns:1fr!important;border-top:none;gap:0}
+.eng-flex .eng-card{min-height:0;border:none;border-left:2px solid var(--hair);padding:1.25rem 0 1.25rem 1.5rem;transition:border-color .25s,background .25s}
+.eng-flex .eng-card p{margin-top:0}
+.eng-flex .eng-card.lit{border-left-color:var(--org);background:var(--grey-50)}
+.eng-flex .schem-wrap{margin-bottom:0}
+@media(min-width:1080px){.eng-flex .schem-wrap{position:sticky;top:110px}}
+@media(max-width:1079px){.eng-flex .schem-wrap{order:-1}}
+
+/* ---- engineering schematic ---- */
+.schem-wrap{margin-bottom:var(--s6)}
+.schem{width:min(560px,100%);height:auto;display:block}
+.schem-cap{color:var(--ink-40);margin-top:var(--s3);text-align:center;width:min(560px,100%)}
+.schem .pg{fill:none;stroke:var(--ink-40);stroke-width:1.4;transition:stroke .25s,stroke-width .25s}
+.schem line,.schem .wp{fill:none;stroke:var(--ink-40);stroke-width:1.2}
+.schem .wp{stroke:var(--org);opacity:.8}
+.schem .pg.lit{stroke:var(--org);stroke-width:2}
+.eng-card{cursor:default}
+.eng-card.lit{background:var(--grey-50)}
+.eng-card .n{transition:color .25s}
+.eng-card.lit .n{color:var(--org)}
+
+/* ============ SERVICES ============ */
+.services{border-top:1px solid var(--hair);padding-block:var(--s8);background:var(--grey-50)}
+.svc-grid{display:grid;gap:var(--s6)}
+@media(min-width:1020px){.svc-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,7rem)}}
+.services h2{font-size:var(--t-2xl)}
+.services h2 em{font-style:normal;color:var(--org)}
+.services .lead{margin-top:var(--s4);color:var(--ink-60);max-width:44ch}
+.svc-list{list-style:none;border-top:1px solid var(--hair)}
+.svc-list li{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);border-bottom:1px solid var(--hair);padding:1.05rem .2rem;font-size:var(--t-sm);font-weight:500;transition:padding-left .35s var(--ease)}
+.svc-list li:hover{padding-left:.8rem}
+.svc-list li .mono{color:var(--ink-40)}
+.svc-cta{margin-top:var(--s5);display:flex;gap:var(--s4);flex-wrap:wrap;align-items:center}
+.svc-phone{font-size:var(--t-lg);font-weight:600;letter-spacing:-.02em}
+.svc-phone:hover{color:var(--org-deep)}
+
+/* ============ QUOTE ============ */
+.voices{padding-block:var(--s8)}
+.quote-rule{width:56px;height:3px;background:var(--org);margin-bottom:var(--s5)}
+.quote{font-size:var(--t-xl);font-weight:500;letter-spacing:-.025em;line-height:1.3;max-width:34ch}
+.quote-by{margin-top:var(--s5);display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap}
+.quote-by .who b{display:block;font-weight:600;font-size:var(--t-sm)}
+.quote-by .who span{font-size:.8rem;color:var(--ink-60)}
+.q-nav{margin-left:auto;display:flex;gap:.5rem;align-items:center}
+.q-nav .cnt{font-family:var(--mono);font-size:.72rem;color:var(--ink-40);margin-right:.5rem}
+.q-btn{width:46px;height:46px;border:1px solid var(--hair);border-radius:50%;transition:all .25s var(--ease);font-size:.95rem}
+.q-btn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip-row{margin-top:var(--s7);display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-size:.78rem;font-weight:500;color:var(--ink-60);border:1px solid var(--hair);border-radius:99px;padding:.5rem 1rem;transition:all .25s}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ============ EXPO STRIP ============ */
+.expo-strip{border-top:1px solid var(--hair);padding-block:var(--s7)}
+.expo-inner{display:grid;gap:var(--s5)}
+@media(min-width:980px){.expo-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,7rem);align-items:center}}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--charcoal);color:#eceae6;padding-block:var(--s8)}
+.ct-grid{display:grid;gap:var(--s7)}
+@media(min-width:1020px){.ct-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2.5rem,6vw,7rem)}}
+.contact .label{color:#9b9da3}
+.contact h2{font-size:var(--t-2xl);color:#fff}
+.contact h2 em{font-style:normal;color:var(--org)}
+.contact .sub{margin-top:var(--s4);color:#9b9da3;max-width:40ch;font-size:var(--t-sm);line-height:1.7}
+.field{margin-top:var(--s4)}
+.field label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#84868c;margin-bottom:.55rem}
+.field input,.field select,.field textarea{width:100%;background:var(--charcoal-2);border:1px solid rgba(236,234,230,.16);border-radius:2px;color:#fff;font-family:var(--font);font-size:var(--t-base);padding:.95rem 1.05rem;min-height:50px;transition:border-color .25s}
+.field :is(input,select,textarea):focus-visible{outline:none;border-color:var(--org)}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#84868c 50%),linear-gradient(135deg,#84868c 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.field select option{background:var(--charcoal-2);color:#fff}
+.field input::placeholder,.field textarea::placeholder{color:#5d6066}
+.ct-info{font-size:var(--t-sm);line-height:2;color:#9b9da3;padding-top:var(--s3)}
+.ct-info b{color:#fff;display:block;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin:var(--s5) 0 .3rem}
+.ct-info b:first-child{margin-top:0}
+.ct-info a:hover{color:#fff}
+.ct-info .org{color:var(--org)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--charcoal);color:#84868c;padding:0 var(--pad) var(--s5);overflow:hidden}
+.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:#26282e;transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
+.foot-big:hover{color:var(--org)}
+.foot-row{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content:space-between;border-top:1px solid rgba(236,234,230,.12);padding-top:var(--s4);font-family:var(--mono);font-size:.68rem;letter-spacing:.06em}
+.foot-row a:hover{color:#fff}
+
+/* WhatsApp FAB */
+.wa{position:fixed;right:20px;bottom:20px;z-index:90;width:54px;height:54px;border-radius:50%;background:#1faf53;display:grid;place-items:center;box-shadow:0 12px 32px rgba(0,0,0,.28);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:27px;height:27px;fill:#fff}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion: reduce){
+  .rv{opacity:1!important;transform:none!important}
+  .hero h1 .ln>span{transform:none!important}
+  .scroll-cue::after{animation:none}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Jagdamba home"><span class="sq"></span>Jagdamba</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="products.html">Products</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="expos.html">Exhibitions</a>
+    <a href="calculators.html">Calculators</a>
+  </nav>
+  <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="products.html">Products <em>01</em></a>
+  <a href="services.html">Services <em>02</em></a>
+  <a href="about.html">About <em>03</em></a>
+  <a href="expos.html">Exhibitions <em>04</em></a>
+  <a href="calculators.html">Calculators <em>05</em></a>
+  <a href="contact.html">Contact <em>06</em></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div id="scene" aria-hidden="true"></div>
+
+  <!-- live dimension callouts, anchored to 3D parts -->
+  <div class="callout L" id="co-crown"><span class="dot"></span><b>Crown</b><i>UT-tested steel · FEA designed</i></div>
+  <div class="callout R" id="co-ram"><span class="dot"></span><b>Ram — up to 650 T</b><i>PTFE seals · bronze guides</i></div>
+  <div class="callout R" id="co-bed"><span class="dot"></span><b>Bolster</b><i>machined after normalising</i></div>
+  <div class="callout R co-hint" id="co-hint"><span class="dot"></span><b>Click to press</b></div>
+
+  <div class="hero-copy container" style="padding-inline:0;margin-inline:0">
+    <p class="label rv-load">Shree Jagdamba Hydropneumatic · Nagpur, est. 2006</p>
+    <h1>
+      <span class="ln"><span>The force behind</span></span>
+      <span class="ln"><span>Indian <em>manufacturing</em>.</span></span>
+    </h1>
+    <p class="hero-sub rv-load">Hydraulic presses from <strong>25 to 650 tons</strong>, cylinders, power packs and manifolds — designed, built and kept running from the centre of India for two decades.</p>
+    <div class="hero-ctas rv-load">
+      <a class="btn" href="#configurator">Explore the press range <span class="arr">→</span></a>
+      <a class="btn-quiet" href="#contact">Talk to an engineer</a>
+    </div>
+    <div class="hero-foot rv-load">
+      <span><b>650 T</b>&ensp;max capacity</span>
+      <span><b>30+</b>&ensp;machine types</span>
+      <span><b>Pan-India</b>&ensp;installed base</span>
+    </div>
+  </div>
+
+  <p class="hero-cap rv-load">
+    <span>Fig. 01 — <b>4-column hydraulic press</b></span>
+    <span class="hint">drag to orbit · click the press to stroke</span>
+    <span>cycles completed <b id="cycCount">0</b></span>
+  </p>
+  <div class="scroll-cue" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="proof" aria-label="Key figures">
+  <div class="proof-grid">
+    <div class="proof-cell rv"><div class="num"><span data-count="20">0</span><em>yrs</em></div><div class="lbl">of uninterrupted hydraulic engineering</div></div>
+    <div class="proof-cell rv"><div class="num"><span data-count="650">0</span><em>ton</em></div><div class="lbl">maximum press capacity in the standard range</div></div>
+    <div class="proof-cell rv"><div class="num"><span data-count="30">0</span><em>+</em></div><div class="lbl">distinct machine types designed and built</div></div>
+    <div class="proof-cell rv"><div class="num"><span data-count="100">0</span><em>%</em></div><div class="lbl">designed and manufactured in India</div></div>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro container">
+  <div class="intro-grid">
+    <div class="rv">
+      <p class="label">Who we are</p>
+      <h2>A veteran workshop with an <em>engineer's</em> stubbornness.</h2>
+    </div>
+    <div class="intro-copy rv">
+      <p>Since 2006 we have done one thing: fluid power, end to end. We design the frame on FEA software, fabricate it from <strong>ultrasonically tested steel</strong>, machine it after normalising, build the hydraulics around a compact manifold — and then stand behind the machine for its working life.</p>
+      <p>Much of our work replaces imported equipment one-for-one: cylinders, manifolds and presses built to OEM specification, at <strong>Indian lead times and Indian costs</strong>.</p>
+      <a class="btn-quiet" href="#engineering">How we build →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="products container" id="products">
+  <div class="prod-head rv">
+    <div>
+      <p class="label">What we build</p>
+      <h2>Five product lines. One discipline.</h2>
+    </div>
+    <span class="mono">Design → fabrication → trials</span>
+  </div>
+
+  <figure class="float-prev" id="floatPrev" aria-hidden="true">
+    <!-- To use a real photo: drop <img src="img/presses.jpg" alt=""> inside this figure
+         and set data-img="img/presses.jpg" on the matching .prod-row -->
+    <span class="fp-cap" id="fpCap">Product photo</span>
+  </figure>
+
+  <a class="prod-row rv" href="products.html#presses" data-photo="Hydraulic presses">
+    <span class="prod-thumb" aria-hidden="true">Photo — Hydraulic presses</span>
+    <span class="prod-num">01</span>
+    <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
+      <path d="M14 58h44M18 58V20h36v38"/><path d="M22 20v-6h28v6"/>
+      <path class="o" d="M32 14v-4h8v4M34 26v10h4V26z"/><path class="o" d="M26 42h20v5H26z"/>
+      <path d="M24 52h24M18 34h-4M58 34h-4" opacity=".5"/></svg></span>
+    <span>
+      <span class="prod-title">Hydraulic presses <span class="arr">→</span></span>
+      <span class="prod-desc">Deep draw, 4-column, C-type, H-type, rubber moulding, FRP, stamping and special purpose. Servo options; retrofits of existing presses.</span>
+    </span>
+    <span class="prod-spec">25–650 T · 13 standard models<br><b>flagship line</b></span>
+  </a>
+  <a class="prod-row rv" href="products.html#cylinders" data-photo="Hydraulic cylinders">
+    <span class="prod-thumb" aria-hidden="true">Photo — Hydraulic cylinders</span>
+    <span class="prod-num">02</span>
+    <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
+      <rect x="10" y="28" width="32" height="16"/><path d="M10 31h-3v10h3M42 33h20M42 39h20"/>
+      <circle class="o" cx="64" cy="36" r="5"/><path class="o" d="M26 28v16"/></svg></span>
+    <span>
+      <span class="prod-title">Hydraulic cylinders <span class="arr">→</span></span>
+      <span class="prod-desc">Mill duty, heavy duty, tie-rod, telescopic and fully custom — for OEMs and end users. PTFE low-friction seals, bronze guide tapes.</span>
+    </span>
+    <span class="prod-spec">OEM + custom<br><b>import substitute</b></span>
+  </a>
+  <a class="prod-row rv" href="products.html#power-packs" data-photo="Power packs">
+    <span class="prod-thumb" aria-hidden="true">Photo — Power packs</span>
+    <span class="prod-num">03</span>
+    <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
+      <rect x="12" y="34" width="36" height="22"/><circle cx="30" cy="24" r="9"/><path d="M30 33v1M22 56v4M40 56v4"/>
+      <path class="o" d="M48 40h12v10H48zM54 40v-8"/></svg></span>
+    <span>
+      <span class="prod-title">Power packs <span class="arr">→</span></span>
+      <span class="prod-desc">Low-noise hydraulic power units for lifts, wagon tipplers, presses, machine tools and mobile applications.</span>
+    </span>
+    <span class="prod-spec">0.75–50 HP typical<br><b>built to duty cycle</b></span>
+  </a>
+  <a class="prod-row rv" href="products.html#manifolds" data-photo="Manifold blocks">
+    <span class="prod-thumb" aria-hidden="true">Photo — Manifold blocks</span>
+    <span class="prod-num">04</span>
+    <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
+      <rect x="16" y="18" width="40" height="36"/><circle class="o" cx="28" cy="30" r="4"/><circle class="o" cx="44" cy="42" r="4"/>
+      <path d="M28 34v8h12M44 38v-8H32M16 26h-6M56 46h6"/></svg></span>
+    <span>
+      <span class="prod-title">Manifold blocks <span class="arr">→</span></span>
+      <span class="prod-desc">From the smallest unit to large system manifolds. We replace existing OEM manifolds one-for-one, quality matched.</span>
+    </span>
+    <span class="prod-spec">Lift · PCM · sequence<br><b>1–4 station</b></span>
+  </a>
+  <a class="prod-row rv" href="products.html#kits" data-photo="Cylinder kits">
+    <span class="prod-thumb" aria-hidden="true">Photo — Cylinder kits</span>
+    <span class="prod-num">05</span>
+    <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
+      <circle cx="24" cy="36" r="12"/><circle cx="24" cy="36" r="5"/>
+      <circle class="o" cx="50" cy="26" r="8"/><circle cx="52" cy="48" r="7"/><circle cx="52" cy="48" r="3"/></svg></span>
+    <span>
+      <span class="prod-title">Cylinder kits <span class="arr">→</span></span>
+      <span class="prod-desc">Mill-duty, welded and heavy-duty kits — back end, gland and pistons, complete. Supplied with or without seals.</span>
+    </span>
+    <span class="prod-spec">New line, 2024<br><b>ready stock</b></span>
+  </a>
+</section>
+
+<!-- ============ CONFIGURATOR ============ -->
+<section class="config" id="configurator">
+  <div class="container">
+    <div class="cfg-head">
+      <div class="rv">
+        <p class="label">Press range</p>
+        <h2>Find your press.</h2>
+      </div>
+      <p class="rv">Thirteen standard deep-draw models and three further families, straight from our model charts. Select a capacity — every machine is then built to your component, cycle time and shop floor.</p>
+    </div>
+
+    <div class="cfg-tabs rv" role="tablist" aria-label="Press family">
+      <button class="cfg-tab" role="tab" aria-selected="true" data-fam="dd">Deep draw</button>
+      <button class="cfg-tab" role="tab" aria-selected="false" data-fam="fc">4-column</button>
+      <button class="cfg-tab" role="tab" aria-selected="false" data-fam="ct">C-type</button>
+      <button class="cfg-tab" role="tab" aria-selected="false" data-fam="rb">Rubber moulding</button>
+    </div>
+
+    <div class="cfg-body rv">
+      <div>
+        <p class="ton-label">Main capacity — tons</p>
+        <div class="ton-chips" id="tonChips"></div>
+        <p class="cfg-note">Data for reference. Fast-approach, slow-press and fast-return speeds are preset to your stroke via proximity switches.</p>
+      </div>
+      <div class="spec-card" aria-live="polite">
+        <div class="spec-top">
+          <div>
+            <div class="spec-fam" id="famName">Deep draw hydraulic press</div>
+            <div class="spec-model" id="sModel">SHD-75+25</div>
+          </div>
+          <div class="spec-cap"><div class="v" id="sCap">100</div><div class="u">tons main capacity</div></div>
+        </div>
+        <div class="spec-grid" id="specGrid"></div>
+        <div class="gauge-row">
+          <span class="mono">0</span>
+          <div class="gauge"><div class="gauge-fill" id="gFill"></div></div>
+          <span class="mono" id="gMax">650 T range</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENGINEERING ============ -->
+<section class="eng container" id="engineering">
+  <div class="eng-top">
+    <div class="rv">
+      <p class="label">How we build</p>
+      <h2>Designed to outlast its <em>operator's career</em>.</h2>
+    </div>
+    <p class="rv">Every Jagdamba press shares one drive philosophy: a compact manifold block instead of piping, internationally reputed valves, and our own cylinders. Fewer joints, fewer leaks, constant pressure through the cycle.</p>
+  </div>
+  
+  <div class="eng-flex">
+  <div class="eng-grid">
+    <div class="eng-card rv" data-part="frame" tabindex="0"><span class="n">01 — Frame</span>
+      <h3>FEA-designed, ultrasonically tested steel</h3>
+      <p>Frames cut from prime steel plates, designed on FEA software to resist deflection, with vibration-damping capability built in.</p></div>
+    <div class="eng-card rv" data-part="guiding" tabindex="0"><span class="n">02 — Guiding</span>
+      <h3>Precision slide guidance</h3>
+      <p>Extra-long, machined and hardened guides with centralised lubrication deliver lasting accuracy, alignment and reduced wear.</p></div>
+    <div class="eng-card rv" data-part="hydraulics" tabindex="0"><span class="n">03 — Hydraulics</span>
+      <h3>Compact manifold drive</h3>
+      <p>The Jagdamba system replaces piping with a single block. In-house cylinders run PTFE low-friction seals on bronze guide tapes.</p></div>
+    <div class="eng-card rv" data-part="controls" tabindex="0"><span class="n">04 — Controls</span>
+      <h3>Operator-safe control panel</h3>
+      <p>Manual, semi and full-auto modes with safety interlocks. Proximity sensors on the top cylinder set the exact stroke required.</p></div>
+  </div>
+  <div class="schem-wrap rv" aria-hidden="false">
+    <svg class="schem" viewBox="0 0 560 554" role="img" aria-label="Press schematic: frame, guiding, hydraulics and controls highlighted per discipline">
+      <line x1="20" y1="536" x2="540" y2="536" stroke-dasharray="3 5" opacity=".5"/>
+      <g class="pg" data-part="frame">
+        <rect x="120" y="492" width="280" height="36"/>
+        <rect x="150" y="472" width="220" height="20"/>
+        <rect x="138" y="72" width="16" height="400"/>
+        <rect x="366" y="72" width="16" height="400"/>
+        <rect x="120" y="36" width="280" height="36"/>
+      </g>
+      <g class="pg" data-part="guiding">
+        <line x1="166" y1="72" x2="166" y2="472"/>
+        <line x1="354" y1="72" x2="354" y2="472"/>
+        <rect x="160" y="240" width="12" height="44"/>
+        <rect x="348" y="240" width="12" height="44"/>
+      </g>
+      <g class="pg" data-part="hydraulics">
+        <rect x="240" y="4" width="40" height="32"/>
+        <rect x="252" y="72" width="16" height="120"/>
+        <rect x="186" y="192" width="148" height="24"/>
+        <rect x="404" y="380" width="44" height="38"/>
+        <line x1="404" y1="392" x2="382" y2="392"/>
+        <circle cx="416" cy="362" r="7"/>
+      </g>
+      <g class="pg" data-part="controls">
+        <rect x="468" y="250" width="52" height="140"/>
+        <rect x="478" y="264" width="32" height="24"/>
+        <circle cx="484" cy="312" r="4"/><circle cx="500" cy="312" r="4"/>
+        <line x1="468" y1="390" x2="448" y2="472"/>
+      </g>
+      <ellipse cx="260" cy="462" rx="26" ry="6" class="wp"/>
+    </svg>
+    <p class="mono schem-cap">Fig. 02 — hover a discipline to locate it on the machine</p>
+  </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container svc-grid">
+    <div class="rv">
+      <p class="label">Service &amp; repair</p>
+      <h2>We keep them <em>running</em>.</h2>
+      <p class="lead">Machine down? We repair what we build — and what others built. Honing, plated rods, seal kits, valve overhauls and full press retrofits.</p>
+      <div class="svc-cta">
+        <a class="svc-phone" href="tel:+919372072041">+91 93720 72041</a>
+        <a class="btn-quiet" href="services.html">All repair services →</a>
+      </div>
+    </div>
+    <ul class="svc-list rv">
+      <li><span>Hydraulic &amp; pneumatic cylinder repair</span><span class="mono">01</span></li>
+      <li><span>Power pack repair</span><span class="mono">02</span></li>
+      <li><span>Hydraulic press repair</span><span class="mono">03</span></li>
+      <li><span>Manifold block repair</span><span class="mono">04</span></li>
+      <li><span>Valve repair &amp; overhaul</span><span class="mono">05</span></li>
+      <li><span>Screw-press to hydraulic conversion</span><span class="mono">06</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="voices container" id="voices">
+  <div class="rv">
+    <div class="quote-rule"></div>
+    <blockquote class="quote" id="qText">With this machine our production capacity has increased compared to our existing machines — highly productive, performing and precise.</blockquote>
+    <div class="quote-by">
+      <div class="who" id="qBy"><b>Naresh Malhotra</b><span>Bhandara, Maharashtra</span></div>
+      <div class="q-nav">
+        <span class="cnt" id="qCnt">1 / 3</span>
+        <button class="q-btn" id="qPrev" aria-label="Previous testimonial">←</button>
+        <button class="q-btn" id="qNext" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="chip-row rv" aria-label="Industries served">
+    <span class="chip">Utensil manufacturing</span><span class="chip">Auto components</span><span class="chip">FRP &amp; composites</span><span class="chip">Rubber moulding</span><span class="chip">Steel</span><span class="chip">Cement</span><span class="chip">Power</span><span class="chip">Railways</span><span class="chip">Chemical</span><span class="chip">Material handling</span>
+  </div>
+</section>
+
+
+<!-- ============ EXHIBITIONS TEASER ============ -->
+<section class="expo-strip" id="exhibitions">
+  <div class="container expo-inner">
+    <div class="rv">
+      <p class="label">Exhibitions</p>
+      <h2 style="font-size:var(--t-2xl)">Meet the machines<br><em style="font-style:normal;color:var(--org)">in person.</em></h2>
+    </div>
+    <div class="rv">
+      <p style="color:var(--ink-60);max-width:42ch">Jagdamba exhibits at national and international industrial expos — presses cycling live on the stand, engineers answering spec questions on the spot.</p>
+      <div style="display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s4)">
+        <a class="btn" href="expos.html">Exhibition calendar <span class="arr">→</span></a>
+        <a class="btn-quiet" href="expos.html#invite">Invite us to your show</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container ct-grid">
+    <div class="rv">
+      <p class="label">Get a quote</p>
+      <h2>Tell us the job. We'll size the <em>force</em>.</h2>
+      <p class="sub">Send your component, capacity or problem — an engineer replies, not a call centre.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Sent — we\'ll call you';">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="f-prod">Product</label>
+          <select id="f-prod">
+            <option>Hydraulic press</option><option>Hydraulic cylinder</option><option>Power pack</option><option>Manifold block</option><option>Cylinder kit</option><option>Repair / service</option><option>Goods / cargo lift</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Requirement</label><textarea id="f-msg" rows="4" placeholder="e.g. 200 T deep draw press for SS utensils, 900×1000 table"></textarea></div>
+        <div class="field"><button class="btn" type="submit" style="width:100%;justify-content:center">Send requirement <span class="arr">→</span></button></div>
+      </form>
+    </div>
+    <div class="ct-info rv">
+      <b>Factory</b>
+      Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India
+      <b>Phones</b>
+      <a href="tel:+919372072041">+91 93720 72041</a><br>
+      <a href="tel:+919372072042">+91 93720 72042</a>
+      <b>Email</b>
+      <a href="mailto:sales@jhydro.in">sales@jhydro.in</a><br>
+      <a href="mailto:info@jhydro.in">info@jhydro.in</a><br>
+      <a href="mailto:service@jhydro.in">service@jhydro.in</a>
+      <b>Hours</b>
+      Mon–Sun · 9 am – 7 pm<br>Wednesday closed
+      <b>Engineering toolkit</b>
+      <a class="org" href="calculators.html">Free hydraulic calculators →</a>
+      <b>Elsewhere</b>
+      <a href="https://www.youtube.com/channel/UCjSLqHML-phV8ardP2tjfxQ" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.instagram.com/j_hydro.in/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/JHydraulics/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/in/shree-jagdamba-hydropneumatic-52818a235/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="foot-big" aria-hidden="true">Jagdamba</span>
+  <div class="foot-row">
+    <span>© 2006–2026 Shree Jagdamba Hydropneumatic Inc.</span>
+    <span>Made in India · MIDC Butibori, Nagpur</span>
+    <a href="calculators.html">Calculators</a>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/message/XGLA6ESY3P3MA1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.7C8.7 2.7 2.8 8.6 2.8 15.9c0 2.6.8 5 2.1 7L2.7 29.3l6.6-2.1c1.9 1.1 4.2 1.7 6.7 1.7 7.3 0 13.2-5.9 13.2-13.2S23.3 2.7 16 2.7zm0 24c-2.2 0-4.3-.6-6-1.7l-.4-.3-3.9 1.2 1.3-3.8-.3-.4a10.7 10.7 0 1 1 9.3 5zm6-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2s-.9 1.1-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.6-.6-.5-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2.8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=q=>document.querySelector(q);
+
+/* ================= PRESS DATA (brochure, Feb 2024) ================= */
+const DATA = {
+  dd:{name:"Deep draw hydraulic press",max:650,rows:[
+    ["SHD-25+10",35,"350 × 530",300,500,"200",5,"125 mm cushion"],
+    ["SHD-35+15",50,"350 × 530",300,500,"200",7.5,"125 mm cushion"],
+    ["SHD-50+15",65,"500 × 550",350,600,"250",10,"150 mm cushion"],
+    ["SHD-60+25",85,"600 × 650",350,600,"250",10,"150 mm cushion · prefill"],
+    ["SHD-75+25",100,"650 × 700",450,800,"350",15,"200 mm cushion · prefill"],
+    ["SHD-100+30",130,"750 × 800",450,800,"350",15,"200 mm cushion · prefill"],
+    ["SHD-125+40",165,"800 × 850",450,850,"400",20,"200 mm cushion · prefill"],
+    ["SHD-150+50",200,"900 × 1000",450,850,"400",20,"200 mm cushion · prefill"],
+    ["SHD-200+75",275,"1000 × 1000",500,950,"450",20,"250 mm cushion · prefill"],
+    ["SHD-250+75",325,"1000 × 1000",500,950,"450",25,"250 mm cushion · prefill"],
+    ["SHD-300+100",400,"1200 × 1000",500,1000,"500",30,"250 mm cushion · prefill"],
+    ["SHD-400+125",525,"1500 × 1200",600,1000,"400",40,"250 mm cushion · prefill"],
+    ["SHD-500+150",650,"1500 × 1200",600,1150,"550",50,"300 mm cushion · prefill"],
+  ]},
+  fc:{name:"Hydraulic 4-column press",max:500,rows:[
+    ["SHD-25",25,"350 × 350",300,350,null,5],["SHD-35",35,"350 × 530",300,350,null,7.5],
+    ["SHD-50",50,"500 × 550",300,450,null,10],["SHD-60",60,"600 × 650",350,450,null,10],
+    ["SHD-75",75,"650 × 700",450,550,null,15],["SHD-100",100,"750 × 800",500,650,null,15],
+    ["SHD-150",150,"900 × 1000",450,500,null,20],["SHD-200",200,"1000 × 1000",600,650,null,20],
+    ["SHD-250",250,"1000 × 1000",500,550,null,25],["SHD-300",300,"1200 × 1000",500,1000,null,30],
+    ["SHD-400",400,"1500 × 1200",600,1000,null,40],["SHD-500",500,"1500 × 1200",600,1150,null,50],
+  ]},
+  ct:{name:"C-type hydraulic press",max:100,ct:true,rows:[
+    ["SHC-5",5,"305 × 178",30,153,"15–75",0.75],["SHC-10",10,"406 × 254",30,204,"15–75",1],
+    ["SHC-15",15,"508 × 305",30,254,"15–100",2],["SHC-20",20,"508 × 305",30,254,"15–100",2],
+    ["SHC-30",30,"558 × 355",25,280,"15–100",3],["SHC-40",40,"584 × 381",28,317,"15–100",3],
+    ["SHC-50",50,"660 × 406",30,332,"15–100",5],["SHC-80",80,"762 × 508",30,381,"15–100",7.5],
+    ["SHC-100",100,"813 × 584",26,406,"15–100",7.5],
+  ]},
+  rb:{name:"Rubber compression moulding press",max:250,rows:[
+    ["SHR-60",60,"355 × 355",310,310,null,5],["SHR-100",100,"410 × 410",360,360,null,5],
+    ["SHR-150",150,"460 × 460",410,410,null,5],["SHR-200",200,"510 × 510",460,460,null,7.5],
+    ["SHR-250",250,"560 × 560",460,460,null,7.5],
+  ]}
+};
+
+let fam='dd', rowIdx=4;
+const chipsEl=$('#tonChips'), grid=$('#specGrid');
+
+function buildChips(){
+  chipsEl.innerHTML='';
+  DATA[fam].rows.forEach((r,i)=>{
+    const b=document.createElement('button');
+    b.className='ton-chip'; b.textContent=r[1]; b.setAttribute('aria-pressed', i===rowIdx);
+    b.addEventListener('click',()=>{rowIdx=i;render();});
+    chipsEl.appendChild(b);
+  });
+}
+function cell(k,v,u){return `<div class="spec-cell"><div class="k">${k}</div><div class="v">${v}${u?` <small>${u}</small>`:''}</div></div>`}
+function render(){
+  const d=DATA[fam], r=d.rows[rowIdx];
+  buildChips();
+  $('#famName').textContent=d.name;
+  $('#sModel').textContent=r[0];
+  $('#gMax').textContent=d.max+' T range';
+  if(!reduced && window.gsap){gsap.fromTo('#sCap',{textContent:0},{textContent:r[1],duration:.6,ease:'power2.out',snap:{textContent:1}});}
+  else $('#sCap').textContent=r[1];
+  let html='';
+  if(d.ct){
+    html+=cell('Table size',r[2],'mm')+cell('Ram to bed',r[4],'mm')+cell('Strokes / min',r[3],'@25mm')+cell('Stroke adjust',r[5],'mm')+cell('Motor',r[6],'HP')+cell('Frame','C-type','open front');
+  }else{
+    html+=cell('Table size',r[2],'mm')+cell('Stroke',r[3],'mm')+cell('Daylight',r[4],'mm');
+    html+= (r[5]?cell('Shut height',r[5],'mm'):cell('Daylight = stroke','✓',''));
+    html+=cell('Motor',r[6],'HP')+cell('Cylinders',fam==='dd'?'Main + pilot':'Single','');
+    if(r[7]) html+=cell('Extras',r[7],'');
+  }
+  grid.innerHTML=html;
+  $('#gFill').style.width=Math.max(5,(r[1]/650)*100)+'%';
+}
+document.querySelectorAll('.cfg-tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.cfg-tab').forEach(x=>x.setAttribute('aria-selected','false'));
+    t.setAttribute('aria-selected','true');
+    fam=t.dataset.fam; rowIdx=Math.min(2,DATA[fam].rows.length-1); render();
+  });
+});
+render();
+
+/* ================= TESTIMONIALS ================= */
+const Q=[
+ {t:"With this machine our production capacity has increased compared to our existing machines — highly productive, performing and precise.",b:"Naresh Malhotra",l:"Bhandara, Maharashtra"},
+ {t:"The best performing machine in all respects — very easy to operate and maintenance-free. I'm planning to buy more.",b:"Vijay K. Patel",l:"Sunrise Iron Works · Rajkot, Gujarat"},
+ {t:"Best quality machine. We are fully satisfied — running strong for three years and counting.",b:"G. Vinayagam",l:"Chennai, Tamil Nadu"}];
+let qi=0;
+function setQ(d){
+  qi=(qi+d+Q.length)%Q.length;
+  const go=()=>{ $('#qText').textContent=Q[qi].t; $('#qBy').innerHTML=`<b>${Q[qi].b}</b><span>${Q[qi].l}</span>`; $('#qCnt').textContent=(qi+1)+' / '+Q.length; };
+  if(!reduced && window.gsap){ gsap.to('#qText',{opacity:0,y:6,duration:.2,onComplete(){go();gsap.to('#qText',{opacity:1,y:0,duration:.35,ease:'power2.out'});}}); } else go();
+}
+$('#qPrev').addEventListener('click',()=>setQ(-1));
+$('#qNext').addEventListener('click',()=>setQ(1));
+let qTimer=setInterval(()=>setQ(1),8000);
+$('#voices').addEventListener('pointerenter',()=>clearInterval(qTimer));
+
+/* ================= NAV ================= */
+const nav=$('#nav'), burger=$('#burger'), mnav=$('#mnav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+burger.addEventListener('click',()=>{
+  const open=mnav.classList.toggle('open');
+  burger.classList.toggle('x',open);
+  burger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ if(mnav.classList.contains('open')) burger.click(); }));
+
+/* ================= THREE.JS — IMMERSIVE CAD-EDGE PRESS STAGE =================
+   Full-bleed hero stage. Translucent faces + EdgesGeometry line work.
+   Interactions: drag-orbit w/ inertia · camera parallax · scroll dolly +
+   ram press-down · CLICK the press to fire a full stroke (cycle counter) ·
+   live screen-projected dimension callouts. */
+(function(){
+  if(!window.THREE) return;
+  const host=document.getElementById('scene');
+  const heroEl=document.querySelector('.hero');
+  const W=()=>host.clientWidth||1, H=()=>host.clientHeight||1;
+  const mobile=()=>innerWidth<900;
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth<760?1.5:2));
+  renderer.setSize(W(),H()); host.appendChild(renderer.domElement);
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(30,W()/H(),.1,100);
+
+  const INK=0x33363c, SOFT=0xb7b4ac, ORG=0xe8521d, FILL=0xfdfdfc;
+
+  function part(geo, edgeColor, opacity){
+    const g=new THREE.Group();
+    g.add(new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color:FILL,transparent:true,opacity:opacity??.93})));
+    g.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo,16),
+      new THREE.LineBasicMaterial({color:edgeColor??INK})));
+    return g;
+  }
+  const P=(g,x,y,z)=>{g.position.set(x,y,z);return g;};
+  const press=new THREE.Group();
+
+  /* bed & bolster */
+  press.add(P(part(new THREE.BoxGeometry(3.6,.55,2.4)),0,.275,0));
+  const bolster=P(part(new THREE.BoxGeometry(2.7,.32,1.9)),0,.71,0); press.add(bolster);
+  [[-1.55,-.95],[1.55,-.95],[-1.55,.95],[1.55,.95]].forEach(([x,z])=>
+    press.add(P(part(new THREE.BoxGeometry(.5,.18,.5)),x,.02,z)));
+
+  /* 4 columns + nuts */
+  [[-1.25,-.85],[1.25,-.85],[-1.25,.85],[1.25,.85]].forEach(([x,z])=>{
+    press.add(P(part(new THREE.CylinderGeometry(.11,.11,3.1,12)),x,2.3,z));
+    press.add(P(part(new THREE.CylinderGeometry(.19,.19,.16,8)),x,.95,z));
+    press.add(P(part(new THREE.CylinderGeometry(.19,.19,.16,8)),x,3.7,z));
+  });
+
+  /* crown */
+  const crown=P(part(new THREE.BoxGeometry(3.3,.7,2.15)),0,4.15,0); press.add(crown);
+
+  /* main cylinder — orange working circuit */
+  press.add(P(part(new THREE.CylinderGeometry(.52,.52,1.15,18),ORG,.95),0,5.05,0));
+  press.add(P(part(new THREE.CylinderGeometry(.6,.6,.22,18),ORG),0,5.7,0));
+  const dial=part(new THREE.CylinderGeometry(.16,.16,.07,14),ORG);
+  dial.rotation.x=Math.PI/2; press.add(P(dial,.78,5.05,0));
+
+  /* ram: rod + platen + die */
+  const ram=new THREE.Group();
+  const rod=P(part(new THREE.CylinderGeometry(.26,.26,1.7,14),ORG,.96),0,.85,0); ram.add(rod);
+  const platen=P(part(new THREE.BoxGeometry(2.45,.34,1.7),ORG,.96),0,-.05,0); ram.add(platen);
+  ram.add(P(part(new THREE.BoxGeometry(1.1,.22,.9)),0,-.33,0));
+  ram.position.y=2.9; press.add(ram);
+
+  /* workpiece */
+  const work=P(part(new THREE.CylinderGeometry(.55,.62,.26,20),ORG,.9),0,1.0,0); press.add(work);
+
+  /* control panel */
+  press.add(P(part(new THREE.BoxGeometry(.8,1.5,.55)),2.45,1.45,.55));
+  press.add(P(part(new THREE.BoxGeometry(.5,.36,.04),ORG),2.45,1.85,.84));
+
+  press.position.y=-1.45;
+  scene.add(press);
+
+  const gridH=new THREE.GridHelper(20,30,SOFT,0xe9e6df);
+  gridH.position.y=-1.5; scene.add(gridH);
+
+  /* faint suspended particles — workshop dust, adds depth */
+  const N=140, pos=new Float32Array(N*3);
+  for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*22;pos[i*3+1]=Math.random()*9-1.5;pos[i*3+2]=(Math.random()-.5)*16;}
+  const pGeo=new THREE.BufferGeometry();
+  pGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  const dust=new THREE.Points(pGeo,new THREE.PointsMaterial({color:0xc9c5bb,size:.04,transparent:true,opacity:.45}));
+  scene.add(dust);
+
+  /* responsive composition: desktop = press right of headline; mobile = centered */
+  function compose(){
+    if(mobile()){ press.position.x=0; cam.clearViewOffset(); cam.position.set(5.6,2.6,10.4); }
+    else{
+      press.position.x=0; cam.position.set(6.8,3.0,10.6);
+      /* pan the rendered view left by 20% of viewport => press appears 20% right,
+         never cropped, independent of FOV or aspect */
+      cam.setViewOffset(W(),H(), -W()*0.20, 0, W(), H());
+    }
+  }
+  compose();
+
+  /* ---------- interactions ---------- */
+  let mx=0,my=0,tx=0,ty=0;            // camera parallax (eased)
+  let dragX=0,dragVel=0,dragging=false,lastX=0,moved=0;
+  host.style.cursor='grab'; host.style.touchAction='pan-y';
+  addEventListener('pointermove',e=>{
+    tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5);
+    if(dragging){const dx=e.clientX-lastX;lastX=e.clientX;moved+=Math.abs(dx);dragVel=dx*.005;dragX+=dragVel;}
+  },{passive:true});
+  host.addEventListener('pointerdown',e=>{dragging=true;moved=0;lastX=e.clientX;host.style.cursor='grabbing';});
+  addEventListener('pointerup',()=>{dragging=false;host.style.cursor='grab';});
+
+  /* click-to-stroke: raycast the press, fire one full cycle */
+  const ray=new THREE.Raycaster(), pt=new THREE.Vector2();
+  let firing=0, cycles=0;
+  const cycEl=document.getElementById('cycCount');
+  host.addEventListener('click',e=>{
+    if(moved>6) return;                       // it was a drag, not a click
+    const r=host.getBoundingClientRect();
+    pt.x=((e.clientX-r.left)/r.width)*2-1; pt.y=-((e.clientY-r.top)/r.height)*2+1;
+    ray.setFromCamera(pt,cam);
+    if(ray.intersectObject(press,true).length){ if(firing<=0) firing=1; }
+  });
+
+  let scrollT=0;
+  addEventListener('scroll',()=>{scrollT=Math.min(1,scrollY/(innerHeight*.9));},{passive:true});
+  let visible=true;
+  new IntersectionObserver(en=>visible=en[0].isIntersecting,{threshold:0}).observe(host);
+
+  /* screen-projected callouts */
+  const callouts=[
+    {el:document.getElementById('co-crown'), obj:crown,   off:new THREE.Vector3(-1.65,0,0)},
+    {el:document.getElementById('co-ram'),   obj:platen,  off:new THREE.Vector3(1.25,0,0)},
+    {el:document.getElementById('co-bed'),   obj:bolster, off:new THREE.Vector3(1.4,0,0)},
+  ];
+  const hint={el:document.getElementById('co-hint'), obj:crown, off:new THREE.Vector3(1.05,1.35,0)};
+  const v=new THREE.Vector3();
+  function place(c){
+    if(!c.el) return;
+    c.obj.getWorldPosition(v); v.add(c.off);
+    v.project(cam);
+    c.el.style.left=((v.x*.5+.5)*W())+'px';
+    c.el.style.top =((-v.y*.5+.5)*H())+'px';
+  }
+  function placeCallouts(){
+    place(hint);
+    if(mobile()) return;
+    callouts.forEach(c=>{
+      if(!c.el) return;
+      c.obj.getWorldPosition(v); v.add(c.off);
+      v.project(cam);
+      c.el.style.left=((v.x*.5+.5)*W())+'px';
+      c.el.style.top =((-v.y*.5+.5)*H())+'px';
+    });
+  }
+
+  const clock=new THREE.Clock();
+  const RAM_TOP=2.9, RAM_BOTTOM=1.6;
+  let prevStroke=0;
+  (function loop(){
+    requestAnimationFrame(loop);
+    if(!visible) return;
+    const t=clock.getElapsedTime(), dt=Math.min(clock.getDelta()||.016,.05);
+    mx+=(tx-mx)*.045; my+=(ty-my)*.045;
+    if(!dragging){dragX+=dragVel;dragVel*=.95;}
+
+    /* stroke: clicked cycle takes priority over idle breathing */
+    let stroke;
+    if(firing>0){
+      firing-=dt*.9;
+      const ph=1-Math.max(firing,0);                    // 0→1 over the cycle
+      stroke= ph<.42 ? Math.pow(ph/.42,2)               // drive down (accelerate)
+            : ph<.58 ? 1                                // dwell under load
+            : 1-Math.min((ph-.58)/.42,1);               // fast return
+      if(firing<=0){ cycles++; if(cycEl) cycEl.textContent=cycles; if(cycles===1 && hint.el) hint.el.classList.add('done'); }
+    } else if(reduced){ stroke=0; }
+    else { const cyc=(Math.sin(t*0.5)+1)/2; stroke=Math.pow(cyc,1.8)*.85; }
+
+    const ramY=RAM_TOP-(RAM_TOP-RAM_BOTTOM)*Math.max(stroke,scrollT*.9);
+    ram.position.y=ramY;
+    rod.scale.y=1+(RAM_TOP-ramY)*.55;
+    rod.position.y=.85+(RAM_TOP-ramY)*.46;
+    /* workpiece squashes slightly at full stroke */
+    const squash=Math.max(0,(stroke-.92))*4;
+    work.scale.set(1+squash*.4,1-squash*.5,1+squash*.4);
+
+    /* impact: tiny camera dip when the clicked stroke bottoms out */
+    const impact=(firing>0 && stroke===1 && prevStroke<1)?1:0;
+    prevStroke=stroke;
+    if(impact && window.gsap && !reduced){ gsap.fromTo(cam.position,{y:cam.position.y},{y:cam.position.y-.07,duration:.07,yoyo:true,repeat:1,ease:'power2.out'}); }
+
+    const auto=reduced?0:t*.045;
+    press.rotation.y=-.55+auto+mx*.28+dragX;
+    press.rotation.x=.05+my*.1;
+    /* camera parallax + slow scroll dolly-in */
+    cam.position.x+= ((mobile()?5.6:6.8)+mx*.7-cam.position.x)*.05;
+    cam.position.z+= ((mobile()?10.4:10.6)-scrollT*1.4-cam.position.z)*.05;
+    cam.lookAt(0,1.55,0);
+    dust.rotation.y=t*.01;
+    renderer.render(scene,cam);
+    placeCallouts();
+  })();
+
+  /* reveal callouts once scene is live */
+  requestAnimationFrame(()=>setTimeout(()=>heroEl.classList.add('ready'),900));
+
+  addEventListener('resize',()=>{cam.aspect=W()/H();cam.updateProjectionMatrix();renderer.setSize(W(),H());compose();});
+})();
+
+/* ================= GSAP — slow, weighty choreography ================= */
+(function(){
+  if(!window.gsap){document.querySelectorAll('.rv,.rv-load').forEach(e=>{e.style.opacity=1;e.style.transform='none'});return;}
+  gsap.registerPlugin(ScrollTrigger);
+  if(reduced){gsap.set('.rv,.rv-load',{opacity:1,y:0});gsap.set('.hero h1 .ln>span',{y:0});return;}
+
+  gsap.to('.hero h1 .ln>span',{y:0,duration:1.4,ease:'power4.out',stagger:.14,delay:.2});
+  gsap.from('.rv-load',{opacity:0,y:22,duration:1.1,ease:'power3.out',stagger:.09,delay:.55});
+
+  document.querySelectorAll('.rv').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:1.15,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const end=+el.dataset.count;
+    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,
+      onEnter:()=>gsap.fromTo(el,{textContent:0},{textContent:end,duration:1.8,ease:'power2.out',snap:{textContent:1}})});
+  });
+})();
+
+/* ===== engineering schematic: hover/focus a card → light its part ===== */
+(function(){
+  const cards=document.querySelectorAll('.eng-card[data-part]');
+  const groups={};document.querySelectorAll('.schem .pg').forEach(g=>groups[g.dataset.part]=g);
+  function lit(part,on){
+    cards.forEach(c=>c.classList.toggle('lit',on&&c.dataset.part===part));
+    Object.entries(groups).forEach(([k,g])=>g.classList.toggle('lit',on&&k===part));
+  }
+  cards.forEach(c=>{
+    c.addEventListener('pointerenter',()=>lit(c.dataset.part,true));
+    c.addEventListener('pointerleave',()=>lit(null,false));
+    c.addEventListener('focus',()=>lit(c.dataset.part,true));
+    c.addEventListener('blur',()=>lit(null,false));
+  });
+})();
+
+/* ===== product rows: cursor-following photo preview (placeholder-ready) ===== */
+(function(){
+  const fp=document.getElementById('floatPrev'),cap=document.getElementById('fpCap');
+  if(!fp) return;
+  const sec=document.querySelector('.products');
+  let raf=null,px=0,py=0;
+  function move(e){
+    const r=sec.getBoundingClientRect();
+    px=e.clientX-r.left+26; py=e.clientY-r.top-160;
+    if(!raf) raf=requestAnimationFrame(()=>{fp.style.transform='';fp.style.left=px+'px';fp.style.top=py+'px';raf=null;});
+  }
+  document.querySelectorAll('.prod-row[data-photo]').forEach(row=>{
+    row.addEventListener('pointerenter',e=>{
+      cap.textContent='Photo — '+row.dataset.photo;
+      const img=fp.querySelector('img'); if(img) img.src=row.dataset.img||img.src;
+      fp.classList.add('on'); move(e);
+    });
+    row.addEventListener('pointermove',move);
+    row.addEventListener('pointerleave',()=>fp.classList.remove('on'));
+  });
+})();
+</script>
+</body>
+</html>

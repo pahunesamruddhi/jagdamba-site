@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineering Calculators — JAGDAMBA · Cylinder Force, Speed, Pump & Press Tonnage</title>
+<meta name="description" content="Free hydraulic engineering calculators by Shree Jagdamba Hydropneumatic — cylinder force, velocity & volumes, pump flow/torque/power, motor sizing and press tonnage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#fdfdfc;--raised:#f6f5f2;--panel:#edece8;--hair:#e3e1db;
+  --ink:#191b1f;--grey:#5d6066;--grey2:#94969b;
+  --org:#e8521d;--org-deep:#c2410c;
+  --line:rgba(25,27,31,.12);
+  --font-d:"Inter",system-ui,sans-serif;--font-b:"Inter",system-ui,sans-serif;--font-m:"JetBrains Mono",ui-monospace,monospace;
+  --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2rem;--s6:3rem;--s7:4.5rem;
+  --step--1:clamp(.72rem,.7rem + .15vw,.8rem);
+  --step-0:clamp(.95rem,.9rem + .3vw,1.06rem);
+  --step-1:clamp(1.15rem,1.05rem + .55vw,1.45rem);
+  --step-2:clamp(1.5rem,1.3rem + 1vw,2.1rem);
+  --step-3:clamp(1.9rem,1.5rem + 2vw,3.1rem);
+  --step-4:clamp(2.4rem,1.7rem + 3.8vw,4.8rem);
+  --ease:cubic-bezier(.16,1,.3,1);--pad-x:clamp(1.1rem,4vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--base);color:var(--ink);font-family:var(--font-b);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--org);color:#fff}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spacing:-.035em}
+.mono{font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase}
+.container{padding-inline:var(--pad-x);max-width:1380px;margin-inline:auto}
+:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;height:68px;display:flex;align-items:center;gap:var(--s4);padding-inline:var(--pad-x);background:rgba(253,252,250,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
+.brand .mark{width:11px;height:11px;background:var(--org);flex:none}
+.nav-links{display:none;gap:var(--s4);margin-left:auto}
+.nav-links a{font-size:.86rem;font-weight:500;color:var(--grey);padding:.55rem 0;transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.on{color:var(--org-deep)}
+.cta{margin-left:auto;display:inline-flex;align-items:center;gap:.6rem;background:var(--org);color:#fff;font-size:.88rem;font-weight:550;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
+.cta:hover{background:var(--org-deep)}
+@media(min-width:900px){.nav-links{display:flex}.cta{margin-left:var(--s4)}}
+
+/* header */
+.head{padding:140px var(--pad-x) var(--s6);border-bottom:1px solid var(--line);background:
+ linear-gradient(rgba(22,24,29,.045) 1px,transparent 1px) 0 0/100% 33.4%,
+ linear-gradient(90deg,rgba(22,24,29,.045) 1px,transparent 1px) 0 0/25% 100%}
+.kicker{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.16em;color:var(--org-deep);text-transform:uppercase;margin-bottom:var(--s3)}
+.kicker::before{content:"";width:8px;height:8px;background:var(--org)}
+.head h1{font-size:var(--step-4)}
+.head h1 em{font-style:normal;color:var(--org)}
+.head p{color:var(--grey);max-width:58ch;margin-top:var(--s3);font-size:var(--step-1);line-height:1.5}
+
+/* calc tabs */
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;padding:var(--s5) var(--pad-x) 0;max-width:1380px;margin-inline:auto}
+.tab{font-size:.86rem;font-weight:550;padding:.8rem 1.25rem;border:1px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);cursor:pointer;min-height:44px;transition:all .2s}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab:hover:not([aria-selected="true"]){background:var(--raised)}
+
+.calc{display:none;padding:var(--s6) 0 var(--s7)}
+.calc.on{display:block}
+
+.calc-grid{display:grid;gap:var(--s5)}
+@media(min-width:1020px){.calc-grid{grid-template-columns:1fr 1.25fr;align-items:start}}
+
+/* input panel */
+.panel{border:1px solid var(--line);background:#fff;position:relative;border-radius:3px}
+
+.panel-h{padding:var(--s4);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.panel-h .t{font-weight:600;letter-spacing:-.02em;font-size:var(--step-1)}
+.unit-tog{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.unit-tog button{font-family:var(--font-m);font-size:.7rem;font-weight:700;letter-spacing:.1em;padding:.55rem .9rem;background:#fff;border:none;cursor:pointer;color:var(--ink);min-height:40px}
+.unit-tog button[aria-pressed="true"]{background:var(--org);color:#fff}
+.fields{padding:var(--s4)}
+.f{margin-bottom:var(--s4)}
+.f label{display:flex;justify-content:space-between;font-family:var(--font-m);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:.45rem}
+.f label b{color:var(--org-deep);font-weight:700}
+.in{display:flex}
+.in input{flex:1;min-width:0;border:1px solid var(--line);border-right:none;background:var(--base);padding:.8rem 1rem;font-family:var(--font-m);font-size:1rem;color:var(--ink);min-height:48px}
+.in input:focus-visible{outline:2px solid var(--org);outline-offset:-1px;border-color:var(--org)}
+.in .u{border:1px solid var(--line);background:var(--raised);font-family:var(--font-m);font-size:.7rem;letter-spacing:.08em;color:var(--grey);display:flex;align-items:center;padding:0 .9rem;min-width:64px;justify-content:center}
+.slider{width:100%;accent-color:var(--org);margin-top:.5rem;height:24px}
+.hint{font-family:var(--font-m);font-size:.66rem;color:var(--grey2);letter-spacing:.06em;margin-top:.4rem;line-height:1.6}
+
+/* SVG cylinder diagram */
+.diag{padding:var(--s4);border-bottom:1px solid var(--hair);background:var(--raised)}
+.diag svg{width:100%;height:auto;display:block}
+
+/* results */
+.res-wrap{display:grid;gap:var(--s4)}
+.res-head{display:flex;align-items:baseline;gap:var(--s3);border-bottom:1px solid var(--line);padding-bottom:var(--s2)}
+.res-head .mono{color:var(--grey)}
+.res-cols{display:grid;gap:var(--s4)}
+@media(min-width:640px){.res-cols{grid-template-columns:1fr 1fr}}
+.side{border:1px solid var(--line);background:#fff;border-radius:3px;overflow:hidden}
+.side .sh{padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);font-family:var(--font-m);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between}
+.side.bore .sh{background:var(--org);color:#fff}
+.side.rod .sh{background:var(--ink);color:#fff}
+.r{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);padding:.85rem var(--s4);border-bottom:1px solid var(--hair)}
+.r:last-child{border-bottom:none}
+.r .k{font-family:var(--font-m);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+.r .v{font-weight:600;letter-spacing:-.02em;font-size:var(--step-1);text-align:right;white-space:nowrap}
+.r .v small{font-size:.55em;color:var(--grey);font-weight:600}
+.hero-r{grid-column:1/-1;border:1px solid var(--line);background:var(--raised);border-radius:3px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s4)}
+.hero-r .k{font-family:var(--font-m);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.hero-r .v{font-weight:600;letter-spacing:-.03em;font-size:var(--step-3);color:var(--org-deep);line-height:1}
+.hero-r .v small{font-size:.4em;color:var(--ink)}
+
+/* simple single-column result list (pump/motor/press) */
+.list-res{border:1px solid var(--line);background:#fff;border-radius:3px}
+
+.note{font-family:var(--font-m);font-size:.66rem;line-height:1.8;color:var(--grey2);letter-spacing:.04em;max-width:80ch;margin-top:var(--s5)}
+.formula{margin-top:var(--s4);border-left:2px solid var(--org);border-radius:0 3px 3px 0;background:var(--raised);padding:var(--s3) var(--s4);font-family:var(--font-m);font-size:.72rem;line-height:2;color:var(--grey);overflow-x:auto}
+.formula b{color:var(--ink)}
+
+/* CTA band */
+.band{background:var(--org);color:#fff;padding:var(--s6) var(--pad-x);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}
+.band h2{font-size:var(--step-2);font-weight:500;letter-spacing:-.03em}
+.band a{background:var(--ink);color:#fff;font-size:.88rem;font-weight:550;border-radius:2px;padding:.95rem 1.5rem;display:inline-flex;gap:.7rem;transition:transform .2s var(--ease)}
+.band a:hover{transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--line);padding:var(--s5) var(--pad-x);display:flex;flex-wrap:wrap;gap:var(--s3);justify-content:space-between;font-family:var(--font-m);font-size:.68rem;letter-spacing:.1em;color:var(--grey2);text-transform:uppercase}
+footer a:hover{color:var(--ink)}
+
+@media (prefers-reduced-motion: reduce){*{transition-duration:.01ms!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span>Jagdamba</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="products.html">Products</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="expos.html">Exhibitions</a>
+    <a class="on" href="calculators.html" aria-current="page">Calculators</a>
+  </nav>
+  <a class="cta" href="contact.html">Request a quote →</a>
+</header>
+
+<section class="head">
+  <p class="kicker">Engineering toolkit · free for the trade</p>
+  <h1>Calculate the <em>force</em>.</h1>
+  <p>The same first-principles math our engineers use to size your machine. Cylinder force &amp; speed, pump output, motor power and press tonnage — live, in metric or inch.</p>
+</section>
+
+<div class="tabs" role="tablist" aria-label="Calculator">
+  <button class="tab" role="tab" aria-selected="true"  data-c="cyl">Cylinder</button>
+  <button class="tab" role="tab" aria-selected="false" data-c="pump">Pump</button>
+  <button class="tab" role="tab" aria-selected="false" data-c="motor">Motor Power</button>
+  <button class="tab" role="tab" aria-selected="false" data-c="press">Press Tonnage</button>
+</div>
+
+<!-- ================= CYLINDER ================= -->
+<section class="calc on container" id="c-cyl">
+  <div class="calc-grid">
+    <div class="panel">
+      <div class="panel-h">
+        <span class="t">Cylinder inputs</span>
+        <div class="unit-tog" role="group" aria-label="Units">
+          <button id="uMet" aria-pressed="true">Metric</button>
+          <button id="uInc" aria-pressed="false">Inch</button>
+        </div>
+      </div>
+      <div class="diag" aria-hidden="true">
+        <svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono,monospace" font-size="11">
+          <!-- barrel -->
+          <rect x="60" y="45" width="260" height="80" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <rect x="48" y="38" width="14" height="94" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <rect x="318" y="38" width="14" height="94" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <!-- piston -->
+          <rect x="200" y="50" width="22" height="70" fill="#e8521d"/>
+          <!-- rod -->
+          <rect x="222" y="73" width="240" height="24" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <circle cx="486" cy="85" r="22" fill="none" stroke="#191b1f" stroke-width="2"/>
+          <circle cx="486" cy="85" r="9" fill="none" stroke="#e8521d" stroke-width="2"/>
+          <!-- dims -->
+          <line x1="36" y1="45" x2="36" y2="125" stroke="#c2410c" stroke-width="1"/>
+          <line x1="30" y1="45" x2="42" y2="45" stroke="#c2410c"/><line x1="30" y1="125" x2="42" y2="125" stroke="#c2410c"/>
+          <text x="10" y="90" fill="#c2410c">D</text>
+          <line x1="340" y1="106" x2="340" y2="130" stroke="#c2410c" stroke-width="1"/>
+          <line x1="334" y1="73" x2="346" y2="73" stroke="#c2410c"/><line x1="334" y1="97" x2="346" y2="97" stroke="#c2410c"/>
+          <line x1="340" y1="73" x2="340" y2="97" stroke="#c2410c"/>
+          <text x="350" y="115" fill="#c2410c">d</text>
+          <line x1="62" y1="150" x2="318" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
+          <text x="160" y="165" fill="#5d6066">stroke L</text>
+          <text x="66" y="36" fill="#5d6066">P, Q →</text>
+        </svg>
+      </div>
+      <div class="fields">
+        <div class="f"><label for="cD"><span>Piston / bore diameter <b>D</b></span></label>
+          <div class="in"><input id="cD" type="number" inputmode="decimal" min="0" step="any" value="100"><span class="u" data-u="len">mm</span></div>
+          <input class="slider" type="range" id="cDs" min="10" max="500" value="100" aria-label="Bore diameter slider">
+        </div>
+        <div class="f"><label for="cd"><span>Rod diameter <b>d</b></span></label>
+          <div class="in"><input id="cd" type="number" inputmode="decimal" min="0" step="any" value="56"><span class="u" data-u="len">mm</span></div>
+          <input class="slider" type="range" id="cds" min="5" max="400" value="56" aria-label="Rod diameter slider">
+        </div>
+        <div class="f"><label for="cL"><span>Stroke <b>L</b></span></label>
+          <div class="in"><input id="cL" type="number" inputmode="decimal" min="0" step="any" value="500"><span class="u" data-u="len">mm</span></div>
+        </div>
+        <div class="f"><label for="cP"><span>Pressure <b>P</b></span></label>
+          <div class="in"><input id="cP" type="number" inputmode="decimal" min="0" step="any" value="210"><span class="u" data-u="prs">bar</span></div>
+        </div>
+        <div class="f" style="margin-bottom:0"><label for="cQ"><span>Oil flow <b>Q</b></span></label>
+          <div class="in"><input id="cQ" type="number" inputmode="decimal" min="0" step="any" value="40"><span class="u" data-u="flw">lpm</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-wrap" aria-live="polite">
+      <div class="hero-r"><span class="k">Push force @ bore side</span><span class="v" id="rForce">—<small> kN</small></span></div>
+      <div class="res-cols">
+        <div class="side bore">
+          <div class="sh"><span>Bore side</span><span>extend ▸</span></div>
+          <div class="r"><span class="k">Area</span><span class="v" id="bA">—</span></div>
+          <div class="r"><span class="k">Volume</span><span class="v" id="bV">—</span></div>
+          <div class="r"><span class="k">Force</span><span class="v" id="bF">—</span></div>
+          <div class="r"><span class="k">Time (full stroke)</span><span class="v" id="bT">—</span></div>
+          <div class="r"><span class="k">Velocity</span><span class="v" id="bVel">—</span></div>
+          <div class="r"><span class="k">Outflow (rod end)</span><span class="v" id="bOut">—</span></div>
+        </div>
+        <div class="side rod">
+          <div class="sh"><span>Rod side</span><span>◂ retract</span></div>
+          <div class="r"><span class="k">Annulus area</span><span class="v" id="rA">—</span></div>
+          <div class="r"><span class="k">Volume</span><span class="v" id="rV">—</span></div>
+          <div class="r"><span class="k">Force</span><span class="v" id="rF">—</span></div>
+          <div class="r"><span class="k">Time (full stroke)</span><span class="v" id="rT">—</span></div>
+          <div class="r"><span class="k">Velocity</span><span class="v" id="rVel">—</span></div>
+          <div class="r"><span class="k">Outflow (bore end)</span><span class="v" id="rOut">—</span></div>
+        </div>
+      </div>
+      <div class="hero-r" style="background:#fff"><span class="k">Area ratio (regeneration factor) — A<sub>bore</sub> : A<sub>rod</sub></span><span class="v" id="rRatio" style="color:var(--ink)">—</span></div>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+        <div class="formula">
+          <b>A</b> = π/4 · D² &nbsp;·&nbsp; <b>A<sub>rod</sub></b> = π/4 · (D² − d²)<br>
+          <b>F</b> = P · A &nbsp;·&nbsp; <b>V</b> = A · L &nbsp;·&nbsp; <b>v</b> = Q / A &nbsp;·&nbsp; <b>t</b> = V / Q &nbsp;·&nbsp; <b>Q<sub>out</sub></b> = Q · A<sub>opposite</sub> / A<sub>driven</sub>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUMP ================= -->
+<section class="calc container" id="c-pump">
+  <div class="calc-grid">
+    <div class="panel">
+      <div class="panel-h"><span class="t">Pump inputs</span></div>
+      <div class="diag" aria-hidden="true">
+        <svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono,monospace" font-size="11">
+          <rect x="150" y="40" width="150" height="90" rx="8" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <circle cx="200" cy="85" r="26" fill="none" stroke="#191b1f" stroke-width="2"/>
+          <circle cx="250" cy="85" r="26" fill="none" stroke="#e8521d" stroke-width="2"/>
+          <circle cx="200" cy="85" r="5" fill="#191b1f"/><circle cx="250" cy="85" r="5" fill="#e8521d"/>
+          <path d="M118 85h32" stroke="#191b1f" stroke-width="2"/>
+          <rect x="64" y="63" width="54" height="44" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <text x="74" y="89" fill="#191b1f">n,T</text>
+          <path d="M300 65h70M300 105h70" stroke="#191b1f" stroke-width="2"/>
+          <path d="M370 60l16 5-16 5zM370 100l16 5-16 5z" fill="#e8521d"/>
+          <text x="396" y="70" fill="#c2410c">Q out</text>
+          <text x="396" y="110" fill="#5d6066">Δp</text>
+          <text x="156" y="32" fill="#5d6066">gear pump · Vg cc/rev</text>
+          <line x1="40" y1="150" x2="520" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+      <div class="fields">
+        <div class="f"><label for="pVg"><span>Displacement <b>Vg</b></span></label>
+          <div class="in"><input id="pVg" type="number" min="0" step="any" value="28"><span class="u">cc/rev</span></div></div>
+        <div class="f"><label for="pN"><span>Shaft speed <b>n</b></span></label>
+          <div class="in"><input id="pN" type="number" min="0" step="any" value="1440"><span class="u">rpm</span></div>
+          <p class="hint">1440 rpm = 4-pole motor @ 50 Hz (India standard)</p></div>
+        <div class="f"><label for="pP"><span>Pressure <b>Δp</b></span></label>
+          <div class="in"><input id="pP" type="number" min="0" step="any" value="210"><span class="u">bar</span></div></div>
+        <div class="f" style="margin-bottom:0"><label for="pE"><span>Overall efficiency <b>η</b></span></label>
+          <div class="in"><input id="pE" type="number" min="1" max="100" step="any" value="90"><span class="u">%</span></div></div>
+      </div>
+    </div>
+    <div class="res-wrap" aria-live="polite">
+      <div class="hero-r"><span class="k">Theoretical flow rate</span><span class="v" id="puQ">—<small> lpm</small></span></div>
+      <div class="list-res">
+        <div class="r"><span class="k">Shaft torque required</span><span class="v" id="puT">—</span></div>
+        <div class="r"><span class="k">Hydraulic power output</span><span class="v" id="puPh">—</span></div>
+        <div class="r"><span class="k">Input (shaft) power @ η</span><span class="v" id="puPi">—</span></div>
+        <div class="r"><span class="k">Input power</span><span class="v" id="puHp">—</span></div>
+      </div>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+        <div class="formula"><b>Q</b> = Vg·n / 1000 [lpm] &nbsp;·&nbsp; <b>T</b> = Vg·Δp / (20π) [N·m] &nbsp;·&nbsp; <b>P<sub>hyd</sub></b> = Q·Δp / 600 [kW] &nbsp;·&nbsp; <b>P<sub>in</sub></b> = P<sub>hyd</sub> / η</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOTOR ================= -->
+<section class="calc container" id="c-motor">
+  <div class="calc-grid">
+    <div class="panel">
+      <div class="panel-h"><span class="t">Motor sizing inputs</span></div>
+      <div class="diag" aria-hidden="true">
+        <svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono,monospace" font-size="11">
+          <rect x="70" y="50" width="130" height="74" rx="6" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <path d="M86 50v-10h98v10M110 124v14M160 124v14" stroke="#191b1f" stroke-width="2" fill="none"/>
+          <text x="92" y="92" fill="#191b1f">M  kW?</text>
+          <path d="M200 87h36" stroke="#191b1f" stroke-width="2"/>
+          <rect x="216" y="77" width="14" height="20" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <circle cx="290" cy="87" r="34" fill="#fff" stroke="#e8521d" stroke-width="2"/>
+          <circle cx="290" cy="87" r="6" fill="#e8521d"/>
+          <text x="262" y="42" fill="#5d6066">pump · η</text>
+          <path d="M324 87h80" stroke="#191b1f" stroke-width="2"/>
+          <path d="M404 82l16 5-16 5z" fill="#e8521d"/>
+          <text x="430" y="80" fill="#c2410c">Q lpm</text>
+          <text x="430" y="104" fill="#5d6066">p bar</text>
+          <line x1="40" y1="150" x2="520" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+      <div class="fields">
+        <div class="f"><label for="mQ"><span>Required flow <b>Q</b></span></label>
+          <div class="in"><input id="mQ" type="number" min="0" step="any" value="40"><span class="u">lpm</span></div></div>
+        <div class="f"><label for="mP"><span>System pressure <b>p</b></span></label>
+          <div class="in"><input id="mP" type="number" min="0" step="any" value="210"><span class="u">bar</span></div></div>
+        <div class="f" style="margin-bottom:0"><label for="mE"><span>Total efficiency <b>η</b> (pump × drive)</span></label>
+          <div class="in"><input id="mE" type="number" min="1" max="100" step="any" value="85"><span class="u">%</span></div>
+          <p class="hint">Typical gear pump systems: 80–90%</p></div>
+      </div>
+    </div>
+    <div class="res-wrap" aria-live="polite">
+      <div class="hero-r"><span class="k">Electric motor power required</span><span class="v" id="moKw">—<small> kW</small></span></div>
+      <div class="list-res">
+        <div class="r"><span class="k">In horsepower</span><span class="v" id="moHp">—</span></div>
+        <div class="r"><span class="k">Nearest standard motor (IS 12615)</span><span class="v" id="moStd">—</span></div>
+        <div class="r"><span class="k">Hydraulic power at actuator</span><span class="v" id="moPh">—</span></div>
+      </div>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+        <div class="formula"><b>P<sub>motor</sub></b> = Q·p / (600·η) [kW] &nbsp;·&nbsp; 1 HP = 0.7457 kW</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESS TONNAGE ================= -->
+<section class="calc container" id="c-press">
+  <div class="calc-grid">
+    <div class="panel">
+      <div class="panel-h"><span class="t">Press tonnage inputs</span></div>
+      <div class="diag" aria-hidden="true">
+        <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono,monospace" font-size="11">
+          <rect x="170" y="150" width="220" height="22" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <rect x="186" y="20" width="12" height="130" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <rect x="362" y="20" width="12" height="130" fill="#fff" stroke="#191b1f" stroke-width="2"/>
+          <rect x="170" y="2" width="220" height="20" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
+          <rect x="252" y="22" width="56" height="40" fill="#fff" stroke="#e8521d" stroke-width="2"/>
+          <rect x="270" y="62" width="20" height="36" fill="#fff" stroke="#e8521d" stroke-width="2"/>
+          <rect x="226" y="98" width="108" height="16" fill="#fff" stroke="#e8521d" stroke-width="2"/>
+          <path d="M280 120v14M275 128l5 8 5-8" fill="none" stroke="#e8521d" stroke-width="2"/>
+          <text x="318" y="135" fill="#c2410c">F = P·A</text>
+          <line x1="252" y1="46" x2="232" y2="46" stroke="#c2410c"/><line x1="308" y1="46" x2="328" y2="46" stroke="#c2410c"/>
+          <line x1="232" y1="38" x2="232" y2="54" stroke="#c2410c"/><line x1="328" y1="38" x2="328" y2="54" stroke="#c2410c"/>
+          <text x="206" y="50" fill="#c2410c">D</text>
+          <text x="402" y="40" fill="#5d6066">P bar →</text>
+          <line x1="40" y1="182" x2="520" y2="182" stroke="#5d6066" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+      <div class="fields">
+        <div class="f"><label for="tD"><span>Main cylinder bore <b>D</b></span></label>
+          <div class="in"><input id="tD" type="number" min="0" step="any" value="320"><span class="u">mm</span></div>
+          <input class="slider" type="range" id="tDs" min="50" max="800" value="320" aria-label="Bore slider"></div>
+        <div class="f" style="margin-bottom:0"><label for="tP"><span>Working pressure <b>P</b></span></label>
+          <div class="in"><input id="tP" type="number" min="0" step="any" value="250"><span class="u">bar</span></div>
+          <p class="hint">Jagdamba presses typically run 200–280 bar working pressure.</p></div>
+      </div>
+    </div>
+    <div class="res-wrap" aria-live="polite">
+      <div class="hero-r"><span class="k">Press capacity</span><span class="v" id="tTon">—<small> tons</small></span></div>
+      <div class="list-res">
+        <div class="r"><span class="k">Force</span><span class="v" id="tKn">—</span></div>
+        <div class="r"><span class="k">Piston area</span><span class="v" id="tA">—</span></div>
+        <div class="r"><span class="k">Closest Jagdamba deep-draw model</span><span class="v" id="tModel" style="color:var(--org-deep)">—</span></div>
+      </div>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+        <div class="formula"><b>F</b> = P · π/4·D² &nbsp;·&nbsp; tons = F[kN] / 9.80665</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <p class="note">DISCLAIMER — Results are based on standard hydraulic system formulas (per ISO 3320 / 3321 / 4393 conventions) and are for preliminary sizing only. Verify all values before design release. Shree Jagdamba Hydropneumatic makes no warranty as to fitness for a particular application — for guaranteed sizing, send us the job.</p>
+</div>
+
+<section class="band">
+  <h2>Numbers look right?<br>Let's build the machine.</h2>
+  <a href="contact.html">Send requirement →</a>
+</section>
+
+<footer>
+  <span>© 2006–2026 Shree Jagdamba Hydropneumatic Inc · Nagpur, India</span>
+  <a href="index.html">← Home</a> · <a href="products.html">Products</a> · <a href="contact.html">Contact</a>
+  <span><a href="https://www.youtube.com/channel/UCjSLqHML-phV8ardP2tjfxQ" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.instagram.com/j_hydro.in/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/JHydraulics/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/in/shree-jagdamba-hydropneumatic-52818a235/" target="_blank" rel="noopener">LinkedIn</a></span>
+</footer>
+
+<script>
+const $=q=>document.querySelector(q);
+const N=(id)=>{const v=parseFloat($(id).value);return isFinite(v)&&v>=0?v:0;};
+
+/* ---------- tabs ---------- */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+  document.querySelectorAll('.calc').forEach(c=>c.classList.remove('on'));
+  t.setAttribute('aria-selected','true');
+  document.getElementById('c-'+t.dataset.c).classList.add('on');
+}));
+
+/* ---------- units ---------- */
+let inch=false;
+const U={len:['mm','in'],prs:['bar','psi'],flw:['lpm','gpm']};
+const CV={len:25.4,prs:.0689476,flw:3.78541}; // inch-unit → metric multiplier
+function setUnits(toInch){
+  if(toInch===inch) return;
+  // convert current field values so the physical quantity is preserved
+  const conv=(id,k)=>{const el=$(id);const v=parseFloat(el.value)||0;
+    el.value=+( toInch ? v/CV[k] : v*CV[k] ).toFixed(3);};
+  conv('#cD','len');conv('#cd','len');conv('#cL','len');conv('#cP','prs');conv('#cQ','flw');
+  inch=toInch;
+  document.querySelectorAll('[data-u]').forEach(s=>s.textContent=U[s.dataset.u][inch?1:0]);
+  $('#uMet').setAttribute('aria-pressed',!inch);$('#uInc').setAttribute('aria-pressed',inch);
+  cyl();
+}
+$('#uMet').addEventListener('click',()=>setUnits(false));
+$('#uInc').addEventListener('click',()=>setUnits(true));
+
+/* ---------- formatting ---------- */
+const fmt=(v,d=2)=>{ if(!isFinite(v))return'—';
+  if(Math.abs(v)>=10000) return v.toLocaleString('en-IN',{maximumFractionDigits:0});
+  if(Math.abs(v)<1) d=3;
+  return v.toLocaleString('en-IN',{maximumFractionDigits:d});};
+const out=(id,v,u)=>{$(id).innerHTML=fmt(v)+(u?` <small>${u}</small>`:'')};
+
+/* ---------- cylinder ---------- */
+function cyl(){
+  // read in current unit, normalize to metric: mm, bar, lpm
+  let D=N('#cD'),d=N('#cd'),L=N('#cL'),P=N('#cP'),Q=N('#cQ');
+  if(inch){D*=CV.len;d*=CV.len;L*=CV.len;P*=CV.prs;Q*=CV.flw;}
+  if(d>=D) d=Math.max(0,D-0.001); // rod cannot exceed bore
+  const Ab=Math.PI/4*D*D/100;            // cm²
+  const Ar=Math.PI/4*(D*D-d*d)/100;      // cm²
+  const Vb=Ab*L/10/1000;                 // litres (cm²·cm → cm³ → l)
+  const Vr=Ar*L/10/1000;
+  const Fb=P*Ab/100;                     // kN  (bar·cm² → daN → /100 kN)
+  const Fr=P*Ar/100;
+  const vb=Q>0?(Q*1000/60)/Ab/100:NaN;   // m/s  (cm³/s ÷ cm² = cm/s → m/s)
+  const vr=Q>0?(Q*1000/60)/Ar/100:NaN;
+  const tb=Q>0?Vb/Q*60:NaN;              // s
+  const tr=Q>0?Vr/Q*60:NaN;
+  const ob=Q*Ar/Ab;                      // rod-end outflow while extending
+  const or_=Q*Ab/Ar;                     // bore-end outflow while retracting
+  const ratio=Ab/Ar;
+
+  if(inch){
+    out('#bA',Ab/6.4516,'in²');out('#rA',Ar/6.4516,'in²');
+    out('#bV',Vb/3.78541,'gal');out('#rV',Vr/3.78541,'gal');
+    out('#bF',Fb*224.809/1000,'lbf ×10³');out('#rF',Fr*224.809/1000,'lbf ×10³');
+    out('#bVel',vb*39.3701,'in/s');out('#rVel',vr*39.3701,'in/s');
+    out('#bOut',ob/3.78541,'gpm');out('#rOut',or_/3.78541,'gpm');
+    out('#rForce',Fb*0.000224809*1000,'×10³ lbf');
+  }else{
+    out('#bA',Ab,'cm²');out('#rA',Ar,'cm²');
+    out('#bV',Vb,'l');out('#rV',Vr,'l');
+    out('#bF',Fb,'kN');out('#rF',Fr,'kN');
+    out('#bVel',vb,'m/s');out('#rVel',vr,'m/s');
+    out('#bOut',ob,'lpm');out('#rOut',or_,'lpm');
+    out('#rForce',Fb,'kN');
+  }
+  out('#bT',tb,'s');out('#rT',tr,'s');
+  $('#rRatio').textContent=isFinite(ratio)?fmt(ratio)+' : 1':'—';
+}
+['#cD','#cd','#cL','#cP','#cQ'].forEach(id=>$(id).addEventListener('input',()=>{
+  if(id==='#cD')$('#cDs').value=$(id).value;
+  if(id==='#cd')$('#cds').value=$(id).value;
+  cyl();}));
+$('#cDs').addEventListener('input',e=>{$('#cD').value=e.target.value;cyl();});
+$('#cds').addEventListener('input',e=>{$('#cd').value=e.target.value;cyl();});
+
+/* ---------- pump ---------- */
+function pump(){
+  const Vg=N('#pVg'),n=N('#pN'),p=N('#pP'),e=Math.min(100,Math.max(1,N('#pE')))/100;
+  const Q=Vg*n/1000;                 // lpm
+  const T=Vg*p/(20*Math.PI);         // N·m
+  const Ph=Q*p/600;                  // kW
+  const Pi=Ph/e;
+  out('#puQ',Q,'lpm');out('#puT',T,'N·m');out('#puPh',Ph,'kW');
+  out('#puPi',Pi,'kW');out('#puHp',Pi/0.7457,'HP');
+}
+['#pVg','#pN','#pP','#pE'].forEach(id=>$(id).addEventListener('input',pump));
+
+/* ---------- motor ---------- */
+const STD=[0.75,1.1,1.5,2.2,3.7,5.5,7.5,11,15,18.5,22,30,37,45,55,75,90,110];
+function motor(){
+  const Q=N('#mQ'),p=N('#mP'),e=Math.min(100,Math.max(1,N('#mE')))/100;
+  const Ph=Q*p/600, Pm=Ph/e;
+  const std=STD.find(s=>s>=Pm);
+  out('#moKw',Pm,'kW');out('#moHp',Pm/0.7457,'HP');out('#moPh',Ph,'kW');
+  $('#moStd').textContent=std?fmt(std)+' kW ('+fmt(std/0.7457,1)+' HP)':'> 110 kW — talk to us';
+}
+['#mQ','#mP','#mE'].forEach(id=>$(id).addEventListener('input',motor));
+
+/* ---------- press tonnage ---------- */
+const SHD=[["SHD-25+10",35],["SHD-35+15",50],["SHD-50+15",65],["SHD-60+25",85],["SHD-75+25",100],["SHD-100+30",130],["SHD-125+40",165],["SHD-150+50",200],["SHD-200+75",275],["SHD-250+75",325],["SHD-300+100",400],["SHD-400+125",525],["SHD-500+150",650]];
+function press(){
+  const D=N('#tD'),P=N('#tP');
+  const A=Math.PI/4*D*D/100;     // cm²
+  const F=P*A/100;               // kN
+  const tons=F/9.80665;
+  out('#tTon',tons,'tons');out('#tKn',F,'kN');out('#tA',A,'cm²');
+  const m=SHD.find(x=>x[1]>=tons);
+  $('#tModel').textContent=m?`${m[0]} (${m[1]} T)`:'Custom build — 650 T+';
+}
+$('#tD').addEventListener('input',()=>{$('#tDs').value=$('#tD').value;press();});
+$('#tDs').addEventListener('input',e=>{$('#tD').value=e.target.value;press();});
+$('#tP').addEventListener('input',press);
+
+cyl();pump();motor();press();
+</script>
+<a class="wa" href="https://wa.me/message/XGLA6ESY3P3MA1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:90;width:54px;height:54px;border-radius:50%;background:#1faf53;display:grid;place-items:center;box-shadow:0 12px 32px rgba(0,0,0,.28)">
+  <svg viewBox="0 0 32 32" style="width:27px;height:27px;fill:#fff" aria-hidden="true"><path d="M16 2.7C8.7 2.7 2.8 8.6 2.8 15.9c0 2.6.8 5 2.1 7L2.7 29.3l6.6-2.1c1.9 1.1 4.2 1.7 6.7 1.7 7.3 0 13.2-5.9 13.2-13.2S23.3 2.7 16 2.7zm0 24c-2.2 0-4.3-.6-6-1.7l-.4-.3-3.9 1.2 1.3-3.8-.3-.4a10.7 10.7 0 1 1 9.3 5zm6-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2s-.9 1.1-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.6-.6-.5-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2.8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+</body>
+</html>

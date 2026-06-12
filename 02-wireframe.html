@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JAGDAMBA — UX Wireframe</title>
+<style>
+  :root{--ink:#2b2b2b;--line:#b9b9b9;--fill:#e9e9e9;--fill2:#f6f6f6;--note:#c2410c;}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fafafa;color:var(--ink);padding:24px;line-height:1.45}
+  .frame{max-width:1080px;margin:0 auto;border:2px solid var(--ink)}
+  .wf{border-bottom:2px dashed var(--line);padding:20px;position:relative}
+  .wf:last-child{border-bottom:none}
+  .tag{position:absolute;top:-1px;right:-1px;background:var(--ink);color:#fff;font-size:11px;padding:3px 10px;letter-spacing:.08em}
+  .note{color:var(--note);font-size:11.5px;margin-top:10px}
+  .box{border:1.5px solid var(--ink);background:var(--fill2);padding:14px;text-align:center}
+  .img{background:repeating-linear-gradient(45deg,#ddd 0 8px,#eee 8px 16px);border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;color:#777;font-size:11px;min-height:70px}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .row>*{flex:1;min-width:140px}
+  h1{font-size:15px;letter-spacing:.12em;margin-bottom:6px}
+  .meta{font-size:12px;color:#666;margin-bottom:22px;max-width:1080px;margin-inline:auto;padding:0 2px}
+  .big{font-size:26px;font-weight:800;letter-spacing:.03em}
+  .pill{display:inline-block;border:1.5px solid var(--ink);border-radius:99px;padding:5px 14px;font-size:11px;margin:3px}
+  .pill.solid{background:var(--ink);color:#fff}
+  table{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}
+  td,th{border:1px solid var(--line);padding:5px 8px;text-align:left}
+  .mob{margin:34px auto 0;max-width:340px}
+  .mob .frame{border-radius:18px;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>JAGDAMBA / jhydro.in — HOMEPAGE WIREFRAME · v1</h1>
+  Annotations in <span style="color:var(--note)">orange</span> describe behavior &amp; motion. Desktop flow first, mobile pattern at bottom.
+</div>
+
+<div class="frame">
+
+  <div class="wf"><span class="tag">0 · NAV (sticky)</span>
+    <div class="row" style="align-items:center">
+      <div class="box" style="max-width:140px">LOGO</div>
+      <div class="box" style="flex:3">Products · Configurator · Engineering · Services · Contact</div>
+      <div class="box" style="max-width:160px;background:#ddd"><b>GET QUOTE ▸</b></div>
+    </div>
+    <div class="note">Slim 64px bar, translucent over hero, gains solid bg after 80px scroll (GSAP). Mobile: hamburger → fullscreen overlay menu.</div>
+  </div>
+
+  <div class="wf"><span class="tag">1 · HERO (100vh)</span>
+    <div class="row">
+      <div style="flex:1.3">
+        <div style="font-size:11px">EST. 2006 · NAGPUR, INDIA</div>
+        <div class="big" style="font-size:40px;margin:10px 0">ENGINEERED<br>FORCE.</div>
+        <div class="box" style="text-align:left;font-size:12px">Sub: presses 25–650T, cylinders, power packs… built &amp; serviced from the center of India.</div>
+        <div style="margin-top:10px"><span class="pill solid">EXPLORE MACHINES ▸</span><span class="pill">REQUEST QUOTE</span></div>
+      </div>
+      <div class="img" style="flex:1;min-height:220px">THREE.JS CANVAS<br>wireframe hydraulic cylinder,<br>piston cycles w/ scroll</div>
+    </div>
+    <div class="box" style="margin-top:12px;font-size:11px">∞ MARQUEE: DEEP DRAW PRESS ◆ HYDRAULIC CYLINDERS ◆ POWER PACKS ◆ MANIFOLDS ◆ …</div>
+    <div class="note">Headline chars clip-reveal upward on load. Canvas: lazy-init, paused off-screen, disabled on prefers-reduced-motion (static SVG fallback). Marquee = CSS transform loop.</div>
+  </div>
+
+  <div class="wf"><span class="tag">2 · PROOF BAR</span>
+    <div class="row">
+      <div class="box"><div class="big">20</div>years</div>
+      <div class="box"><div class="big">650T</div>max press capacity</div>
+      <div class="box"><div class="big">30+</div>machine types</div>
+      <div class="box"><div class="big">100%</div>made in India</div>
+    </div>
+    <div class="note">Counters roll up on ScrollTrigger enter, once.</div>
+  </div>
+
+  <div class="wf"><span class="tag">3 · PRODUCT INDEX</span>
+    <div class="box" style="text-align:left">01 — HYDRAULIC PRESSES <span style="float:right">25–650 T ▸</span></div>
+    <div class="box" style="text-align:left">02 — HYDRAULIC CYLINDERS <span style="float:right">mill · heavy · telescopic ▸</span></div>
+    <div class="box" style="text-align:left">03 — POWER PACKS ▸</div>
+    <div class="box" style="text-align:left">04 — MANIFOLD BLOCKS <span style="float:right">lift · PCM · sequence ▸</span></div>
+    <div class="box" style="text-align:left">05 — CYLINDER KITS ▸</div>
+    <div class="note">Editorial index rows. Desktop hover: row inverts + floating image preview follows cursor. Rows stagger-reveal. Mobile: rows become cards w/ inline image.</div>
+  </div>
+
+  <div class="wf"><span class="tag">4 · PRESS CONFIGURATOR ★ centerpiece</span>
+    <div><span class="pill solid">DEEP DRAW</span><span class="pill">4-COLUMN</span><span class="pill">C-TYPE</span><span class="pill">RUBBER MOLDING</span></div>
+    <div class="row" style="margin-top:10px">
+      <div class="box" style="flex:1.2;text-align:left">TONNAGE CHIPS:<br><span class="pill">35</span><span class="pill solid">100</span><span class="pill">200</span><span class="pill">325</span><span class="pill">650</span>…</div>
+      <div style="flex:2">
+        <table>
+          <tr><th>MODEL</th><td>SHD-75+25</td><th>MOTOR</th><td>15 HP</td></tr>
+          <tr><th>TABLE</th><td>650×700 mm</td><th>STROKE</th><td>450 mm</td></tr>
+          <tr><th>DAYLIGHT</th><td>800 mm</td><th>CUSHION</th><td>200 mm</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="note">Data = brochure model charts verbatim. Switching chip animates numbers (GSAP tween) + capacity gauge bar. Disclaimer: "specs customizable per requirement."</div>
+  </div>
+
+  <div class="wf"><span class="tag">5 · ENGINEERING PROCESS</span>
+    <div class="row">
+      <div class="box">01 FEA-DESIGNED FRAMES</div>
+      <div class="box">02 ULTRASONIC-TESTED STEEL</div>
+      <div class="box">03 PRECISION MACHINING</div>
+      <div class="box">04 RELIABLE DRIVE SYSTEM</div>
+    </div>
+    <div class="note">Inverted "paper" section (light bg) — spec-sheet aesthetic. Cards reveal with dimension-line rules drawing in.</div>
+  </div>
+
+  <div class="wf"><span class="tag">6 · SERVICES</span>
+    <div class="row">
+      <div class="box" style="flex:1.3;text-align:left"><b>WE KEEP THEM RUNNING.</b><br><span style="font-size:11px">Cylinder · power pack · press · manifold · valve repair, retrofits</span></div>
+      <div class="box">☎ PHONE-FIRST CTA<br>+91 93720 72041</div>
+    </div>
+    <div class="note">Urgency framing for breakdown traffic; tel: link + WhatsApp deep link.</div>
+  </div>
+
+  <div class="wf"><span class="tag">7 · INDUSTRIES + TESTIMONIALS</span>
+    <div><span class="pill">UTENSILS</span><span class="pill">AUTO</span><span class="pill">FRP</span><span class="pill">RUBBER</span><span class="pill">STEEL</span><span class="pill">CEMENT</span><span class="pill">POWER</span><span class="pill">RAIL</span></div>
+    <div class="box" style="margin-top:10px;text-align:left">“ Oversized quote — production capacity increased… ” — Naresh Malhotra, Bhandara &nbsp; <span style="float:right">◂ 1/3 ▸</span></div>
+    <div class="note">3 real testimonials, auto-advance, swipe on mobile.</div>
+  </div>
+
+  <div class="wf"><span class="tag">8 · CONTACT + FOOTER</span>
+    <div class="row">
+      <div class="box" style="text-align:left">QUOTE FORM<br><span style="font-size:11px">name / phone / product select / message → submit</span></div>
+      <div class="box" style="text-align:left">MIDC Butibori, Nagpur<br>Mon–Sun 9–7 (Wed closed)<br>4 emails · 2 phones · WhatsApp</div>
+    </div>
+    <div class="box" style="margin-top:10px;font-size:11px">FOOTER: sitemap columns · Make in India mark · social · ©</div>
+  </div>
+</div>
+
+<div class="mob">
+  <div class="meta" style="margin-bottom:8px"><h1>MOBILE PATTERN (375px)</h1></div>
+  <div class="frame">
+    <div class="wf"><span class="tag">stacked</span>
+      <div class="box">LOGO ☰</div>
+      <div class="img" style="min-height:120px;margin:8px 0">3D (perf-capped DPR)</div>
+      <div class="box"><b>ENGINEERED FORCE.</b></div>
+      <div class="box" style="background:#ddd">GET QUOTE ▸ (full-width, 48px)</div>
+      <div class="note">Everything single-column; configurator chips scroll horizontally; index rows → cards; sticky bottom-right WhatsApp FAB.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
