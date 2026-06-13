@@ -46,7 +46,7 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 @media(min-width:900px){.nav-links{display:flex}.cta{margin-left:var(--s4)}}
 
 /* header */
-.head{padding:140px var(--pad-x) var(--s6);border-bottom:1px solid var(--line);background:
+.head{padding:clamp(104px,15vh,140px) var(--pad-x) clamp(2rem,6vh,var(--s6));border-bottom:1px solid var(--line);background:
  linear-gradient(rgba(22,24,29,.045) 1px,transparent 1px) 0 0/100% 33.4%,
  linear-gradient(90deg,rgba(22,24,29,.045) 1px,transparent 1px) 0 0/25% 100%}
 .kicker{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.16em;color:var(--org-deep);text-transform:uppercase;margin-bottom:var(--s3)}
@@ -516,7 +516,7 @@ function press(){
   const tons=F/9.80665;
   out('#tTon',tons,'tons');out('#tKn',F,'kN');out('#tA',A,'cm²');
   const m=SHD.find(x=>x[1]>=tons);
-  $('#tModel').textContent=m?`${m[0]} (${m[1]} T)`:'Custom build — 650 T+';
+  $('#tModel').textContent=m?`${m[0]} (${m[1]} T)`:'Servo / custom build — up to 1,000 T';
 }
 $('#tD').addEventListener('input',()=>{$('#tDs').value=$('#tD').value;press();});
 $('#tDs').addEventListener('input',e=>{$('#tD').value=e.target.value;press();});

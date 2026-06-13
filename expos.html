@@ -71,7 +71,7 @@ section{position:relative}
 .mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
@@ -142,6 +142,10 @@ table.data .cap{color:var(--org-deep);font-weight:500}
 .t-item::before{content:"";position:absolute;left:calc(5px - clamp(1.4rem,4vw,3rem));top:6px;width:11px;height:11px;border-radius:50%;background:var(--org);transform:translateX(-5px);box-shadow:0 0 0 5px var(--white)}
 .t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--org-deep)}
 .t-item h3{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;margin:.5rem 0 .6rem}
+.t-item .lhead{display:flex;align-items:center;gap:1rem;margin:.5rem 0 .2rem}
+.logo-slot{flex:none;width:64px;height:64px;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;font-family:var(--mono);font-size:.52rem;letter-spacing:.05em;color:var(--ink-40);text-align:center;background:repeating-linear-gradient(-45deg,var(--grey-50) 0 10px,var(--white) 10px 20px)}
+.logo-slot img{width:100%;height:100%;object-fit:contain;border-radius:3px;background:#fff}
+.t-item .lhead h3{margin:0}
 .t-item .where{font-family:var(--mono);font-size:.74rem;color:var(--ink-40);margin-bottom:var(--s3)}
 .t-item p{color:var(--ink-60);max-width:56ch;font-size:var(--t-sm);line-height:1.7}
 .t-item .ph{margin-top:var(--s4);aspect-ratio:16/7;max-width:680px;border:1px solid var(--hair);background:
@@ -201,7 +205,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 <section class="phero" id="top">
   <p class="label rv in">Exhibitions</p>
   <h1 class="rv in">Where the machines<br>meet the <em>industry</em>.</h1>
-  <p class="sub rv in">Jagdamba exhibits at <strong>national and international</strong> industrial expos — running presses live on the stand, talking specs engineer-to-engineer, and bringing back what the industry asks for next.</p>
+  <p class="sub rv in">Jagdamba has exhibited at <strong>nine national and international</strong> expos since 2021 — running presses live on the stand, talking specs engineer-to-engineer, and bringing back what the industry asks for next.</p>
   <div class="heroctas rv in">
     <a class="btn" href="#invite">Invite us to your show <span class="arr">→</span></a>
     <a class="btn-quiet" href="contact.html">Book a stand meeting</a>
@@ -223,22 +227,54 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 <section class="sect container" style="padding-top:0">
   <div class="sect-head rv">
     <div><p class="label">Exhibition record</p><h2>Recent &amp; upcoming shows.</h2></div>
-    <p>A growing calendar across India's industrial-belt expos and international fluid-power shows. Entries below are updated after every event — photographs from each stand included.</p>
+    <p>Nine shows and counting across India's industrial belts — Raipur to Chennai, Pune to Hyderabad — including the international sourcing circuit (IESS). Logo and photo slots below are ready for each show's imagery.</p>
   </div>
   <div class="timeline">
-    <div class="t-item rv"><span class="when">Upcoming</span><h3>Next show — to be announced</h3>
-      <p class="where">Watch this space · follow us on <a href="https://www.instagram.com/j_hydro.in/" target="_blank" rel="noopener" style="color:var(--org-deep)">Instagram</a> for the announcement</p>
-      <p>Stand details, hall and machine line-up will be published here ahead of the event.</p></div>
-    <div class="t-item rv"><span class="when">August 2023</span><h3>Industrial exhibition — Jagdamba stand</h3>
-      <p class="where">India</p>
-      <p>Our team exhibited the press and cylinder range, meeting OEMs, plant heads and fabricators across the industry.</p>
+    <div class="t-item rv"><span class="when">Upcoming · 20–24 Aug 2026</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>HIMTEX 2026 — Hyderabad International Machine Tool &amp; Engineering Expo</h3></div>
+      <p class="where">HITEX Exhibition Centre, Hyderabad · Stall 3A-47</p>
+      <p>The 9th edition — meet the Jagdamba team at stall <strong>3A-47</strong>: presses, cylinders and the hybrid-servo retrofit system on display. Free visitor registration on the organiser's site.</p>
+      <div class="ph">Stand photo — add after the show</div></div>
+    <div class="t-item rv"><span class="when">8–11 Jan 2026</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>MASSIA's Advantage Maharashtra Expo 2026</h3></div>
+      <p class="where">Chh. Sambhajinagar · Hall A1, Stall 1 &amp; 2</p>
+      <p>Back with MASSIA — a two-stall presence with a working press and the cylinder range, serving Marathwada's small-scale industry belt.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">27–29 Nov 2024</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>IESS XII — International Engineering Sourcing Show</h3></div>
+      <p class="where">Chennai Trade Centre · Hall 1, Booth H1-U12</p>
+      <p>EEPC India's flagship sourcing show — Jagdamba among India's engineering exporters meeting international buyers.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">4–6 Mar 2024</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>IESS IX — International Engineering Sourcing Show</h3></div>
+      <p class="where">CODISSIA Trade Fair Complex, Coimbatore · Hall C, Booth H3-P01</p>
+      <p>Our first IESS outing — presses and cylinder kits in front of the South's machine-building cluster.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">2–4 Nov 2023</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>IMS 2023 — 6th India Manufacturing Show</h3></div>
+      <p class="where">BIEC, Tumkur Road, Bengaluru · Hall 1, Stall H1E5</p>
+      <p>A 4-column press on display at Bengaluru's manufacturing showcase.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">18–21 Aug 2023</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>HIMTEX 2023 — Hyderabad International Machine Tool &amp; Engineering Expo</h3></div>
+      <p class="where">HITEX, Hyderabad · Hall 3, Stall 3A03</p>
+      <p>Our first HIMTEX — machine tools, automation and the Jagdamba press range; the show we return to in 2026.</p>
       <div class="ph">Stand photo — August 2023 (from jhydro.in gallery)</div></div>
-    <div class="t-item tpl rv"><span class="when">[Year]</span><h3>[Add show name]</h3>
-      <p class="where">[City · Hall · Stall no.]</p>
-      <p>[One line on what was exhibited — template entry for the Jagdamba team to complete from expo records.]</p></div>
-    <div class="t-item tpl rv"><span class="when">[Year]</span><h3>[Add show name]</h3>
-      <p class="where">[City · Hall · Stall no.]</p>
-      <p>[Template entry — duplicate this block for every past national or international show.]</p></div>
+    <div class="t-item rv"><span class="when">25–28 May 2023</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>Globe-Tech Engineering Expo, 8th edition</h3></div>
+      <p class="where">Auto Cluster Exhibition Centre, Chinchwad, Pune · Stall A-14</p>
+      <p>Pune's engineering and manufacturing exhibition — four days with the western auto-component belt.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">5–8 Jan 2023</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>Advantage Maharashtra Expo 2023 (MASSIA)</h3></div>
+      <p class="where">AURIC, DMIC Shendra, Aurangabad · Stall A-52</p>
+      <p>A full stand with a live deep-draw press — our machines in front of Marathwada's fabricators.</p>
+      <div class="ph">Stand photo — to be added</div></div>
+    <div class="t-item rv"><span class="when">10–12 Dec 2021</span>
+      <div class="lhead"><span class="logo-slot">Logo<br>— add</span><h3>National Expo — Steel · Power · Cement · Mining (11th year)</h3></div>
+      <p class="where">International Hockey Stadium (Science College Ground), Raipur, C.G. · Stall D-21</p>
+      <p>Where the exhibition record begins — Industry 4.0-focused show in Chhattisgarh's steel belt, 100+ exhibitors.</p>
+      <div class="ph">Stand photo — to be added</div></div>
   </div>
 </section>
 
@@ -284,7 +320,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
     <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
-      Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
+      Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>
       <a href="about.html">About</a><br><a href="expos.html">Exhibitions</a><br><a href="services.html">Services</a><br><a href="calculators.html">Calculators</a></div>

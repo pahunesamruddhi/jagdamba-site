@@ -71,7 +71,7 @@ section{position:relative}
 .mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
@@ -247,7 +247,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <div class="container snav-in">
     <a href="#presses">Presses</a><a href="#cylinders">Cylinders</a><a href="#power-packs">Power packs</a>
     <a href="#manifolds">Manifolds</a><a href="#kits">Kits</a><a href="#lifts">Lifts</a>
-    <a href="#gates">Gates</a><a href="#components">Components</a>
+    <a href="#gates">Gates</a><a href="#components">Components</a><a href="#defence">Defence</a>
   </div>
 </nav>
 
@@ -255,8 +255,8 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 <section class="sect container" id="presses">
   <div class="sect-head rv">
     <div><p class="label">01 · Hydraulic presses</p>
-      <h2>One range, <em>25 to 650</em> tons.</h2></div>
-    <p>Deep draw, 4-column, C-type, H-type, rubber moulding, lead pipe, FRP, stamping, lamination, terracotta and special-purpose presses — plus servo options, retrofits and screw-press conversions. Fabricated from ultrasonically tested steel, FEA-designed, driven by the compact Jagdamba manifold system.</p>
+      <h2>One range, <em>10 to 1,000</em> tons.</h2></div>
+    <p>Deep draw and CNC servo deep draw (to 1,000 T), 4-column, C-type, H-type, rubber moulding, lead pipe, FRP, stamping, lamination, terracotta, TLT, notching, hole-punching after bending, universal bending, 2-in-1, and horizontal &amp; vertical bonding presses — plus hybrid-servo retrofits (up to 70% energy savings) and screw-press conversions. Fabricated from ultrasonically tested steel, FEA-designed, driven by the compact Jagdamba manifold system.</p>
   </div>
 
   <figure class="pressphoto rv">
@@ -318,7 +318,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
       <span class="num">03</span>
       <figure class="pthumb"><figcaption>Photo — Power packs</figcaption></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="12" y="34" width="36" height="22"/><circle cx="30" cy="24" r="9"/><path d="M30 33v1M22 56v4M40 56v4"/><path class="o" d="M48 40h12v10H48zM54 40v-8"/></svg></span>
-      <span><span class="ttl">Hydraulic power packs</span><br><span class="desc">Low-noise power units for lifting platforms, elevators, wagon tipplers, presses and machine tools — assembled with internationally reputed components, sized to your duty cycle.</span></span>
+      <span><span class="ttl">Hydraulic power packs</span><br><span class="desc">Low-noise power units for lifting platforms, elevators, wagon tipplers, presses, machine tools, mobile and flameproof (FLP) applications — internationally reputed components, sized to your duty cycle.</span></span>
       <span class="desc" style="max-width:none">AC and DC packs, hand pumps, jacks, tippler power packs — cost-effective without compromising quality.</span>
       <span class="spec">Lifts · tipplers · presses<br><b>built to duty cycle</b></span>
     </a><a class="row rv" id="manifolds" href="contact.html?product=manifolds">
@@ -346,8 +346,8 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
       <span class="num">07</span>
       <figure class="pthumb"><figcaption>Photo — Hydraulic gates</figcaption></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M12 58V18M60 58V18M12 58h48"/><rect x="18" y="24" width="28" height="34"/><path class="o" d="M46 41h10M52 36l5 5-5 5"/></svg></span>
-      <span><span class="ttl">Hydraulic gates & actuators</span><br><span class="desc">Hydraulically operated gates and actuators for water management and industrial flow control, built around our own cylinders and power packs.</span></span>
-      <span class="desc" style="max-width:none">Long-stroke cylinders, weather-protected packs, remote operation.</span>
+      <span><span class="ttl">Hydraulic gates & actuators</span><br><span class="desc">Bunker-mouth and industrial gates with fail-safe automatic closure on power failure, remote electric control, CCTV + PA monitoring and a dust-proof AC operator cabin — built around our own cylinders and packs.</span></span>
+      <span class="desc" style="max-width:none">Fail-safe · CCTV &amp; PA · remote panel · heavy-duty wear-resistant build.</span>
       <span class="spec">Industrial & irrigation<br><b>turnkey</b></span>
     </a><a class="row rv" id="components" href="contact.html?product=components">
       <span class="num">08</span>
@@ -360,6 +360,22 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   </div>
 </section>
 
+
+<section class="sect container" id="defence" style="padding-top:0">
+  <div class="sect-head rv">
+    <div><p class="label">09 · Defence &amp; special purpose</p>
+      <h2>Built for the <em>services</em>.</h2></div>
+    <p>Special-purpose machines engineered to defence programme specifications — delivered with documentation, trials and the discretion the work demands.</p>
+  </div>
+  <div class="cardgrid c4">
+    <div class="card rv"><span class="n">D-01</span><h3>FISC tube forming</h3><p>Special-purpose forming presses for FISC tube production, built to programme drawings and tolerances.</p></div>
+    <div class="card rv"><span class="n">D-02</span><h3>Missile warhead assembly</h3><p>Assembly presses for warhead sections — controlled force application with documented, repeatable cycles.</p></div>
+    <div class="card rv"><span class="n">D-03</span><h3>Powder-compacting FLP presses</h3><p>Flameproof presses for energetic powder compacting, with FLP-rated power packs and controls.</p></div>
+    <div class="card rv"><span class="n">D-04</span><h3>Defence power packs</h3><p>Special hydraulic power packs for defence platforms and test rigs — including flameproof builds.</p></div>
+  </div>
+  <p class="tnote rv" style="margin-top:var(--s4)">Defence enquiries are handled directly by the directors — <a href="contact.html?product=defence" style="color:var(--org-deep)">write to us</a> with your programme reference.</p>
+</section>
+
 <section class="cta-strip container">
   <div class="inner rv">
     <h2>Can't find it? We probably <em>build it to order</em>.</h2>
@@ -370,7 +386,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
     <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
-      Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
+      Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>
       <a href="about.html">About</a><br><a href="expos.html">Exhibitions</a><br><a href="services.html">Services</a><br><a href="calculators.html">Calculators</a></div>

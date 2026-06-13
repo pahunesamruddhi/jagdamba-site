@@ -71,7 +71,7 @@ section{position:relative}
 .mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
@@ -237,8 +237,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   </div>
   <div class="timeline rv">
     <div class="t-item"><span class="when">2006</span><h3>Founded at MIDC Butibori</h3><p class="where">Nagpur, Maharashtra</p><p>Shree Jagdamba Hydropneumatic opens as a hydraulic cylinder and repair workshop in central India.</p></div>
-    <div class="t-item"><span class="when">2010s</span><h3>Full fluid-power range</h3><p class="where">Presses · power packs · manifolds</p><p>The catalogue grows to complete machines — deep-draw presses to 650 tons, power packs, manifold systems, lifts and gates.</p></div>
-    <div class="t-item"><span class="when">2024</span><h3>Cylinder kits launched</h3><p class="where">Newest product line</p><p>Mill-duty, welded and heavy-duty kits — back end, gland and pistons, with or without seals.</p></div>
+    <div class="t-item"><span class="when">2010s</span><h3>Full fluid-power range</h3><p class="where">Presses · power packs · manifolds</p><p>The catalogue grows to complete machines — deep-draw presses to 1,000 tons (CNC servo), power packs, manifold systems, lifts and gates.</p></div>
     <div class="t-item"><span class="when">Today</span><h3>20 years of engineered force</h3><p class="where">30+ machine types · pan-India</p><p>Two decades in, the aim is unchanged: reliable products, best quality, satisfied customers.</p></div>
   </div>
 </section>
@@ -256,7 +255,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
     <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
-      Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
+      Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>
       <a href="about.html">About</a><br><a href="expos.html">Exhibitions</a><br><a href="services.html">Services</a><br><a href="calculators.html">Calculators</a></div>
