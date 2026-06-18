@@ -13,8 +13,8 @@
 :root{
   --white:#fdfdfc;--grey-50:#f6f5f2;--grey-100:#edece8;--grey-150:#e3e1db;
   --ink:#191b1f;--ink-60:#5d6066;--ink-40:#94969b;
-  --charcoal:#1d1f24;--charcoal-2:#26282e;
-  --org:#e8521d;--org-deep:#c2410c;
+  --charcoal:#163a5c;--charcoal-2:#1d496f;
+  --org:#f5b70a;--org-deep:#0f2b45;--blue:#163a5c;--blue-2:#1d496f;--blue-soft:#e9eef3;
   --hair:rgba(25,27,31,.12);--hair-soft:rgba(25,27,31,.07);
   --font:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
   --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2.25rem;--s6:3.5rem;--s7:5.5rem;--s8:8.5rem;
@@ -30,7 +30,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--ink);font-family:var(--font);font-size:var(--t-base);line-height:1.65;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--org);color:#fff}
+::selection{background:var(--org);color:var(--blue)}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 img{max-width:100%;display:block}
@@ -45,19 +45,19 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:11px;height:11px;background:var(--org);flex:none}
+.brand .sq{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after,.nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 .nav-links a[aria-current="page"]{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:#fff;font-size:.88rem;font-weight:550;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
-.btn:hover{background:var(--org-deep)}
+.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:var(--blue);font-size:.88rem;font-weight:600;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
+.btn:hover{background:#ffca28}
 .btn .arr{transition:transform .3s var(--ease)}
 .btn:hover .arr{transform:translateX(5px)}
 .btn-quiet{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem .25rem;min-height:46px;border-bottom:1.5px solid var(--ink);transition:color .25s,border-color .25s}
-.btn-quiet:hover{color:var(--org-deep);border-color:var(--org)}
+.btn-quiet:hover{color:var(--blue);border-color:var(--org)}
 .nav .btn{margin-left:auto}
 @media(min-width:1060px){.nav-links{display:flex}.nav .btn{margin-left:0}}
 .burger{margin-left:auto;width:46px;height:46px;display:grid;place-items:center}
@@ -71,16 +71,16 @@ section{position:relative}
 .mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
    linear-gradient(90deg,var(--hair-soft) 1px,transparent 1px) 0 0/clamp(70px,14vw,130px) 100%;
   -webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
 .phero h1{font-size:var(--t-3xl)}
-.phero h1 em{font-style:normal;color:var(--org)}
+.phero h1 em{font-style:normal;color:var(--blue);background:linear-gradient(transparent 62%, rgba(245,183,10,.5) 62%)}
 .phero .sub{margin-top:var(--s5);max-width:52ch;font-size:var(--t-lg);line-height:1.55;color:var(--ink-60)}
-.phero .sub strong{color:var(--ink);font-weight:600}
+.phero .sub strong{color:var(--blue);font-weight:700;border-bottom:3px solid var(--org)}
 .phero .heroctas{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s5);align-items:center}
 
 /* ---- editorial rows (products/services) ---- */
@@ -98,7 +98,7 @@ section{position:relative}
 @media(min-width:980px){.rows .spec{text-align:right}}
 .rows .spec b{color:var(--org-deep);font-weight:500}
 .rows .row:hover{padding-left:.9rem}
-.rows .row:hover .num{color:var(--org)}
+.rows .row:hover .num{color:var(--blue)}
 .rows .row:hover .ico svg{stroke:var(--ink)}
 
 /* ---- data tables ---- */
@@ -108,7 +108,7 @@ table.data th{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-
 table.data td{font-family:var(--mono);font-size:.8rem;padding:.8rem .9rem;border-bottom:1px solid var(--hair-soft);white-space:nowrap}
 table.data td:first-child{color:var(--ink);font-weight:500}
 table.data tr:hover td{background:var(--grey-50)}
-table.data .cap{color:var(--org-deep);font-weight:500}
+table.data .cap{color:var(--blue);font-weight:600}
 .tnote{font-size:.78rem;color:var(--ink-40);margin-top:var(--s3);max-width:64ch}
 
 /* ---- section scaffolding ---- */
@@ -116,7 +116,7 @@ table.data .cap{color:var(--org-deep);font-weight:500}
 .sect-head{display:grid;gap:var(--s4);margin-bottom:var(--s6)}
 @media(min-width:980px){.sect-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,7rem);align-items:end}}
 .sect-head h2{font-size:var(--t-2xl)}
-.sect-head h2 em{font-style:normal;color:var(--org)}
+.sect-head h2 em{font-style:normal;color:var(--blue)}
 .sect-head p{color:var(--ink-60);max-width:46ch}
 .band{background:var(--charcoal);color:#eceae6}
 .band .label{color:#9b9da3}
@@ -131,7 +131,7 @@ table.data .cap{color:var(--org-deep);font-weight:500}
 @media(min-width:1180px){.cardgrid.c4{grid-template-columns:repeat(4,1fr)}.cardgrid.c3{grid-template-columns:repeat(3,1fr)}}
 .card{padding:var(--s5) var(--s4) var(--s5) 0;border-bottom:1px solid var(--hair)}
 @media(min-width:720px){.card{border-right:1px solid var(--hair-soft);padding-inline:var(--s4)}.card:first-child{padding-left:0}.card:nth-last-child(1){border-right:none}}
-.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--org-deep)}
+.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--blue)}
 .card h3{font-size:var(--t-lg);font-weight:550;letter-spacing:-.02em;margin:var(--s3) 0;line-height:1.25}
 .card p{color:var(--ink-60);font-size:var(--t-sm);line-height:1.7}
 
@@ -140,7 +140,7 @@ table.data .cap{color:var(--org-deep);font-weight:500}
 .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--hair)}
 .t-item{position:relative;padding:0 0 var(--s7)}
 .t-item::before{content:"";position:absolute;left:calc(5px - clamp(1.4rem,4vw,3rem));top:6px;width:11px;height:11px;border-radius:50%;background:var(--org);transform:translateX(-5px);box-shadow:0 0 0 5px var(--white)}
-.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--org-deep)}
+.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
 .t-item h3{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;margin:.5rem 0 .6rem}
 .t-item .where{font-family:var(--mono);font-size:.74rem;color:var(--ink-40);margin-bottom:var(--s3)}
 .t-item p{color:var(--ink-60);max-width:56ch;font-size:var(--t-sm);line-height:1.7}
@@ -163,11 +163,11 @@ table.data .cap{color:var(--org-deep);font-weight:500}
 .cta-strip{border-top:1px solid var(--hair);padding-block:var(--s7)}
 .cta-strip .inner{display:flex;flex-wrap:wrap;gap:var(--s5);align-items:center;justify-content:space-between}
 .cta-strip h2{font-size:var(--t-2xl);max-width:18ch}
-.cta-strip h2 em{font-style:normal;color:var(--org)}
+.cta-strip h2 em{font-style:normal;color:var(--blue)}
 
 /* ---- footer ---- */
 footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var(--s5);overflow:hidden}
-.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:#26282e;transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
+.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:var(--blue-2);transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
 .foot-big:hover{color:var(--org)}
 .foot-cols{display:grid;gap:var(--s5);padding-bottom:var(--s5);font-size:var(--t-sm);line-height:2}
 @media(min-width:880px){.foot-cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
@@ -186,6 +186,13 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
 
+
+/* ===== blue+yellow palette overrides: yellow only on dark surfaces ===== */
+.band .label::before{background:var(--org)}
+.band .sect-head h2 em,.band h2 em{color:var(--org)}
+.band .card .n{color:var(--org)}
+.cta-strip{border-top:1px solid var(--hair)}
+.svc-phone:hover{color:var(--blue)}
 </style>
 
 </head>
@@ -217,7 +224,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
               <option>Hydraulic power pack</option><option>Manifold blocks</option><option>Cylinder kits</option>
               <option>Hydraulic goods / cargo lifts</option><option>Hydraulic passenger lifts</option><option>Hydraulic gates</option>
               <option>Hydraulic accessories / seals</option><option>Honed tubes</option><option>Plated rods</option>
-              <option>Repair / service</option><option>Exhibition / stand meeting</option><option>Other</option>
+              <option>Defence / special purpose</option><option>Repair / service</option><option>Exhibition / stand meeting</option><option>Other</option>
             </select>
           </div>
           <div class="field"><label for="f-msg">Requirement</label><textarea id="f-msg" rows="4" placeholder="e.g. 200 T deep draw press for SS utensils, 900×1000 table"></textarea></div>
@@ -226,8 +233,8 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
       </div>
       <div class="rv" style="font-size:var(--t-sm);line-height:2.05;color:#9b9da3">
         <b style="color:#fff;display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem">Factory</b>
-        Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122, Maharashtra, India<br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Shree+Jagdamba+hydropneumatic+Butibori+Nagpur" target="_blank" rel="noopener" style="color:#e8521d">Open in Google Maps →</a>
+        Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122, Maharashtra, India<br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Shree+Jagdamba+hydropneumatic+Butibori+Nagpur" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">Open in Google Maps →</a>
         <b style="color:#fff;display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;margin:var(--s5) 0 .4rem">Phones</b>
         <a href="tel:+919372072041">+91 93720 72041</a><br><a href="tel:+919372072042">+91 93720 72042</a><br>
         <a href="https://wa.me/message/XGLA6ESY3P3MA1" target="_blank" rel="noopener">WhatsApp business line →</a>
@@ -249,7 +256,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
     <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
-      Plot No. A-11/21 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
+      Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>
       <a href="about.html">About</a><br><a href="expos.html">Exhibitions</a><br><a href="services.html">Services</a><br><a href="calculators.html">Calculators</a></div>
@@ -286,7 +293,7 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   const msg=document.getElementById('f-msg'), sel=document.getElementById('f-prod');
   if(model){ msg.value='Regarding model '+model+' — '; sel.value='Hydraulic presses'; msg.focus(); }
   else if(prod && sel){
-    const map={'cylinders':'Hydraulic cylinders','power-packs':'Hydraulic power pack','manifolds':'Manifold blocks','kits':'Cylinder kits','lifts':'Hydraulic goods / cargo lifts','gates':'Hydraulic gates','components':'Hydraulic accessories / seals'};
+    const map={'cylinders':'Hydraulic cylinders','power-packs':'Hydraulic power pack','manifolds':'Manifold blocks','kits':'Cylinder kits','lifts':'Hydraulic goods / cargo lifts','gates':'Hydraulic gates','components':'Hydraulic accessories / seals','defence':'Defence / special purpose'};
     if(map[prod]) sel.value=map[prod];
   }
 })();
