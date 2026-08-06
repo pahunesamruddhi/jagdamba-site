@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Engineering Calculators — JAGDAMBA · Cylinder Force, Speed, Pump & Press Tonnage</title>
 <meta name="description" content="Free hydraulic engineering calculators by Shree Jagdamba Hydropneumatic — cylinder force, velocity & volumes, pump flow/torque/power, motor sizing and press tonnage.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 /* nav */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;height:68px;display:flex;align-items:center;gap:var(--s4);padding-inline:var(--pad-x);background:rgba(253,252,250,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .mark{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
+.brand .mark{width:32px;height:32px;flex:none;object-fit:contain}
 .nav-links{display:none;gap:var(--s4);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--grey);padding:.55rem 0;transition:color .25s}
 .nav-links a:hover{color:var(--ink)}
@@ -132,7 +133,7 @@ footer a:hover{color:var(--ink)}
 <body>
 
 <header class="nav">
-  <a class="brand" href="index.html"><span class="mark"></span>Jagdamba</a>
+  <a class="brand" href="index.html"><img class="mark" src="img/logo/mark.png" alt="">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary">
     <a href="products.html">Products</a>
     <a href="services.html">Services</a>

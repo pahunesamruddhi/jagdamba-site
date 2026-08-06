@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Jagdamba · A technocrat workshop since 2006</title>
 <meta name="description" content="Shree Jagdamba Hydropneumatic: 20 years of hydraulic engineering from MIDC Butibori, Nagpur. Import-substitute specialists in cylinders, presses, power packs and manifolds.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
@@ -45,7 +46,7 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
+.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -198,7 +199,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Jagdamba home"><span class="sq"></span>Jagdamba</a>
+  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary"><a href="products.html">Products</a><a href="services.html">Services</a><a href="about.html" aria-current="page">About</a><a href="expos.html">Exhibitions</a><a href="calculators.html">Calculators</a></nav>
   <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -223,6 +224,27 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
     <div class="card rv"><span class="n">Principle 04</span><h3>Personalised solutions</h3><p>Every machine specified to your component, cycle time and shop floor. Consultancy included, jargon optional.</p></div>
   </div>
 </section>
+
+<section class="sect container" style="padding-top:0">
+  <div class="sect-head rv">
+    <div><p class="label">The floor</p><h2>MIDC Butibori, <em>Nagpur</em>.</h2></div>
+    <p>Presses, cylinders and manifolds built and tested on-site — a working shop, not a showroom.</p>
+  </div>
+  <div class="photo-wall rv">
+    <figure class="slot"><img src="img/facility/team-with-press.jpg" alt="Jagdamba team beside a completed deep draw hydraulic press"></figure>
+    <figure class="slot"><img src="img/facility/leadership-forming-press.jpg" alt="Directors on the shop floor beside a forming press"></figure>
+    <figure class="slot"><img src="img/facility/shopfloor-visit.jpg" alt="Factory visit on the Jagdamba shop floor"></figure>
+    <figure class="slot"><img src="img/facility/press-overhead-detail.jpg" alt="Overhead view of a hydraulic press frame under assembly"></figure>
+    <figure class="slot"><img src="img/facility/press-servo-floor.jpg" alt="Servo deep draw press assembled on the shop floor"></figure>
+    <figure class="slot"><img src="img/facility/press-servo-floor-2.jpg" alt="Servo deep draw press among machines awaiting dispatch"></figure>
+  </div>
+</section>
+<style>
+.photo-wall{display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}
+@media(min-width:880px){.photo-wall{grid-template-columns:repeat(3,1fr)}}
+.photo-wall .slot{aspect-ratio:4/3;position:relative;border:1px solid var(--hair);border-radius:3px;overflow:hidden}
+.photo-wall .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+</style>
 
 <section class="sect band">
   <div class="container">

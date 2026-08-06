@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products — Jagdamba · Hydraulic presses, cylinders, power packs, manifolds & more</title>
 <meta name="description" content="Eleven product lines from Shree Jagdamba Hydropneumatic: hydraulic presses 25–650 T with full model charts, cylinders, power packs, manifold blocks, lifts, gates, seals, honed tubes and plated rods.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
@@ -45,7 +46,7 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
+.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -203,10 +204,10 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .snav a{flex:none;font-size:.8rem;font-weight:500;color:var(--ink-60);padding:.45rem .95rem;border:1px solid var(--hair);border-radius:99px;transition:all .25s}
 .snav a:hover{color:var(--ink);border-color:var(--ink)}
 /* press hero photo slot */
-.pressphoto{margin:0 0 var(--s5);aspect-ratio:16/6;min-height:180px;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
+.pressphoto{margin:0 0 var(--s5);position:relative;aspect-ratio:16/6;min-height:180px;overflow:hidden;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
   background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px)}
 .pressphoto figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-40);text-align:center;padding:0 1rem}
-.pressphoto img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pressphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px}
 /* collapsible chart cards */
 .chart{border:1px solid var(--hair);border-radius:3px;margin-bottom:var(--s3);background:var(--white)}
 .chart summary{list-style:none;cursor:pointer;display:grid;gap:.3rem var(--s4);padding:1.1rem var(--s4);align-items:center}
@@ -223,9 +224,9 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .chart:focus-within{border-color:var(--ink-40)}
 /* row photo placeholders */
 .rows .ico{display:none!important}
-.pthumb{margin:0;width:100%;max-width:200px;aspect-ratio:4/3;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
+.pthumb{margin:0;position:relative;width:100%;max-width:200px;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
   background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px)}
-.pthumb img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px}
 .pthumb figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--ink-40);text-align:center;padding:0 .6rem}
 @media(min-width:980px){.rows .row{grid-template-columns:56px 200px minmax(0,1fr) minmax(0,1fr) auto!important}}
 @media(max-width:979px){.pthumb{max-width:300px}}
@@ -233,7 +234,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Jagdamba home"><span class="sq"></span>Jagdamba</a>
+  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary"><a href="products.html" aria-current="page">Products</a><a href="services.html">Services</a><a href="about.html">About</a><a href="expos.html">Exhibitions</a><a href="calculators.html">Calculators</a></nav>
   <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -267,8 +268,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   </div>
 
   <figure class="pressphoto rv">
-    <!-- Replace with a real press photo: <img src="img/press-hero.jpg" alt="Jagdamba deep draw press on the shop floor"> -->
-    <figcaption>Press photo — add a shop-floor image (recommended 1600×600)</figcaption>
+    <img src="img/products/press-hero-shopfloor.jpg" alt="Jagdamba deep draw hydraulic press on the shop floor at MIDC Butibori, Nagpur">
   </figure>
 
 <details class="chart rv">
@@ -316,49 +316,49 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <div class="rows">
 <a class="row rv" id="cylinders" href="contact.html?product=cylinders">
       <span class="num">02</span>
-      <figure class="pthumb"><figcaption>Photo — Hydraulic cylinders</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/cylinders-pair-ready.jpg" alt="Finished hydraulic cylinders ready for dispatch"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="10" y="28" width="32" height="16"/><path d="M10 31h-3v10h3M42 33h20M42 39h20"/><circle class="o" cx="64" cy="36" r="5"/><path class="o" d="M26 28v16"/></svg></span>
       <span><span class="ttl">Hydraulic & pneumatic cylinders</span><br><span class="desc">Mill duty, heavy duty, tie-rod, telescopic and fully custom — for mobile and industrial applications, OEM and end user. PTFE low-friction seals, bronze guide tapes, long service life.</span></span>
       <span class="desc" style="max-width:none">Steel, cement, chemical & power plants; wagon tipplers, side-arm chargers, stacker reclaimers; earth-moving and loader cylinders.</span>
       <span class="spec">OEM + custom<br><b>import substitute</b></span>
     </a><a class="row rv" id="power-packs" href="contact.html?product=power-packs">
       <span class="num">03</span>
-      <figure class="pthumb"><figcaption>Photo — Power packs</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/powerpack-render.jpg" alt="Hydraulic power pack units"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="12" y="34" width="36" height="22"/><circle cx="30" cy="24" r="9"/><path d="M30 33v1M22 56v4M40 56v4"/><path class="o" d="M48 40h12v10H48zM54 40v-8"/></svg></span>
       <span><span class="ttl">Hydraulic power packs</span><br><span class="desc">Low-noise power units for lifting platforms, elevators, wagon tipplers, presses, machine tools, mobile and flameproof (FLP) applications — internationally reputed components, sized to your duty cycle.</span></span>
       <span class="desc" style="max-width:none">AC and DC packs, hand pumps, jacks, tippler power packs — cost-effective without compromising quality.</span>
       <span class="spec">Lifts · tipplers · presses<br><b>built to duty cycle</b></span>
     </a><a class="row rv" id="manifolds" href="contact.html?product=manifolds">
       <span class="num">04</span>
-      <figure class="pthumb"><figcaption>Photo — Manifold blocks</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/manifold-render.jpg" alt="Precision-machined hydraulic manifold block"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="16" y="18" width="40" height="36"/><circle class="o" cx="28" cy="30" r="4"/><circle class="o" cx="44" cy="42" r="4"/><path d="M28 34v8h12M44 38v-8H32M16 26h-6M56 46h6"/></svg></span>
       <span><span class="ttl">Manifold blocks</span><br><span class="desc">From the smallest unit to large system manifolds. We design, develop and manufacture to your requirement — and replace existing OEM manifolds one-for-one with quality-matched blocks.</span></span>
       <span class="desc" style="max-width:none">Standard range: lift block, PCM block, regeneration block, sequence block, 1–4 station blocks.</span>
       <span class="spec">Lift · PCM · sequence<br><b>1–4 station</b></span>
     </a><a class="row rv" id="kits" href="contact.html?product=kits">
       <span class="num">05</span>
-      <figure class="pthumb"><figcaption>Photo — Cylinder kits</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/cylinder-closeup.jpg" alt="Hydraulic cylinder kit components"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="24" cy="36" r="12"/><circle cx="24" cy="36" r="5"/><circle class="o" cx="50" cy="26" r="8"/><circle cx="52" cy="48" r="7"/><circle cx="52" cy="48" r="3"/></svg></span>
       <span><span class="ttl">Hydraulic cylinder kits</span><br><span class="desc">Our newest line: mill-duty, welded-construction and heavy-duty kits. Each kit complete with back end, gland (head) and pistons — supplied with or without seals.</span></span>
       <span class="desc" style="max-width:none">Top-grade kits for builders and repairers who machine their own tubes.</span>
       <span class="spec">New line<br><b>ready stock</b></span>
     </a><a class="row rv" id="lifts" href="contact.html?product=lifts">
       <span class="num">06</span>
-      <figure class="pthumb"><figcaption>Photo — Goods & cargo lifts</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/press-4column-front.jpg" alt="Hydraulic lift structure on the shop floor"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M16 62V12h40v50M16 62h40"/><rect class="o" x="26" y="34" width="20" height="20"/><path class="o" d="M36 34V22M32 26l4-4 4 4"/></svg></span>
       <span><span class="ttl">Goods, cargo & passenger lifts</span><br><span class="desc">Hydraulic goods and cargo lifts engineered for factories and warehouses, plus hydraulic passenger lift systems — smooth, compact machine-room-friendly drives.</span></span>
       <span class="desc" style="max-width:none">Complete with cylinder, power pack, manifold and controls from one workshop.</span>
       <span class="spec">Factory & warehouse<br><b>single-source supply</b></span>
     </a><a class="row rv" id="gates" href="contact.html?product=gates">
       <span class="num">07</span>
-      <figure class="pthumb"><figcaption>Photo — Hydraulic gates</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/hydraulic-jacks-range.jpg" alt="Hydraulic gate actuator hardware"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M12 58V18M60 58V18M12 58h48"/><rect x="18" y="24" width="28" height="34"/><path class="o" d="M46 41h10M52 36l5 5-5 5"/></svg></span>
       <span><span class="ttl">Hydraulic gates & actuators</span><br><span class="desc">Bunker-mouth and industrial gates with fail-safe automatic closure on power failure, remote electric control, CCTV + PA monitoring and a dust-proof AC operator cabin — built around our own cylinders and packs.</span></span>
       <span class="desc" style="max-width:none">Fail-safe · CCTV &amp; PA · remote panel · heavy-duty wear-resistant build.</span>
       <span class="spec">Industrial & irrigation<br><b>turnkey</b></span>
     </a><a class="row rv" id="components" href="contact.html?product=components">
       <span class="num">08</span>
-      <figure class="pthumb"><figcaption>Photo — Seals, tubes & rods</figcaption></figure>
+      <figure class="pthumb"><img src="img/products/valve-block-atos.jpg" alt="Hydraulic valve block and components"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="20"/><circle class="o" cx="36" cy="36" r="12"/><circle cx="36" cy="36" r="5"/><path d="M36 8v8M36 56v8M8 36h8M56 36h8" opacity=".5"/></svg></span>
       <span><span class="ttl">Components & consumables</span><br><span class="desc">Hydraulic accessories and seals: V, U and Vdas seals, O-rings, wipers, Sharron seal kits, guide tape, bronze-filled PTFE. Plus honed tubes and hard-chrome plated rods, cut to size.</span></span>
       <span class="desc" style="max-width:none">Valves and pumps of reputed makes (Polyhydron, Yuken, Rexroth class), DCVs, check valves, gear pumps, filters, gauges, hoses and fittings.</span>

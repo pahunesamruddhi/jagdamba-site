@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exhibitions — Jagdamba at national & international expos</title>
 <meta name="description" content="Shree Jagdamba Hydropneumatic exhibits at national and international industrial expos. See where the machines meet the industry — and invite us to your show.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
@@ -45,7 +46,7 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
+.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -202,7 +203,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Jagdamba home"><span class="sq"></span>Jagdamba</a>
+  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary"><a href="products.html">Products</a><a href="services.html">Services</a><a href="about.html">About</a><a href="expos.html" aria-current="page">Exhibitions</a><a href="calculators.html">Calculators</a></nav>
   <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -292,7 +293,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
     <p>Six slots, ready for stand photographs — replace each placeholder with an image from the show (recommended 1200×900, 4:3).</p>
   </div>
   <div class="photo-wall rv">
-    <figure class="slot"><figcaption>Stand photo 01 — add image</figcaption></figure>
+    <figure class="slot"><img src="img/expo/booth-e5.jpg" alt="Jagdamba exhibition stand with a deep draw press and product posters on display"></figure>
     <figure class="slot"><figcaption>Stand photo 02 — add image</figcaption></figure>
     <figure class="slot"><figcaption>Stand photo 03 — add image</figcaption></figure>
     <figure class="slot"><figcaption>Machine live demo — add image</figcaption></figure>
@@ -303,9 +304,10 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 <style>
 .photo-wall{display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}
 @media(min-width:880px){.photo-wall{grid-template-columns:repeat(3,1fr)}}
-.photo-wall .slot{aspect-ratio:4/3;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
+.photo-wall .slot{aspect-ratio:4/3;position:relative;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;overflow:hidden;
   background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px)}
 .photo-wall figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-40);text-align:center;padding:0 1rem}
+.photo-wall .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 </style>
 
 <section class="sect band" id="invite">

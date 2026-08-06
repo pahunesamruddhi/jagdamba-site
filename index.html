@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>[BLUE+YELLOW] Jagdamba — Hydraulic presses, cylinders & power packs. Engineered in India since 2006.</title>
 <meta name="description" content="Shree Jagdamba Hydropneumatic builds hydraulic presses from 10 to 1,000 tons, cylinders, power packs and manifold blocks — designed, manufactured and serviced from Nagpur, India.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -71,7 +72,7 @@ section{position:relative}
   padding-inline:var(--pad);background:transparent;transition:background .4s var(--ease),box-shadow .4s}
 .nav.solid{background:rgba(253,253,252,.92);backdrop-filter:blur(18px);box-shadow:0 2px 0 var(--blue)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:13px;height:13px;background:var(--blue);flex:none;box-shadow:3px 3px 0 var(--org)}
+.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -250,9 +251,10 @@ html.anim .hero h1 .ln>span{transform:translateY(115%)}
 .float-prev.on{opacity:1;transform:scale(1)}
 .prod-thumb{display:none}
 @media(max-width:1079px){
-  .prod-thumb{display:grid;place-items:center;aspect-ratio:4/3;max-width:340px;border:1px solid var(--hair);border-radius:3px;margin-bottom:.6rem;
+  .prod-thumb{display:grid;place-items:center;position:relative;aspect-ratio:4/3;max-width:340px;border:1px solid var(--hair);border-radius:3px;margin-bottom:.6rem;overflow:hidden;
     background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px);
     font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--ink-40)}
+  .prod-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 }
 
 /* ============ CONFIGURATOR — charcoal band ============ */
@@ -416,7 +418,7 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Jagdamba home"><span class="sq"></span>Jagdamba</a>
+  <a class="brand" href="#top" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary">
     <a href="products.html">Products</a>
     <a href="services.html">Services</a>
@@ -508,13 +510,12 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
   </div>
 
   <figure class="float-prev" id="floatPrev" aria-hidden="true">
-    <!-- To use a real photo: drop <img src="img/presses.jpg" alt=""> inside this figure
-         and set data-img="img/presses.jpg" on the matching .prod-row -->
+    <img src="img/products/press-hero-shopfloor.jpg" alt="">
     <span class="fp-cap" id="fpCap">Product photo</span>
   </figure>
 
-  <a class="prod-row rv" href="products.html#presses" data-photo="Hydraulic presses">
-    <span class="prod-thumb" aria-hidden="true">Photo — Hydraulic presses</span>
+  <a class="prod-row rv" href="products.html#presses" data-photo="Hydraulic presses" data-img="img/products/press-hero-shopfloor.jpg">
+    <span class="prod-thumb" aria-hidden="true"><img src="img/products/press-hero-shopfloor.jpg" alt=""></span>
     <span class="prod-num">01</span>
     <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
       <path d="M14 58h44M18 58V20h36v38"/><path d="M22 20v-6h28v6"/>
@@ -526,8 +527,8 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
     </span>
     <span class="prod-spec">10–1,000 T · 13 standard models<br><b>flagship line</b></span>
   </a>
-  <a class="prod-row rv" href="products.html#cylinders" data-photo="Hydraulic cylinders">
-    <span class="prod-thumb" aria-hidden="true">Photo — Hydraulic cylinders</span>
+  <a class="prod-row rv" href="products.html#cylinders" data-photo="Hydraulic cylinders" data-img="img/products/cylinders-pair-ready.jpg">
+    <span class="prod-thumb" aria-hidden="true"><img src="img/products/cylinders-pair-ready.jpg" alt=""></span>
     <span class="prod-num">02</span>
     <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
       <rect x="10" y="28" width="32" height="16"/><path d="M10 31h-3v10h3M42 33h20M42 39h20"/>
@@ -538,8 +539,8 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
     </span>
     <span class="prod-spec">OEM + custom<br><b>import substitute</b></span>
   </a>
-  <a class="prod-row rv" href="products.html#power-packs" data-photo="Power packs">
-    <span class="prod-thumb" aria-hidden="true">Photo — Power packs</span>
+  <a class="prod-row rv" href="products.html#power-packs" data-photo="Power packs" data-img="img/products/powerpack-render.jpg">
+    <span class="prod-thumb" aria-hidden="true"><img src="img/products/powerpack-render.jpg" alt=""></span>
     <span class="prod-num">03</span>
     <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
       <rect x="12" y="34" width="36" height="22"/><circle cx="30" cy="24" r="9"/><path d="M30 33v1M22 56v4M40 56v4"/>
@@ -550,8 +551,8 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
     </span>
     <span class="prod-spec">0.75–50 HP typical<br><b>built to duty cycle</b></span>
   </a>
-  <a class="prod-row rv" href="products.html#manifolds" data-photo="Manifold blocks">
-    <span class="prod-thumb" aria-hidden="true">Photo — Manifold blocks</span>
+  <a class="prod-row rv" href="products.html#manifolds" data-photo="Manifold blocks" data-img="img/products/manifold-render.jpg">
+    <span class="prod-thumb" aria-hidden="true"><img src="img/products/manifold-render.jpg" alt=""></span>
     <span class="prod-num">04</span>
     <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
       <rect x="16" y="18" width="40" height="36"/><circle class="o" cx="28" cy="30" r="4"/><circle class="o" cx="44" cy="42" r="4"/>
@@ -562,8 +563,8 @@ html.anim .rv{opacity:0;transform:translateY(28px)}
     </span>
     <span class="prod-spec">Lift · PCM · sequence<br><b>1–4 station</b></span>
   </a>
-  <a class="prod-row rv" href="products.html#kits" data-photo="Cylinder kits">
-    <span class="prod-thumb" aria-hidden="true">Photo — Cylinder kits</span>
+  <a class="prod-row rv" href="products.html#kits" data-photo="Cylinder kits" data-img="img/products/cylinder-closeup.jpg">
+    <span class="prod-thumb" aria-hidden="true"><img src="img/products/cylinder-closeup.jpg" alt=""></span>
     <span class="prod-num">05</span>
     <span class="prod-ico"><svg viewBox="0 0 72 72" aria-hidden="true">
       <circle cx="24" cy="36" r="12"/><circle cx="24" cy="36" r="5"/>
