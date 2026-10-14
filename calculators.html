@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#fdfdfc">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Engineering Calculators — JAGDAMBA · Cylinder Force, Speed, Pump & Press Tonnage</title>
 <meta name="description" content="Free hydraulic engineering calculators by Shree Jagdamba Hydropneumatic — cylinder force, velocity & volumes, pump flow/torque/power, motor sizing and press tonnage.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
 :root{
   --base:#fdfdfc;--raised:#f6f5f2;--panel:#edece8;--hair:#e3e1db;
   --ink:#191b1f;--grey:#5d6066;--grey2:#94969b;
-  --org:#f5b70a;--org-deep:#0f2b45;--blue:#163a5c;--blue-2:#1d496f;--blue-soft:#e9eef3;
+  --org:#f5c000;--org-text:#1c4fa0;--blue:#1c4fa0;--blue-deep:#143a78;--yel-deep:#dcaa00;--em-c:var(--ink);--em-bg:linear-gradient(transparent 60%,var(--org) 60%,var(--org) 92%,transparent 92%);--org-deep:#1c4fa0;
   --line:rgba(25,27,31,.12);
   --font-d:"Inter",system-ui,sans-serif;--font-b:"Inter",system-ui,sans-serif;--font-m:"JetBrains Mono",ui-monospace,monospace;
   --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2rem;--s6:3rem;--s7:4.5rem;
@@ -27,33 +28,33 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--base);color:var(--ink);font-family:var(--font-b);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--org);color:var(--blue)}
+::selection{background:var(--org);color:var(--ink)}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spacing:-.035em}
 .mono{font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase}
 .container{padding-inline:var(--pad-x);max-width:1380px;margin-inline:auto}
-:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+:focus-visible{outline:2px solid var(--org-text);outline-offset:2px}
 
 /* nav */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;height:68px;display:flex;align-items:center;gap:var(--s4);padding-inline:var(--pad-x);background:rgba(253,252,250,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .mark{width:32px;height:32px;flex:none;object-fit:contain}
+.brand .mark{width:11px;height:11px;background:var(--org);flex:none}
 .nav-links{display:none;gap:var(--s4);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--grey);padding:.55rem 0;transition:color .25s}
 .nav-links a:hover{color:var(--ink)}
-.nav-links a.on{color:var(--org-deep)}
-.cta{margin-left:auto;display:inline-flex;align-items:center;gap:.6rem;background:var(--org);color:var(--blue);font-size:.88rem;font-weight:600;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
-.cta:hover{background:var(--org-deep)}
+.nav-links a.on{color:var(--org-text)}
+.cta{margin-left:auto;display:inline-flex;align-items:center;gap:.6rem;background:var(--org);color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
+.cta:hover{background:var(--yel-deep)}
 @media(min-width:900px){.nav-links{display:flex}.cta{margin-left:var(--s4)}}
 
 /* header */
-.head{padding:clamp(104px,15vh,140px) var(--pad-x) clamp(2rem,6vh,var(--s6));border-bottom:1px solid var(--line);background:
+.head{padding:140px var(--pad-x) var(--s6);border-bottom:1px solid var(--line);background:
  linear-gradient(rgba(22,24,29,.045) 1px,transparent 1px) 0 0/100% 33.4%,
  linear-gradient(90deg,rgba(22,24,29,.045) 1px,transparent 1px) 0 0/25% 100%}
-.kicker{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.16em;color:var(--org-deep);text-transform:uppercase;margin-bottom:var(--s3)}
+.kicker{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--font-m);font-size:var(--step--1);letter-spacing:.16em;color:var(--org-text);text-transform:uppercase;margin-bottom:var(--s3)}
 .kicker::before{content:"";width:8px;height:8px;background:var(--org)}
 .head h1{font-size:var(--step-4)}
-.head h1 em{font-style:normal;color:var(--blue);background:linear-gradient(transparent 62%, rgba(245,183,10,.5) 62%)}
+.head h1 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .head p{color:var(--grey);max-width:58ch;margin-top:var(--s3);font-size:var(--step-1);line-height:1.5}
 
 /* calc tabs */
@@ -75,14 +76,14 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 .panel-h .t{font-weight:600;letter-spacing:-.02em;font-size:var(--step-1)}
 .unit-tog{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
 .unit-tog button{font-family:var(--font-m);font-size:.7rem;font-weight:700;letter-spacing:.1em;padding:.55rem .9rem;background:#fff;border:none;cursor:pointer;color:var(--ink);min-height:40px}
-.unit-tog button[aria-pressed="true"]{background:var(--org);color:var(--blue);font-weight:700}
+.unit-tog button[aria-pressed="true"]{background:var(--org);color:var(--ink)}
 .fields{padding:var(--s4)}
 .f{margin-bottom:var(--s4)}
 .f label{display:flex;justify-content:space-between;font-family:var(--font-m);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:.45rem}
-.f label b{color:var(--org-deep);font-weight:700}
+.f label b{color:var(--org-text);font-weight:700}
 .in{display:flex}
 .in input{flex:1;min-width:0;border:1px solid var(--line);border-right:none;background:var(--base);padding:.8rem 1rem;font-family:var(--font-m);font-size:1rem;color:var(--ink);min-height:48px}
-.in input:focus-visible{outline:2px solid var(--org);outline-offset:-1px;border-color:var(--org)}
+.in input:focus-visible{outline:2px solid var(--org-text);outline-offset:-1px;border-color:var(--org)}
 .in .u{border:1px solid var(--line);background:var(--raised);font-family:var(--font-m);font-size:.7rem;letter-spacing:.08em;color:var(--grey);display:flex;align-items:center;padding:0 .9rem;min-width:64px;justify-content:center}
 .slider{width:100%;accent-color:var(--org);margin-top:.5rem;height:24px}
 .hint{font-family:var(--font-m);font-size:.66rem;color:var(--grey2);letter-spacing:.06em;margin-top:.4rem;line-height:1.6}
@@ -99,7 +100,7 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 @media(min-width:640px){.res-cols{grid-template-columns:1fr 1fr}}
 .side{border:1px solid var(--line);background:#fff;border-radius:3px;overflow:hidden}
 .side .sh{padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);font-family:var(--font-m);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between}
-.side.bore .sh{background:var(--org);color:var(--blue)}
+.side.bore .sh{background:var(--org);color:var(--ink)}
 .side.rod .sh{background:var(--ink);color:#fff}
 .r{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);padding:.85rem var(--s4);border-bottom:1px solid var(--hair)}
 .r:last-child{border-bottom:none}
@@ -108,7 +109,7 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 .r .v small{font-size:.55em;color:var(--grey);font-weight:600}
 .hero-r{grid-column:1/-1;border:1px solid var(--line);background:var(--raised);border-radius:3px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s4)}
 .hero-r .k{font-family:var(--font-m);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
-.hero-r .v{font-weight:600;letter-spacing:-.03em;font-size:var(--step-3);color:var(--org-deep);line-height:1}
+.hero-r .v{font-weight:600;letter-spacing:-.03em;font-size:var(--step-3);color:var(--org-text);line-height:1}
 .hero-r .v small{font-size:.4em;color:var(--ink)}
 
 /* simple single-column result list (pump/motor/press) */
@@ -119,21 +120,25 @@ h1,h2,h3{font-family:var(--font-d);font-weight:500;line-height:1.06;letter-spaci
 .formula b{color:var(--ink)}
 
 /* CTA band */
-.band{background:var(--blue);color:#eef2f6;padding:var(--s6) var(--pad-x);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}
+.band{background:var(--org);color:var(--ink);padding:var(--s6) var(--pad-x);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}
 .band h2{font-size:var(--step-2);font-weight:500;letter-spacing:-.03em}
-.band a{background:var(--org);color:var(--blue);font-weight:600;font-size:.88rem;font-weight:550;border-radius:2px;padding:.95rem 1.5rem;display:inline-flex;gap:.7rem;transition:transform .2s var(--ease)}
+.band a{background:var(--ink);color:#fff;font-size:.88rem;font-weight:550;border-radius:2px;padding:.95rem 1.5rem;display:inline-flex;gap:.7rem;transition:transform .2s var(--ease)}
 .band a:hover{transform:translateY(-2px)}
 
 footer{border-top:1px solid var(--line);padding:var(--s5) var(--pad-x);display:flex;flex-wrap:wrap;gap:var(--s3);justify-content:space-between;font-family:var(--font-m);font-size:.68rem;letter-spacing:.1em;color:var(--grey2);text-transform:uppercase}
 footer a:hover{color:var(--ink)}
 
 @media (prefers-reduced-motion: reduce){*{transition-duration:.01ms!important;animation:none!important}}
+.config,.contact,.band,footer,.qbar{--org-text:var(--org);--em-c:var(--org);--em-bg:none}
+body .band{--org-text:var(--blue-deep);--em-c:var(--ink);--em-bg:none}
+em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.brand img.sq{width:26px;height:auto;flex:none;display:block;background:none}
 </style>
 </head>
 <body>
 
 <header class="nav">
-  <a class="brand" href="index.html"><img class="mark" src="img/logo/mark.png" alt="">Jagdamba</a>
+  <a class="brand" href="index.html"><img class="sq" src="img/logo/mark.webp" alt="" width="26" height="24">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary">
     <a href="products.html">Products</a>
     <a href="services.html">Services</a>
@@ -175,19 +180,19 @@ footer a:hover{color:var(--ink)}
           <rect x="48" y="38" width="14" height="94" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
           <rect x="318" y="38" width="14" height="94" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
           <!-- piston -->
-          <rect x="200" y="50" width="22" height="70" fill="#163a5c"/>
+          <rect x="200" y="50" width="22" height="70" fill="#f5c000"/>
           <!-- rod -->
           <rect x="222" y="73" width="240" height="24" fill="#fff" stroke="#191b1f" stroke-width="2"/>
           <circle cx="486" cy="85" r="22" fill="none" stroke="#191b1f" stroke-width="2"/>
-          <circle cx="486" cy="85" r="9" fill="none" stroke="#163a5c" stroke-width="2"/>
+          <circle cx="486" cy="85" r="9" fill="none" stroke="#f5c000" stroke-width="2"/>
           <!-- dims -->
-          <line x1="36" y1="45" x2="36" y2="125" stroke="#0f2b45" stroke-width="1"/>
-          <line x1="30" y1="45" x2="42" y2="45" stroke="#0f2b45"/><line x1="30" y1="125" x2="42" y2="125" stroke="#0f2b45"/>
-          <text x="10" y="90" fill="#0f2b45">D</text>
-          <line x1="340" y1="106" x2="340" y2="130" stroke="#0f2b45" stroke-width="1"/>
-          <line x1="334" y1="73" x2="346" y2="73" stroke="#0f2b45"/><line x1="334" y1="97" x2="346" y2="97" stroke="#0f2b45"/>
-          <line x1="340" y1="73" x2="340" y2="97" stroke="#0f2b45"/>
-          <text x="350" y="115" fill="#0f2b45">d</text>
+          <line x1="36" y1="45" x2="36" y2="125" stroke="#1c4fa0" stroke-width="1"/>
+          <line x1="30" y1="45" x2="42" y2="45" stroke="#1c4fa0"/><line x1="30" y1="125" x2="42" y2="125" stroke="#1c4fa0"/>
+          <text x="10" y="90" fill="#1c4fa0">D</text>
+          <line x1="340" y1="106" x2="340" y2="130" stroke="#1c4fa0" stroke-width="1"/>
+          <line x1="334" y1="73" x2="346" y2="73" stroke="#1c4fa0"/><line x1="334" y1="97" x2="346" y2="97" stroke="#1c4fa0"/>
+          <line x1="340" y1="73" x2="340" y2="97" stroke="#1c4fa0"/>
+          <text x="350" y="115" fill="#1c4fa0">d</text>
           <line x1="62" y1="150" x2="318" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
           <text x="160" y="165" fill="#5d6066">stroke L</text>
           <text x="66" y="36" fill="#5d6066">P, Q →</text>
@@ -237,7 +242,7 @@ footer a:hover{color:var(--ink)}
         </div>
       </div>
       <div class="hero-r" style="background:#fff"><span class="k">Area ratio (regeneration factor) — A<sub>bore</sub> : A<sub>rod</sub></span><span class="v" id="rRatio" style="color:var(--ink)">—</span></div>
-      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-text)">Show formulas</summary>
         <div class="formula">
           <b>A</b> = π/4 · D² &nbsp;·&nbsp; <b>A<sub>rod</sub></b> = π/4 · (D² − d²)<br>
           <b>F</b> = P · A &nbsp;·&nbsp; <b>V</b> = A · L &nbsp;·&nbsp; <b>v</b> = Q / A &nbsp;·&nbsp; <b>t</b> = V / Q &nbsp;·&nbsp; <b>Q<sub>out</sub></b> = Q · A<sub>opposite</sub> / A<sub>driven</sub>
@@ -256,14 +261,14 @@ footer a:hover{color:var(--ink)}
         <svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono,monospace" font-size="11">
           <rect x="150" y="40" width="150" height="90" rx="8" fill="#fff" stroke="#191b1f" stroke-width="2"/>
           <circle cx="200" cy="85" r="26" fill="none" stroke="#191b1f" stroke-width="2"/>
-          <circle cx="250" cy="85" r="26" fill="none" stroke="#163a5c" stroke-width="2"/>
-          <circle cx="200" cy="85" r="5" fill="#191b1f"/><circle cx="250" cy="85" r="5" fill="#163a5c"/>
+          <circle cx="250" cy="85" r="26" fill="none" stroke="#f5c000" stroke-width="2"/>
+          <circle cx="200" cy="85" r="5" fill="#191b1f"/><circle cx="250" cy="85" r="5" fill="#f5c000"/>
           <path d="M118 85h32" stroke="#191b1f" stroke-width="2"/>
           <rect x="64" y="63" width="54" height="44" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
           <text x="74" y="89" fill="#191b1f">n,T</text>
           <path d="M300 65h70M300 105h70" stroke="#191b1f" stroke-width="2"/>
-          <path d="M370 60l16 5-16 5zM370 100l16 5-16 5z" fill="#163a5c"/>
-          <text x="396" y="70" fill="#0f2b45">Q out</text>
+          <path d="M370 60l16 5-16 5zM370 100l16 5-16 5z" fill="#f5c000"/>
+          <text x="396" y="70" fill="#1c4fa0">Q out</text>
           <text x="396" y="110" fill="#5d6066">Δp</text>
           <text x="156" y="32" fill="#5d6066">gear pump · Vg cc/rev</text>
           <line x1="40" y1="150" x2="520" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
@@ -289,7 +294,7 @@ footer a:hover{color:var(--ink)}
         <div class="r"><span class="k">Input (shaft) power @ η</span><span class="v" id="puPi">—</span></div>
         <div class="r"><span class="k">Input power</span><span class="v" id="puHp">—</span></div>
       </div>
-      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-text)">Show formulas</summary>
         <div class="formula"><b>Q</b> = Vg·n / 1000 [lpm] &nbsp;·&nbsp; <b>T</b> = Vg·Δp / (20π) [N·m] &nbsp;·&nbsp; <b>P<sub>hyd</sub></b> = Q·Δp / 600 [kW] &nbsp;·&nbsp; <b>P<sub>in</sub></b> = P<sub>hyd</sub> / η</div>
       </details>
     </div>
@@ -308,12 +313,12 @@ footer a:hover{color:var(--ink)}
           <text x="92" y="92" fill="#191b1f">M  kW?</text>
           <path d="M200 87h36" stroke="#191b1f" stroke-width="2"/>
           <rect x="216" y="77" width="14" height="20" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
-          <circle cx="290" cy="87" r="34" fill="#fff" stroke="#163a5c" stroke-width="2"/>
-          <circle cx="290" cy="87" r="6" fill="#163a5c"/>
+          <circle cx="290" cy="87" r="34" fill="#fff" stroke="#f5c000" stroke-width="2"/>
+          <circle cx="290" cy="87" r="6" fill="#f5c000"/>
           <text x="262" y="42" fill="#5d6066">pump · η</text>
           <path d="M324 87h80" stroke="#191b1f" stroke-width="2"/>
-          <path d="M404 82l16 5-16 5z" fill="#163a5c"/>
-          <text x="430" y="80" fill="#0f2b45">Q lpm</text>
+          <path d="M404 82l16 5-16 5z" fill="#f5c000"/>
+          <text x="430" y="80" fill="#1c4fa0">Q lpm</text>
           <text x="430" y="104" fill="#5d6066">p bar</text>
           <line x1="40" y1="150" x2="520" y2="150" stroke="#5d6066" stroke-dasharray="4 3"/>
         </svg>
@@ -335,7 +340,7 @@ footer a:hover{color:var(--ink)}
         <div class="r"><span class="k">Nearest standard motor (IS 12615)</span><span class="v" id="moStd">—</span></div>
         <div class="r"><span class="k">Hydraulic power at actuator</span><span class="v" id="moPh">—</span></div>
       </div>
-      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-text)">Show formulas</summary>
         <div class="formula"><b>P<sub>motor</sub></b> = Q·p / (600·η) [kW] &nbsp;·&nbsp; 1 HP = 0.7457 kW</div>
       </details>
     </div>
@@ -353,14 +358,14 @@ footer a:hover{color:var(--ink)}
           <rect x="186" y="20" width="12" height="130" fill="#fff" stroke="#191b1f" stroke-width="2"/>
           <rect x="362" y="20" width="12" height="130" fill="#fff" stroke="#191b1f" stroke-width="2"/>
           <rect x="170" y="2" width="220" height="20" fill="#edece8" stroke="#191b1f" stroke-width="2"/>
-          <rect x="252" y="22" width="56" height="40" fill="#fff" stroke="#163a5c" stroke-width="2"/>
-          <rect x="270" y="62" width="20" height="36" fill="#fff" stroke="#163a5c" stroke-width="2"/>
-          <rect x="226" y="98" width="108" height="16" fill="#fff" stroke="#163a5c" stroke-width="2"/>
-          <path d="M280 120v14M275 128l5 8 5-8" fill="none" stroke="#163a5c" stroke-width="2"/>
-          <text x="318" y="135" fill="#0f2b45">F = P·A</text>
-          <line x1="252" y1="46" x2="232" y2="46" stroke="#0f2b45"/><line x1="308" y1="46" x2="328" y2="46" stroke="#0f2b45"/>
-          <line x1="232" y1="38" x2="232" y2="54" stroke="#0f2b45"/><line x1="328" y1="38" x2="328" y2="54" stroke="#0f2b45"/>
-          <text x="206" y="50" fill="#0f2b45">D</text>
+          <rect x="252" y="22" width="56" height="40" fill="#fff" stroke="#f5c000" stroke-width="2"/>
+          <rect x="270" y="62" width="20" height="36" fill="#fff" stroke="#f5c000" stroke-width="2"/>
+          <rect x="226" y="98" width="108" height="16" fill="#fff" stroke="#f5c000" stroke-width="2"/>
+          <path d="M280 120v14M275 128l5 8 5-8" fill="none" stroke="#f5c000" stroke-width="2"/>
+          <text x="318" y="135" fill="#1c4fa0">F = P·A</text>
+          <line x1="252" y1="46" x2="232" y2="46" stroke="#1c4fa0"/><line x1="308" y1="46" x2="328" y2="46" stroke="#1c4fa0"/>
+          <line x1="232" y1="38" x2="232" y2="54" stroke="#1c4fa0"/><line x1="328" y1="38" x2="328" y2="54" stroke="#1c4fa0"/>
+          <text x="206" y="50" fill="#1c4fa0">D</text>
           <text x="402" y="40" fill="#5d6066">P bar →</text>
           <line x1="40" y1="182" x2="520" y2="182" stroke="#5d6066" stroke-dasharray="4 3"/>
         </svg>
@@ -379,9 +384,9 @@ footer a:hover{color:var(--ink)}
       <div class="list-res">
         <div class="r"><span class="k">Force</span><span class="v" id="tKn">—</span></div>
         <div class="r"><span class="k">Piston area</span><span class="v" id="tA">—</span></div>
-        <div class="r"><span class="k">Closest Jagdamba deep-draw model</span><span class="v" id="tModel" style="color:var(--blue)">—</span></div>
+        <div class="r"><span class="k">Closest Jagdamba deep-draw model</span><span class="v" id="tModel" style="color:var(--org-text)">—</span></div>
       </div>
-      <details><summary class="mono" style="cursor:pointer;color:var(--org-deep)">Show formulas</summary>
+      <details><summary class="mono" style="cursor:pointer;color:var(--org-text)">Show formulas</summary>
         <div class="formula"><b>F</b> = P · π/4·D² &nbsp;·&nbsp; tons = F[kN] / 9.80665</div>
       </details>
     </div>
@@ -517,7 +522,7 @@ function press(){
   const tons=F/9.80665;
   out('#tTon',tons,'tons');out('#tKn',F,'kN');out('#tA',A,'cm²');
   const m=SHD.find(x=>x[1]>=tons);
-  $('#tModel').textContent=m?`${m[0]} (${m[1]} T)`:'Servo / custom build — up to 1,000 T';
+  $('#tModel').textContent=m?`${m[0]} (${m[1]} T)`:'CNC servo / custom build, to 1,000 T';
 }
 $('#tD').addEventListener('input',()=>{$('#tDs').value=$('#tD').value;press();});
 $('#tDs').addEventListener('input',e=>{$('#tD').value=e.target.value;press();});

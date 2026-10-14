@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#fdfdfc">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services — Jagdamba · Hydraulic repair, overhaul & press retrofits</title>
 <meta name="description" content="Cylinder, power pack, press, manifold and valve repair by Shree Jagdamba Hydropneumatic, Nagpur — honing, plated rods, seal kits, pressure testing and full press retrofits.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
@@ -14,8 +15,8 @@
 :root{
   --white:#fdfdfc;--grey-50:#f6f5f2;--grey-100:#edece8;--grey-150:#e3e1db;
   --ink:#191b1f;--ink-60:#5d6066;--ink-40:#94969b;
-  --charcoal:#163a5c;--charcoal-2:#1d496f;
-  --org:#f5b70a;--org-deep:#0f2b45;--blue:#163a5c;--blue-2:#1d496f;--blue-soft:#e9eef3;
+  --charcoal:#0e1a33;--charcoal-2:#17284c;
+  --org:#f5c000;--org-text:#1c4fa0;--blue:#1c4fa0;--blue-deep:#143a78;--yel-deep:#dcaa00;--em-c:var(--ink);--em-bg:linear-gradient(transparent 60%,var(--org) 60%,var(--org) 92%,transparent 92%);--org-deep:#1c4fa0;
   --hair:rgba(25,27,31,.12);--hair-soft:rgba(25,27,31,.07);
   --font:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
   --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2.25rem;--s6:3.5rem;--s7:5.5rem;--s8:8.5rem;
@@ -31,14 +32,14 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--ink);font-family:var(--font);font-size:var(--t-base);line-height:1.65;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--org);color:var(--blue)}
+::selection{background:var(--org);color:var(--ink)}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 img{max-width:100%;display:block}
 h1,h2,h3{font-weight:500;letter-spacing:-.035em;line-height:1.06}
 .mono{font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
 .container{padding-inline:var(--pad);max-width:1560px;margin-inline:auto}
-:focus-visible{outline:2px solid var(--org);outline-offset:3px}
+:focus-visible{outline:2px solid var(--org-text);outline-offset:3px}
 section{position:relative}
 .label{display:flex;align-items:center;gap:.65rem;font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-60);margin-bottom:var(--s4)}
 .label::before{content:"";width:8px;height:8px;background:var(--org)}
@@ -46,19 +47,19 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
+.brand .sq{width:26px;height:auto;flex:none;display:block}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after,.nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 .nav-links a[aria-current="page"]{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:var(--blue);font-size:.88rem;font-weight:600;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
-.btn:hover{background:#ffca28}
+.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
+.btn:hover{background:var(--yel-deep)}
 .btn .arr{transition:transform .3s var(--ease)}
 .btn:hover .arr{transform:translateX(5px)}
 .btn-quiet{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem .25rem;min-height:46px;border-bottom:1.5px solid var(--ink);transition:color .25s,border-color .25s}
-.btn-quiet:hover{color:var(--blue);border-color:var(--org)}
+.btn-quiet:hover{color:var(--org-text);border-color:var(--org)}
 .nav .btn{margin-left:auto}
 @media(min-width:1060px){.nav-links{display:flex}.nav .btn{margin-left:0}}
 .burger{margin-left:auto;width:46px;height:46px;display:grid;place-items:center}
@@ -69,19 +70,19 @@ section{position:relative}
 .mnav{position:fixed;inset:0;z-index:110;background:var(--white);display:flex;flex-direction:column;justify-content:center;padding-inline:var(--pad);transform:translateY(-102%);transition:transform .6s var(--ease)}
 .mnav.open{transform:none}
 .mnav a{font-size:clamp(1.6rem,7vw,2.3rem);font-weight:500;letter-spacing:-.03em;border-bottom:1px solid var(--hair);padding:1rem 0;display:flex;justify-content:space-between;align-items:baseline}
-.mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
+.mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-text)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
    linear-gradient(90deg,var(--hair-soft) 1px,transparent 1px) 0 0/clamp(70px,14vw,130px) 100%;
   -webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
 .phero h1{font-size:var(--t-3xl)}
-.phero h1 em{font-style:normal;color:var(--blue);background:linear-gradient(transparent 62%, rgba(245,183,10,.5) 62%)}
+.phero h1 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .phero .sub{margin-top:var(--s5);max-width:52ch;font-size:var(--t-lg);line-height:1.55;color:var(--ink-60)}
-.phero .sub strong{color:var(--blue);font-weight:700;border-bottom:3px solid var(--org)}
+.phero .sub strong{color:var(--ink);font-weight:600}
 .phero .heroctas{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s5);align-items:center}
 
 /* ---- editorial rows (products/services) ---- */
@@ -92,14 +93,14 @@ section{position:relative}
 .rows .ico{width:72px;height:72px;display:none}
 @media(min-width:980px){.rows .ico{display:block}}
 .rows .ico svg{width:100%;height:100%;fill:none;stroke:var(--ink-40);stroke-width:1.1;transition:stroke .3s}
-.rows .ico svg .o{stroke:var(--org)}
+.rows .ico svg .o{stroke:var(--org-text)}
 .rows .ttl{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;line-height:1.08}
 .rows .desc{color:var(--ink-60);font-size:var(--t-sm);line-height:1.65;max-width:50ch}
 .rows .spec{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--ink-40);line-height:2;white-space:nowrap}
 @media(min-width:980px){.rows .spec{text-align:right}}
-.rows .spec b{color:var(--org-deep);font-weight:500}
+.rows .spec b{color:var(--org-text);font-weight:500}
 .rows .row:hover{padding-left:.9rem}
-.rows .row:hover .num{color:var(--blue)}
+.rows .row:hover .num{color:var(--org-text)}
 .rows .row:hover .ico svg{stroke:var(--ink)}
 
 /* ---- data tables ---- */
@@ -109,7 +110,7 @@ table.data th{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-
 table.data td{font-family:var(--mono);font-size:.8rem;padding:.8rem .9rem;border-bottom:1px solid var(--hair-soft);white-space:nowrap}
 table.data td:first-child{color:var(--ink);font-weight:500}
 table.data tr:hover td{background:var(--grey-50)}
-table.data .cap{color:var(--blue);font-weight:600}
+table.data .cap{color:var(--org-text);font-weight:500}
 .tnote{font-size:.78rem;color:var(--ink-40);margin-top:var(--s3);max-width:64ch}
 
 /* ---- section scaffolding ---- */
@@ -117,7 +118,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 .sect-head{display:grid;gap:var(--s4);margin-bottom:var(--s6)}
 @media(min-width:980px){.sect-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,7rem);align-items:end}}
 .sect-head h2{font-size:var(--t-2xl)}
-.sect-head h2 em{font-style:normal;color:var(--blue)}
+.sect-head h2 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .sect-head p{color:var(--ink-60);max-width:46ch}
 .band{background:var(--charcoal);color:#eceae6}
 .band .label{color:#9b9da3}
@@ -132,7 +133,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 @media(min-width:1180px){.cardgrid.c4{grid-template-columns:repeat(4,1fr)}.cardgrid.c3{grid-template-columns:repeat(3,1fr)}}
 .card{padding:var(--s5) var(--s4) var(--s5) 0;border-bottom:1px solid var(--hair)}
 @media(min-width:720px){.card{border-right:1px solid var(--hair-soft);padding-inline:var(--s4)}.card:first-child{padding-left:0}.card:nth-last-child(1){border-right:none}}
-.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--blue)}
+.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--org-text)}
 .card h3{font-size:var(--t-lg);font-weight:550;letter-spacing:-.02em;margin:var(--s3) 0;line-height:1.25}
 .card p{color:var(--ink-60);font-size:var(--t-sm);line-height:1.7}
 
@@ -141,7 +142,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--hair)}
 .t-item{position:relative;padding:0 0 var(--s7)}
 .t-item::before{content:"";position:absolute;left:calc(5px - clamp(1.4rem,4vw,3rem));top:6px;width:11px;height:11px;border-radius:50%;background:var(--org);transform:translateX(-5px);box-shadow:0 0 0 5px var(--white)}
-.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--org-text)}
 .t-item h3{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;margin:.5rem 0 .6rem}
 .t-item .where{font-family:var(--mono);font-size:.74rem;color:var(--ink-40);margin-bottom:var(--s3)}
 .t-item p{color:var(--ink-60);max-width:56ch;font-size:var(--t-sm);line-height:1.7}
@@ -164,12 +165,12 @@ table.data .cap{color:var(--blue);font-weight:600}
 .cta-strip{border-top:1px solid var(--hair);padding-block:var(--s7)}
 .cta-strip .inner{display:flex;flex-wrap:wrap;gap:var(--s5);align-items:center;justify-content:space-between}
 .cta-strip h2{font-size:var(--t-2xl);max-width:18ch}
-.cta-strip h2 em{font-style:normal;color:var(--blue)}
+.cta-strip h2 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 
 /* ---- footer ---- */
 footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var(--s5);overflow:hidden}
-.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:var(--blue-2);transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
-.foot-big:hover{color:var(--org)}
+.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:#17284c;transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
+.foot-big:hover{color:var(--org-text)}
 .foot-cols{display:grid;gap:var(--s5);padding-bottom:var(--s5);font-size:var(--t-sm);line-height:2}
 @media(min-width:880px){.foot-cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
 .foot-cols b{color:#fff;display:block;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
@@ -187,19 +188,24 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
 
-
-/* ===== blue+yellow palette overrides: yellow only on dark surfaces ===== */
-.band .label::before{background:var(--org)}
-.band .sect-head h2 em,.band h2 em{color:var(--org)}
-.band .card .n{color:var(--org)}
-.cta-strip{border-top:1px solid var(--hair)}
-.svc-phone:hover{color:var(--blue)}
+.config,.contact,.band,footer,.qbar{--org-text:var(--org);--em-c:var(--org);--em-bg:none}
+em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media(max-width:479px){.nav .btn{display:none}}
+.brand img.sq{width:26px;height:auto;flex:none;display:block;background:none}
 </style>
 
+<style>
+/* shop-floor photo strip */
+.shop{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3)}
+@media(min-width:880px){.shop{grid-template-columns:repeat(4,1fr)}}
+.shop figure{margin:0;border-radius:3px;overflow:hidden;border:1px solid var(--hair);background:var(--grey-50)}
+.shop img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.shop figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--ink-60);padding:.6rem .8rem}
+</style>
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
+  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.webp" alt="" width="26" height="24">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary"><a href="products.html">Products</a><a href="services.html" aria-current="page">Services</a><a href="about.html">About</a><a href="expos.html">Exhibitions</a><a href="calculators.html">Calculators</a></nav>
   <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -234,8 +240,8 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
       <span class="num">03</span>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M14 58h44M18 58V20h36v38"/><path d="M22 20v-6h28v6"/><path class="o" d="M32 14v-4h8v4M34 26v10h4V26z"/><path class="o" d="M26 42h20v5H26z"/><path d="M24 52h24" opacity=".5"/></svg></span>
       <span><span class="ttl">Hydraulic press repair</span><br><span class="desc">Frame inspection, guide re-machining, cylinder overhaul, manifold and control panel rebuilds — for our presses and others'.</span></span>
-      <span class="desc" style="max-width:none">Hybrid servo retrofits cut energy costs by up to 70% — zero idle consumption, closed-loop PQ control, up to 60% less oil heating. We also convert screw-type sheet-bending presses to hydraulic.</span>
-      <span class="spec">All press types<br><b>incl. retrofits</b></span>
+      <span class="desc" style="max-width:none">Hybrid-servo retrofits cut energy costs by up to 70%: zero idle consumption, closed-loop PQ control, up to 60% less oil heating. We also convert screw-type sheet-bending presses to hydraulic.</span>
+      <span class="spec">All press types<br><b>hybrid-servo retrofits</b></span>
     </a><a class="row rv" href="contact.html">
       <span class="num">04</span>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="16" y="18" width="40" height="36"/><circle class="o" cx="28" cy="30" r="4"/><circle class="o" cx="44" cy="42" r="4"/><path d="M28 34v8h12M44 38v-8H32M16 26h-6M56 46h6"/></svg></span>
@@ -249,6 +255,19 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
       <span class="desc" style="max-width:none">Documented test results with every overhaul.</span>
       <span class="spec">DCV · check · pressure<br><b>bench-tested</b></span>
     </a>
+  </div>
+</section>
+
+<section class="sect container" style="padding-top:0">
+  <div class="sect-head rv">
+    <div><p class="label">On the bench</p><h2>Rebuilt, re-plumbed, <em>re-tested</em>.</h2></div>
+    <p>Manifold stacks and power units from our workshop floor — every valve wired, every line pressure-checked before it leaves Butibori.</p>
+  </div>
+  <div class="shop rv">
+    <figure><img src="img/manifold-03-sm.webp" srcset="img/manifold-03-sm.webp 480w, img/manifold-03.webp 1406w" sizes="(min-width:880px) 25vw, 50vw" alt="Manifold block stack with solenoid directional valves and pressure gauges" width="1406" height="1600" loading="lazy" decoding="async"><figcaption>Manifold stack · valve rebuild</figcaption></figure>
+    <figure><img src="img/manifold-04-sm.webp" srcset="img/manifold-04-sm.webp 480w, img/manifold-04.webp 1200w" sizes="(min-width:880px) 25vw, 50vw" alt="Close-up of solenoid valves and hydraulic hose connections on a manifold" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Solenoid valves · re-plumbed</figcaption></figure>
+    <figure><img src="img/manifold-05-sm.webp" srcset="img/manifold-05-sm.webp 480w, img/manifold-05.webp 1200w" sizes="(min-width:880px) 25vw, 50vw" alt="Manifold block with hydraulic hoses mounted on a yellow power pack tank" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Manifold on tank · final fit</figcaption></figure>
+    <figure><img src="img/power-pack-sm.webp" srcset="img/power-pack-sm.webp 480w, img/power-pack.webp 1600w" sizes="(min-width:880px) 25vw, 50vw" alt="Hydraulic power pack with motor, pump and valve stack" width="1600" height="1246" loading="lazy" decoding="async"><figcaption>Power pack · ready for test</figcaption></figure>
   </div>
 </section>
 

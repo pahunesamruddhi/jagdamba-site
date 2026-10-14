@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#fdfdfc">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jagdamba — Logo Explorations · 3 Directions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,650;14..32,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--white:#fdfdfc;--grey:#f6f5f2;--hair:rgba(25,27,31,.12);--ink:#191b1f;--ink60:#5d6066;--ink40:#94969b;
---char:#1d1f24;--org:#e8521d;--deep:#c2410c;--mono:"JetBrains Mono",monospace;--ease:cubic-bezier(.22,1,.36,1)}
+--char:#0e1a33;--org:#f5c000;--org-text:#1c4fa0;--blue:#1c4fa0;--blue-deep:#143a78;--yel-deep:#dcaa00;--em-c:var(--ink);--em-bg:linear-gradient(transparent 60%,var(--org) 60%,var(--org) 92%,transparent 92%);--deep:#1c4fa0;--mono:"JetBrains Mono",monospace;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0}
 body{background:var(--white);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;padding:clamp(1.5rem,5vw,5rem)}
 h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:500;letter-spacing:-.035em;line-height:1.05}
-h1 em{font-style:normal;color:var(--org)}
+h1 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .lede{color:var(--ink60);max-width:62ch;margin-top:1rem}
 .mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
 .label{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink60)}
@@ -33,13 +34,15 @@ h1 em{font-style:normal;color:var(--org)}
 .lock{display:flex;align-items:center;gap:14px}
 .wm{font-weight:650;letter-spacing:-.025em;color:var(--ink)}
 .dark .wm{color:#fdfdfc}
-.wm .dot{color:var(--org)}
+.wm .dot{color:var(--org-text)}
 .rec{margin-top:4.5rem;border:1px solid var(--hair);border-left:3px solid var(--org);border-radius:0 3px 3px 0;background:var(--grey);padding:1.4rem 1.8rem;max-width:880px}
 .rec b{font-weight:600}
 .note{margin-top:2.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink40);max-width:90ch;line-height:1.9}
 /* C hover demo: platen presses */
 .c-demo:hover .platen{transform:translateY(7px)}
 .platen{transition:transform .5s var(--ease)}
+.config,.contact,.band,footer,.qbar{--org-text:var(--org);--em-c:var(--org);--em-bg:none}
+em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
 </style>
 </head>
 <body>
@@ -57,7 +60,7 @@ h1 em{font-style:normal;color:var(--org)}
       <div class="lock">
         <svg width="72" height="72" viewBox="0 0 64 64" aria-label="Pressmark">
           <rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="5"/>
-          <rect x="33" y="9" width="12" height="8" fill="#e8521d"/>
+          <rect x="33" y="9" width="12" height="8" fill="#f5c000"/>
           <path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="6"/>
         </svg>
         <span class="wm" style="font-size:34px">Jagdamba</span>
@@ -67,7 +70,7 @@ h1 em{font-style:normal;color:var(--org)}
       <div class="lock">
         <svg width="58" height="58" viewBox="0 0 64 64">
           <rect x="4" y="4" width="56" height="56" fill="none" stroke="#fdfdfc" stroke-width="5"/>
-          <rect x="33" y="9" width="12" height="8" fill="#e8521d"/>
+          <rect x="33" y="9" width="12" height="8" fill="#f5c000"/>
           <path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#fdfdfc" stroke-width="6"/>
         </svg>
         <span class="wm" style="font-size:27px">Jagdamba</span>
@@ -75,9 +78,9 @@ h1 em{font-style:normal;color:var(--org)}
     </div>
     <div class="tile"><span class="tag">Mark · small sizes</span>
       <div class="smallrow">
-        <svg width="64" height="64" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="5"/><rect x="33" y="9" width="12" height="8" fill="#e8521d"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="6"/></svg>
-        <svg width="32" height="32" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="6"/><rect x="33" y="9" width="12" height="8" fill="#e8521d"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="7"/></svg>
-        <svg width="18" height="18" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="8"/><path d="M39 14v25a11 11 0 0 1 -22 0" fill="none" stroke="#e8521d" stroke-width="9"/></svg>
+        <svg width="64" height="64" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="5"/><rect x="33" y="9" width="12" height="8" fill="#f5c000"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="6"/></svg>
+        <svg width="32" height="32" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="6"/><rect x="33" y="9" width="12" height="8" fill="#f5c000"/><path d="M39 17v22a11 11 0 0 1 -22 0" fill="none" stroke="#191b1f" stroke-width="7"/></svg>
+        <svg width="18" height="18" viewBox="0 0 64 64"><rect x="4" y="4" width="56" height="56" fill="none" stroke="#191b1f" stroke-width="8"/><path d="M39 14v25a11 11 0 0 1 -22 0" fill="none" stroke="#f5c000" stroke-width="9"/></svg>
       </div>
     </div>
   </div>
@@ -95,10 +98,10 @@ h1 em{font-style:normal;color:var(--org)}
           <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
           <circle cx="60" cy="60" r="56" fill="none" stroke="#191b1f" stroke-width="3"/>
           <circle cx="60" cy="60" r="33" fill="none" stroke="#191b1f" stroke-width="2"/>
-          <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="3"/>
+          <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#f5c000" stroke-width="3"/>
           <text font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="3.4" fill="#191b1f" font-weight="500"><textPath href="#ring">JAGDAMBA · HYDROPNEUMATIC · EST 2006 ·</textPath></text>
           <text x="60" y="72" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#191b1f">J</text>
-          <rect x="52" y="78" width="16" height="3.5" fill="#e8521d"/>
+          <rect x="52" y="78" width="16" height="3.5" fill="#f5c000"/>
         </svg>
         <span class="wm" style="font-size:32px">Jagdamba</span>
       </div>
@@ -108,16 +111,16 @@ h1 em{font-style:normal;color:var(--org)}
         <defs><path id="ring2" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
         <circle cx="60" cy="60" r="56" fill="none" stroke="#fdfdfc" stroke-width="3"/>
         <circle cx="60" cy="60" r="33" fill="none" stroke="#fdfdfc" stroke-width="2"/>
-        <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="3"/>
+        <path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#f5c000" stroke-width="3"/>
         <text font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="3.4" fill="#fdfdfc" font-weight="500"><textPath href="#ring2">JAGDAMBA · HYDROPNEUMATIC · EST 2006 ·</textPath></text>
         <text x="60" y="72" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#fdfdfc">J</text>
-        <rect x="52" y="78" width="16" height="3.5" fill="#e8521d"/>
+        <rect x="52" y="78" width="16" height="3.5" fill="#f5c000"/>
       </svg>
     </div>
     <div class="tile"><span class="tag">As a hallmark · small</span>
       <div class="smallrow">
-        <svg width="72" height="72" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="none" stroke="#191b1f" stroke-width="4"/><circle cx="60" cy="60" r="33" fill="none" stroke="#191b1f" stroke-width="2.5"/><path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#e8521d" stroke-width="4"/><text x="60" y="73" text-anchor="middle" font-family="Inter" font-weight="800" font-size="38" fill="#191b1f">J</text></svg>
-        <svg width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#191b1f" stroke-width="7"/><path d="M60,60 m-54,0 a54,54 0 0,1 54,-54" fill="none" stroke="#e8521d" stroke-width="7"/><text x="60" y="76" text-anchor="middle" font-family="Inter" font-weight="800" font-size="46" fill="#191b1f">J</text></svg>
+        <svg width="72" height="72" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="none" stroke="#191b1f" stroke-width="4"/><circle cx="60" cy="60" r="33" fill="none" stroke="#191b1f" stroke-width="2.5"/><path d="M60,60 m-56,0 a56,56 0 0,1 56,-56" fill="none" stroke="#f5c000" stroke-width="4"/><text x="60" y="73" text-anchor="middle" font-family="Inter" font-weight="800" font-size="38" fill="#191b1f">J</text></svg>
+        <svg width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#191b1f" stroke-width="7"/><path d="M60,60 m-54,0 a54,54 0 0,1 54,-54" fill="none" stroke="#f5c000" stroke-width="7"/><text x="60" y="76" text-anchor="middle" font-family="Inter" font-weight="800" font-size="46" fill="#191b1f">J</text></svg>
       </div>
     </div>
   </div>
@@ -131,22 +134,22 @@ h1 em{font-style:normal;color:var(--org)}
   <div class="grid">
     <div class="tile"><span class="tag">Primary lockup · hover me</span>
       <svg class="c-demo" width="320" height="100" viewBox="0 0 320 100" aria-label="Daylight wordmark">
-        <rect class="platen" x="6" y="8" width="116" height="9" fill="#e8521d"/>
+        <rect class="platen" x="6" y="8" width="116" height="9" fill="#f5c000"/>
         <text x="4" y="66" font-family="Inter" font-weight="650" font-size="44" letter-spacing="-1.4" fill="#191b1f">Jagdamba</text>
         <rect x="6" y="80" width="232" height="9" fill="#191b1f"/>
       </svg>
     </div>
     <div class="tile dark"><span class="tag">Reversed</span>
       <svg width="270" height="90" viewBox="0 0 320 100">
-        <rect x="6" y="8" width="116" height="9" fill="#e8521d"/>
+        <rect x="6" y="8" width="116" height="9" fill="#f5c000"/>
         <text x="4" y="66" font-family="Inter" font-weight="650" font-size="44" letter-spacing="-1.4" fill="#fdfdfc">Jagdamba</text>
         <rect x="6" y="80" width="232" height="9" fill="#fdfdfc"/>
       </svg>
     </div>
     <div class="tile"><span class="tag">Monogram · small sizes</span>
       <div class="smallrow">
-        <svg width="56" height="56" viewBox="0 0 64 64"><rect x="8" y="6" width="30" height="7" fill="#e8521d"/><text x="8" y="46" font-family="Inter" font-weight="650" font-size="34" fill="#191b1f">J</text><rect x="8" y="52" width="48" height="7" fill="#191b1f"/></svg>
-        <svg width="30" height="30" viewBox="0 0 64 64"><rect x="8" y="4" width="32" height="9" fill="#e8521d"/><text x="8" y="48" font-family="Inter" font-weight="650" font-size="38" fill="#191b1f">J</text><rect x="8" y="54" width="48" height="9" fill="#191b1f"/></svg>
+        <svg width="56" height="56" viewBox="0 0 64 64"><rect x="8" y="6" width="30" height="7" fill="#f5c000"/><text x="8" y="46" font-family="Inter" font-weight="650" font-size="34" fill="#191b1f">J</text><rect x="8" y="52" width="48" height="7" fill="#191b1f"/></svg>
+        <svg width="30" height="30" viewBox="0 0 64 64"><rect x="8" y="4" width="32" height="9" fill="#f5c000"/><text x="8" y="48" font-family="Inter" font-weight="650" font-size="38" fill="#191b1f">J</text><rect x="8" y="54" width="48" height="9" fill="#191b1f"/></svg>
       </div>
     </div>
   </div>

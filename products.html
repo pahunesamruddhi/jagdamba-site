@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#fdfdfc">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products — Jagdamba · Hydraulic presses, cylinders, power packs, manifolds & more</title>
-<meta name="description" content="Eleven product lines from Shree Jagdamba Hydropneumatic: hydraulic presses 25–650 T with full model charts, cylinders, power packs, manifold blocks, lifts, gates, seals, honed tubes and plated rods.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png"><link rel="apple-touch-icon" href="img/logo/favicon-180.png">
+<meta name="description" content="Eleven product lines from Shree Jagdamba Hydropneumatic: hydraulic presses 10–1,000 T with full model charts, cylinders, power packs, manifold blocks, lifts, gates, seals, honed tubes and plated rods.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,450;14..32,500;14..32,600;14..32,650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
@@ -14,8 +15,8 @@
 :root{
   --white:#fdfdfc;--grey-50:#f6f5f2;--grey-100:#edece8;--grey-150:#e3e1db;
   --ink:#191b1f;--ink-60:#5d6066;--ink-40:#94969b;
-  --charcoal:#163a5c;--charcoal-2:#1d496f;
-  --org:#f5b70a;--org-deep:#0f2b45;--blue:#163a5c;--blue-2:#1d496f;--blue-soft:#e9eef3;
+  --charcoal:#0e1a33;--charcoal-2:#17284c;
+  --org:#f5c000;--org-text:#1c4fa0;--blue:#1c4fa0;--blue-deep:#143a78;--yel-deep:#dcaa00;--em-c:var(--ink);--em-bg:linear-gradient(transparent 60%,var(--org) 60%,var(--org) 92%,transparent 92%);--org-deep:#1c4fa0;
   --hair:rgba(25,27,31,.12);--hair-soft:rgba(25,27,31,.07);
   --font:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
   --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2.25rem;--s6:3.5rem;--s7:5.5rem;--s8:8.5rem;
@@ -31,14 +32,14 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--ink);font-family:var(--font);font-size:var(--t-base);line-height:1.65;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--org);color:var(--blue)}
+::selection{background:var(--org);color:var(--ink)}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 img{max-width:100%;display:block}
 h1,h2,h3{font-weight:500;letter-spacing:-.035em;line-height:1.06}
 .mono{font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
 .container{padding-inline:var(--pad);max-width:1560px;margin-inline:auto}
-:focus-visible{outline:2px solid var(--org);outline-offset:3px}
+:focus-visible{outline:2px solid var(--org-text);outline-offset:3px}
 section{position:relative}
 .label{display:flex;align-items:center;gap:.65rem;font-family:var(--mono);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-60);margin-bottom:var(--s4)}
 .label::before{content:"";width:8px;height:8px;background:var(--org)}
@@ -46,19 +47,19 @@ section{position:relative}
 /* ---- nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:120;height:76px;display:flex;align-items:center;gap:var(--s5);padding-inline:var(--pad);background:rgba(253,253,252,.86);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--hair)}
 .brand{display:flex;align-items:center;gap:.7rem;font-weight:650;font-size:1.06rem;letter-spacing:-.02em}
-.brand .sq{width:32px;height:32px;flex:none;object-fit:contain}
+.brand .sq{width:26px;height:auto;flex:none;display:block}
 .nav-links{display:none;gap:clamp(1.2rem,2.4vw,2.6rem);margin-left:auto}
 .nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-60);padding:.55rem 0;position:relative;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;background:var(--org);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after,.nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 .nav-links a[aria-current="page"]{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:var(--blue);font-size:.88rem;font-weight:600;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
-.btn:hover{background:#ffca28}
+.btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--org);color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem 1.45rem;border-radius:2px;min-height:46px;transition:background .25s}
+.btn:hover{background:var(--yel-deep)}
 .btn .arr{transition:transform .3s var(--ease)}
 .btn:hover .arr{transform:translateX(5px)}
 .btn-quiet{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);font-size:.88rem;font-weight:550;padding:.85rem .25rem;min-height:46px;border-bottom:1.5px solid var(--ink);transition:color .25s,border-color .25s}
-.btn-quiet:hover{color:var(--blue);border-color:var(--org)}
+.btn-quiet:hover{color:var(--org-text);border-color:var(--org)}
 .nav .btn{margin-left:auto}
 @media(min-width:1060px){.nav-links{display:flex}.nav .btn{margin-left:0}}
 .burger{margin-left:auto;width:46px;height:46px;display:grid;place-items:center}
@@ -69,19 +70,19 @@ section{position:relative}
 .mnav{position:fixed;inset:0;z-index:110;background:var(--white);display:flex;flex-direction:column;justify-content:center;padding-inline:var(--pad);transform:translateY(-102%);transition:transform .6s var(--ease)}
 .mnav.open{transform:none}
 .mnav a{font-size:clamp(1.6rem,7vw,2.3rem);font-weight:500;letter-spacing:-.03em;border-bottom:1px solid var(--hair);padding:1rem 0;display:flex;justify-content:space-between;align-items:baseline}
-.mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-deep)}
+.mnav a em{font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--org-text)}
 
 /* ---- sub-page hero ---- */
-.phero{padding:clamp(112px,16vh,160px) var(--pad) clamp(2.4rem,7vh,var(--s7));max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
+.phero{padding:160px var(--pad) var(--s7);max-width:1560px;margin-inline:auto;position:relative;overflow:hidden}
 .phero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
   background:
    linear-gradient(var(--hair-soft) 1px,transparent 1px) 0 0/100% clamp(70px,14vh,130px),
    linear-gradient(90deg,var(--hair-soft) 1px,transparent 1px) 0 0/clamp(70px,14vw,130px) 100%;
   -webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
 .phero h1{font-size:var(--t-3xl)}
-.phero h1 em{font-style:normal;color:var(--blue);background:linear-gradient(transparent 62%, rgba(245,183,10,.5) 62%)}
+.phero h1 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .phero .sub{margin-top:var(--s5);max-width:52ch;font-size:var(--t-lg);line-height:1.55;color:var(--ink-60)}
-.phero .sub strong{color:var(--blue);font-weight:700;border-bottom:3px solid var(--org)}
+.phero .sub strong{color:var(--ink);font-weight:600}
 .phero .heroctas{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s5);align-items:center}
 
 /* ---- editorial rows (products/services) ---- */
@@ -92,14 +93,14 @@ section{position:relative}
 .rows .ico{width:72px;height:72px;display:none}
 @media(min-width:980px){.rows .ico{display:block}}
 .rows .ico svg{width:100%;height:100%;fill:none;stroke:var(--ink-40);stroke-width:1.1;transition:stroke .3s}
-.rows .ico svg .o{stroke:var(--org)}
+.rows .ico svg .o{stroke:var(--org-text)}
 .rows .ttl{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;line-height:1.08}
 .rows .desc{color:var(--ink-60);font-size:var(--t-sm);line-height:1.65;max-width:50ch}
 .rows .spec{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--ink-40);line-height:2;white-space:nowrap}
 @media(min-width:980px){.rows .spec{text-align:right}}
-.rows .spec b{color:var(--org-deep);font-weight:500}
+.rows .spec b{color:var(--org-text);font-weight:500}
 .rows .row:hover{padding-left:.9rem}
-.rows .row:hover .num{color:var(--blue)}
+.rows .row:hover .num{color:var(--org-text)}
 .rows .row:hover .ico svg{stroke:var(--ink)}
 
 /* ---- data tables ---- */
@@ -109,7 +110,7 @@ table.data th{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-
 table.data td{font-family:var(--mono);font-size:.8rem;padding:.8rem .9rem;border-bottom:1px solid var(--hair-soft);white-space:nowrap}
 table.data td:first-child{color:var(--ink);font-weight:500}
 table.data tr:hover td{background:var(--grey-50)}
-table.data .cap{color:var(--blue);font-weight:600}
+table.data .cap{color:var(--org-text);font-weight:500}
 .tnote{font-size:.78rem;color:var(--ink-40);margin-top:var(--s3);max-width:64ch}
 
 /* ---- section scaffolding ---- */
@@ -117,7 +118,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 .sect-head{display:grid;gap:var(--s4);margin-bottom:var(--s6)}
 @media(min-width:980px){.sect-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,7rem);align-items:end}}
 .sect-head h2{font-size:var(--t-2xl)}
-.sect-head h2 em{font-style:normal;color:var(--blue)}
+.sect-head h2 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 .sect-head p{color:var(--ink-60);max-width:46ch}
 .band{background:var(--charcoal);color:#eceae6}
 .band .label{color:#9b9da3}
@@ -132,7 +133,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 @media(min-width:1180px){.cardgrid.c4{grid-template-columns:repeat(4,1fr)}.cardgrid.c3{grid-template-columns:repeat(3,1fr)}}
 .card{padding:var(--s5) var(--s4) var(--s5) 0;border-bottom:1px solid var(--hair)}
 @media(min-width:720px){.card{border-right:1px solid var(--hair-soft);padding-inline:var(--s4)}.card:first-child{padding-left:0}.card:nth-last-child(1){border-right:none}}
-.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--blue)}
+.card .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--org-text)}
 .card h3{font-size:var(--t-lg);font-weight:550;letter-spacing:-.02em;margin:var(--s3) 0;line-height:1.25}
 .card p{color:var(--ink-60);font-size:var(--t-sm);line-height:1.7}
 
@@ -141,7 +142,7 @@ table.data .cap{color:var(--blue);font-weight:600}
 .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--hair)}
 .t-item{position:relative;padding:0 0 var(--s7)}
 .t-item::before{content:"";position:absolute;left:calc(5px - clamp(1.4rem,4vw,3rem));top:6px;width:11px;height:11px;border-radius:50%;background:var(--org);transform:translateX(-5px);box-shadow:0 0 0 5px var(--white)}
-.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.t-item .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--org-text)}
 .t-item h3{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;margin:.5rem 0 .6rem}
 .t-item .where{font-family:var(--mono);font-size:.74rem;color:var(--ink-40);margin-bottom:var(--s3)}
 .t-item p{color:var(--ink-60);max-width:56ch;font-size:var(--t-sm);line-height:1.7}
@@ -164,12 +165,12 @@ table.data .cap{color:var(--blue);font-weight:600}
 .cta-strip{border-top:1px solid var(--hair);padding-block:var(--s7)}
 .cta-strip .inner{display:flex;flex-wrap:wrap;gap:var(--s5);align-items:center;justify-content:space-between}
 .cta-strip h2{font-size:var(--t-2xl);max-width:18ch}
-.cta-strip h2 em{font-style:normal;color:var(--blue)}
+.cta-strip h2 em{font-style:normal;color:var(--em-c);background:var(--em-bg)}
 
 /* ---- footer ---- */
 footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var(--s5);overflow:hidden}
-.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:var(--blue-2);transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
-.foot-big:hover{color:var(--org)}
+.foot-big{display:block;font-weight:600;font-size:clamp(3rem,13.5vw,11.5rem);letter-spacing:-.05em;line-height:1.05;color:#17284c;transition:color .5s;user-select:none;text-align:center;margin-bottom:var(--s5)}
+.foot-big:hover{color:var(--org-text)}
 .foot-cols{display:grid;gap:var(--s5);padding-bottom:var(--s5);font-size:var(--t-sm);line-height:2}
 @media(min-width:880px){.foot-cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
 .foot-cols b{color:#fff;display:block;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
@@ -187,13 +188,10 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
 
-
-/* ===== blue+yellow palette overrides: yellow only on dark surfaces ===== */
-.band .label::before{background:var(--org)}
-.band .sect-head h2 em,.band h2 em{color:var(--org)}
-.band .card .n{color:var(--org)}
-.cta-strip{border-top:1px solid var(--hair)}
-.svc-phone:hover{color:var(--blue)}
+.config,.contact,.band,footer,.qbar{--org-text:var(--org);--em-c:var(--org);--em-bg:none}
+em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media(max-width:479px){.nav .btn{display:none}}
+.brand img.sq{width:26px;height:auto;flex:none;display:block;background:none}
 </style>
 
 <style>
@@ -204,18 +202,50 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .snav a{flex:none;font-size:.8rem;font-weight:500;color:var(--ink-60);padding:.45rem .95rem;border:1px solid var(--hair);border-radius:99px;transition:all .25s}
 .snav a:hover{color:var(--ink);border-color:var(--ink)}
 /* press hero photo slot */
-.pressphoto{margin:0 0 var(--s5);position:relative;aspect-ratio:16/6;min-height:180px;overflow:hidden;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
+.pressphoto{margin:0 0 var(--s5);aspect-ratio:16/6;min-height:180px;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
   background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px)}
 .pressphoto figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-40);text-align:center;padding:0 1rem}
-.pressphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pressphoto img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+/* press-family catalogue */
+.pcat-head{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);margin:0 0 var(--s3)}
+.pcat-head .mono{color:var(--ink-40)}
+.pcat-grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:0 0 var(--s5)}
+.pcat{display:flex;flex-direction:column;border:1px solid var(--hair);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .25s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.pcat:hover{border-color:var(--ink-40);box-shadow:0 18px 44px rgba(14,26,51,.1);transform:translateY(-3px)}
+.pcat-img{display:block;position:relative;aspect-ratio:4/3.4;background:#fff;border-bottom:1px solid var(--hair-soft);overflow:hidden}
+.pcat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:.7rem;mix-blend-mode:multiply;transition:transform .5s var(--ease)}
+.pcat:hover .pcat-img img{transform:scale(1.03)}
+.pcat-body{display:flex;flex-direction:column;gap:.35rem;padding:1rem 1.1rem 1.15rem;flex:1}
+.pcat-range{align-self:flex-start;font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;background:var(--org);color:var(--ink);padding:.2rem .5rem;border-radius:2px}
+.pcat h3{font-size:var(--t-lg);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-top:.2rem}
+.pcat p{font-size:var(--t-sm);color:var(--ink-60);line-height:1.55;flex:1}
+.pcat-go{margin-top:.4rem;font-size:.84rem;font-weight:600;color:var(--org-text);display:inline-flex;gap:.4rem;align-items:center}
+.pcat-go span{transition:transform .3s var(--ease)}
+.pcat:hover .pcat-go span{transform:translateX(4px)}
+.pcat-go.chart-link:hover span{transform:translateY(3px)}
+/* new-generation block */
+.newgen{border:1px solid var(--hair);border-radius:3px;padding:var(--s5);margin:0 0 var(--s5);background:var(--grey-50)}
+.ng-head h3{font-size:var(--t-xl);font-weight:500;letter-spacing:-.03em;margin-bottom:var(--s4)}
+.ng-grid{display:grid;gap:var(--s4)}
+@media(min-width:880px){.ng-grid{grid-template-columns:repeat(4,1fr)}}
+.ng-grid b{display:block;font-weight:600;margin-bottom:.4rem}
+.ng-grid p{font-size:var(--t-sm);color:var(--ink-60);line-height:1.65;margin-bottom:.6rem}
+.ng-grid a{font-size:.78rem;font-weight:550;color:var(--org-text);margin-right:.6rem;white-space:nowrap}
+/* press gallery */
+.pgal{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3);margin:0 0 var(--s5)}
+@media(min-width:880px){.pgal{grid-template-columns:repeat(4,1fr)}}
+.pgal figure{margin:0;border:1px solid var(--hair);border-radius:3px;overflow:hidden;background:#fff}
+.pgal img{display:block;width:100%;height:auto;aspect-ratio:4/5;padding:0}
+.pgal img[style*="contain"]{padding:.6rem}
+.pgal figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--ink-60);padding:.6rem .8rem;border-top:1px solid var(--hair-soft)}
 /* collapsible chart cards */
-.chart{border:1px solid var(--hair);border-radius:3px;margin-bottom:var(--s3);background:var(--white)}
+.chart{scroll-margin-top:140px;border:1px solid var(--hair);border-radius:3px;margin-bottom:var(--s3);background:var(--white)}
 .chart summary{list-style:none;cursor:pointer;display:grid;gap:.3rem var(--s4);padding:1.1rem var(--s4);align-items:center}
 .chart summary::-webkit-details-marker{display:none}
 @media(min-width:880px){.chart summary{grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr) auto}}
 .cs-fam{font-weight:600;letter-spacing:-.02em;font-size:var(--t-lg)}
 .cs-stats{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--ink-40)}
-.cs-tog{font-size:.82rem;font-weight:550;color:var(--org-deep);display:inline-flex;gap:.45rem;align-items:center;white-space:nowrap}
+.cs-tog{font-size:.82rem;font-weight:550;color:var(--org-text);display:inline-flex;gap:.45rem;align-items:center;white-space:nowrap}
 .cs-tog i{font-style:normal;transition:transform .3s var(--ease)}
 .chart[open] .cs-tog i{transform:rotate(180deg)}
 .chart .opened{display:none}.chart[open] .opened{display:inline}.chart[open] .closed{display:none}
@@ -224,9 +254,12 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 .chart:focus-within{border-color:var(--ink-40)}
 /* row photo placeholders */
 .rows .ico{display:none!important}
-.pthumb{margin:0;position:relative;width:100%;max-width:200px;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
+.pthumb{margin:0;width:100%;max-width:200px;aspect-ratio:4/3;border:1px solid var(--hair);border-radius:3px;display:grid;place-items:center;
   background:repeating-linear-gradient(-45deg,var(--grey-50) 0 14px,var(--white) 14px 28px)}
-.pthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pthumb{overflow:hidden}
+.pthumb img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pthumb.noimg{background:var(--grey-50)}
+.rows .pthumb.noimg .ico{display:block!important;width:72px;height:72px}
 .pthumb figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--ink-40);text-align:center;padding:0 .6rem}
 @media(min-width:980px){.rows .row{grid-template-columns:56px 200px minmax(0,1fr) minmax(0,1fr) auto!important}}
 @media(max-width:979px){.pthumb{max-width:300px}}
@@ -234,7 +267,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.png" alt="">Jagdamba</a>
+  <a class="brand" href="index.html" aria-label="Jagdamba home"><img class="sq" src="img/logo/mark.webp" alt="" width="26" height="24">Jagdamba</a>
   <nav class="nav-links" aria-label="Primary"><a href="products.html" aria-current="page">Products</a><a href="services.html">Services</a><a href="about.html">About</a><a href="expos.html">Exhibitions</a><a href="calculators.html">Calculators</a></nav>
   <a class="btn" href="contact.html">Request a quote <span class="arr">→</span></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -244,7 +277,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 <section class="phero" id="top">
   <p class="label rv in">Products</p>
   <h1 class="rv in">Everything that moves by <em>oil</em>,<br>we build.</h1>
-  <p class="sub rv in">Eleven product lines, one discipline — from a 650-ton deep-draw press to the seal kit that keeps it dry. Designed, manufactured and tested at MIDC Butibori, Nagpur.</p>
+  <p class="sub rv in">Twelve product lines, one discipline — from a 1,000-ton CNC servo deep-draw press to the seal kit that keeps it dry. Designed, manufactured and tested at MIDC Butibori, Nagpur.</p>
   <div class="heroctas rv in">
     <a class="btn" href="#presses">Press model charts <span class="arr">→</span></a>
     <a class="btn-quiet" href="contact.html">Discuss a custom build</a>
@@ -264,35 +297,85 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <div class="sect-head rv">
     <div><p class="label">01 · Hydraulic presses</p>
       <h2>One range, <em>10 to 1,000</em> tons.</h2></div>
-    <p>Deep draw and CNC servo deep draw (to 1,000 T), 4-column, C-type, H-type, rubber moulding, lead pipe, FRP, stamping, lamination, terracotta, TLT, notching, hole-punching after bending, universal bending, 2-in-1, and horizontal &amp; vertical bonding presses — plus hybrid-servo retrofits (up to 70% energy savings) and screw-press conversions. Fabricated from ultrasonically tested steel, FEA-designed, driven by the compact Jagdamba manifold system.</p>
+    <p>Deep draw and CNC servo deep draw (to 1,000 T), 4-column, C-type, H-type, rubber moulding, lead pipe, FRP, stamping, lamination, terracotta, TLT, notching, hole-punching after bending, universal bending, 2-in-1, and horizontal &amp; vertical bonding presses, plus hybrid-servo retrofits (up to 70% energy saving) and screw-press conversions. Fabricated from UT-tested IS 2062 steel, FEA-designed, driven by the compact Jagdamba manifold system.</p>
   </div>
 
-  <figure class="pressphoto rv">
-    <img src="img/products/press-hero-shopfloor.jpg" alt="Jagdamba deep draw hydraulic press on the shop floor at MIDC Butibori, Nagpur">
-  </figure>
+  <div class="pcat-head rv"><p class="label" style="margin-bottom:0">Press families</p><span class="mono">8 families · 10 T to 1,000 T</span></div>
+  <div class="pcat-grid rv">
+    <article class="pcat">
+      <a class="pcat-img" href="#chart-dd"><img src="img/products/deep-draw-press-catalog-sm.webp" alt="Jagdamba deep draw hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">35–650 T · 13 models</span><h3>Deep draw</h3><p>Utensils, auto components, cookware. Main + cushion cylinder, prefill valve.</p>
+        <a class="pcat-go chart-link" href="#chart-dd">Model chart <span>↓</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="contact.html?product=presses"><img src="img/products/servo-deep-draw-press-sm.webp" alt="Jagdamba cnc servo deep draw hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">to 1,000 T</span><h3>CNC servo deep draw</h3><p>Saved programs, near-silent running, up to 70% less energy. IoT and robot-ready.</p>
+        <a class="pcat-go" href="contact.html?product=presses">Enquire <span>→</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="#chart-fc"><img src="img/products/4-column-press-sm.webp" alt="Jagdamba 4-column hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">25–500 T · 12 models</span><h3>4-column</h3><p>General forming, blanking, assembly and straightening.</p>
+        <a class="pcat-go chart-link" href="#chart-fc">Model chart <span>↓</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="#chart-ct"><img src="img/press-c-type-sm.webp" alt="Jagdamba c-type hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">5–100 T · 9 models</span><h3>C-type</h3><p>Open-front bench work: pressing, riveting, punching, bushing.</p>
+        <a class="pcat-go chart-link" href="#chart-ct">Model chart <span>↓</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="#chart-rb"><img src="img/products/rubber-compression-press-sm.webp" alt="Jagdamba rubber compression moulding hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">60–250 T · 5 models</span><h3>Rubber compression moulding</h3><p>Heated platens for rubber and composite moulding.</p>
+        <a class="pcat-go chart-link" href="#chart-rb">Model chart <span>↓</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="contact.html?product=presses"><img src="img/products/lead-pipe-press-sm.webp" alt="Jagdamba lead pipe extrusion hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">Built to order</span><h3>Lead pipe extrusion</h3><p>Lead pipe and rod extrusion with a dedicated container and die set.</p>
+        <a class="pcat-go" href="contact.html?product=presses">Enquire <span>→</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="contact.html?product=presses"><img src="img/press-notching-sm.webp" alt="Jagdamba notching & punching hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">Built to order</span><h3>Notching & punching</h3><p>Notching, hole-punching after bending, universal bending and TLT presses.</p>
+        <a class="pcat-go" href="contact.html?product=presses">Enquire <span>→</span></a></div>
+    </article>
+    <article class="pcat">
+      <a class="pcat-img" href="contact.html?product=presses"><img src="img/press-special-purpose-sm.webp" alt="Jagdamba special purpose & bonding hydraulic press" loading="lazy" decoding="async"></a>
+      <div class="pcat-body"><span class="pcat-range">Built to order</span><h3>Special purpose & bonding</h3><p>2-in-1, horizontal and vertical bonding, FRP, stamping, lamination, terracotta.</p>
+        <a class="pcat-go" href="contact.html?product=presses">Enquire <span>→</span></a></div>
+    </article>
+  </div>
 
-<details class="chart rv">
+<div class="newgen rv">
+    <div class="ng-head"><p class="label" style="margin-bottom:.4rem">New generation</p><h3>Servo, connected and automated.</h3></div>
+    <div class="ng-grid">
+      <div><b>Servo-hydraulic presses</b><p>A servo motor drives the pump, so the press uses power only while it moves. That means lower energy use, near-silent running and repeatable accuracy. Built up to 425 T, Central India's biggest servo deep-draw press. Programs are saved to cut die-setting time.</p><a href="https://www.youtube.com/watch?v=7PCkkEoVBuI" target="_blank" rel="noopener">▶ 425 T servo press</a> <a href="https://www.youtube.com/shorts/I_xOq8AcQpA" target="_blank" rel="noopener">▶ 200 T servo</a></div>
+      <div><b>IoT-enabled control</b><p>Operate, set parameters, monitor and troubleshoot the press remotely from a mobile phone.</p><a href="https://www.youtube.com/shorts/yR_5wTv77Og" target="_blank" rel="noopener">▶ See it working</a></div>
+      <div><b>Robotic automation</b><p>Deep draw press with a robotic arm for fully automated forming, which keeps quality high and consistent.</p><a href="https://www.youtube.com/shorts/2USNeraYHJo" target="_blank" rel="noopener">▶ Robot-fed press</a></div>
+      <div><b>Heavy &amp; special builds</b><p>600-ton presses for large drawn parts, gib-type guided presses for high production, ball-crimping servo presses, embossing and notching presses.</p><a href="https://www.youtube.com/shorts/LltY9sGaYUM" target="_blank" rel="noopener">▶ 600 T press</a> <a href="https://www.youtube.com/shorts/YsIlZ8Zmm-c" target="_blank" rel="noopener">▶ Gib-type</a></div>
+    </div>
+  </div>
+
+<details class="chart rv" id="chart-dd">
     <summary>
       <span class="cs-fam">Deep draw</span>
       <span class="cs-stats">13 models · 35–650 T · tables to 1500×1200 mm</span>
       <span class="cs-tog"><span class="closed">View model chart</span><span class="opened">Hide chart</span> <i>▾</i></span>
     </summary>
     <div class="tablewrap rv"><table class="data"><thead><tr><th>Model</th><th>Capacity (T)</th><th>Table (mm)</th><th>Stroke (mm)</th><th>Daylight (mm)</th><th>Shut ht (mm)</th><th>Motor (HP)</th><th>Speed appr/work/ret (mm/s)</th><th>Prefill</th><th>Cushion (mm)</th></tr></thead><tbody><tr><td>SHD-25+10</td><td class="cap">35</td><td>350 × 530</td><td>300</td><td>500</td><td>200</td><td>5</td><td>81 / 7-12 / 169</td><td>No</td><td>125</td></tr><tr><td>SHD-35+15</td><td class="cap">50</td><td>350 × 530</td><td>300</td><td>500</td><td>200</td><td>7.5</td><td>82 / 8-13 / 147</td><td>No</td><td>125</td></tr><tr><td>SHD-50+15</td><td class="cap">65</td><td>500 × 550</td><td>350</td><td>600</td><td>250</td><td>10</td><td>77 / 7-13 / 195</td><td>No</td><td>150</td></tr><tr><td>SHD-60+25</td><td class="cap">85</td><td>600 × 650</td><td>350</td><td>600</td><td>250</td><td>10</td><td>110 / 6-10 / 174</td><td>Yes</td><td>150</td></tr><tr><td>SHD-75+25</td><td class="cap">100</td><td>650 × 700</td><td>450</td><td>800</td><td>350</td><td>15</td><td>150 / 7-12 / 200</td><td>Yes</td><td>200</td></tr><tr><td>SHD-100+30</td><td class="cap">130</td><td>750 × 800</td><td>450</td><td>800</td><td>350</td><td>15</td><td>150 / 6-9 / 149</td><td>Yes</td><td>200</td></tr><tr><td>SHD-125+40</td><td class="cap">165</td><td>800 × 850</td><td>450</td><td>850</td><td>400</td><td>20</td><td>100 / 6-10 / 140</td><td>Yes</td><td>200</td></tr><tr><td>SHD-150+50</td><td class="cap">200</td><td>900 × 1000</td><td>450</td><td>850</td><td>400</td><td>20</td><td>100 / 6-10 / 140</td><td>Yes</td><td>200</td></tr><tr><td>SHD-200+75</td><td class="cap">275</td><td>1000 × 1000</td><td>500</td><td>950</td><td>450</td><td>20</td><td>100 / 6-10 / 140</td><td>Yes</td><td>250</td></tr><tr><td>SHD-250+75</td><td class="cap">325</td><td>1000 × 1000</td><td>500</td><td>950</td><td>450</td><td>25</td><td>100 / 6-10 / 140</td><td>Yes</td><td>250</td></tr><tr><td>SHD-300+100</td><td class="cap">400</td><td>1200 × 1000</td><td>500</td><td>1000</td><td>500</td><td>30</td><td>100 / 6-10 / 140</td><td>Yes</td><td>250</td></tr><tr><td>SHD-400+125</td><td class="cap">525</td><td>1500 × 1200</td><td>600</td><td>1000</td><td>400</td><td>40</td><td>100 / 6-10 / 140</td><td>Yes</td><td>250</td></tr><tr><td>SHD-500+150</td><td class="cap">650</td><td>1500 × 1200</td><td>600</td><td>1150</td><td>550</td><td>50</td><td>100 / 6-10 / 140</td><td>Yes</td><td>300</td></tr></tbody></table></div><p class="tnote" style="padding:0 var(--s3) var(--s3)">Main capacity includes pilot/cushion cylinder (e.g. SHD-75+25 → 100 T combined). Data for reference; every press is specified to your component and cycle.</p>
-  </details><details class="chart rv">
+  </details><details class="chart rv" id="chart-fc">
     <summary>
       <span class="cs-fam">4-column</span>
       <span class="cs-stats">12 models · 25–500 T · tables to 1500×1200 mm</span>
       <span class="cs-tog"><span class="closed">View model chart</span><span class="opened">Hide chart</span> <i>▾</i></span>
     </summary>
     <div class="tablewrap rv"><table class="data"><thead><tr><th>Model</th><th>Capacity (T)</th><th>Table (mm)</th><th>Stroke (mm)</th><th>Daylight (mm)</th><th>Motor (HP)</th></tr></thead><tbody><tr><td>SHD-25</td><td class="cap">25</td><td>350×350</td><td>300</td><td>350</td><td>5</td></tr><tr><td>SHD-35</td><td class="cap">35</td><td>350×530</td><td>300</td><td>350</td><td>7.5</td></tr><tr><td>SHD-50</td><td class="cap">50</td><td>500×550</td><td>300</td><td>450</td><td>10</td></tr><tr><td>SHD-60</td><td class="cap">60</td><td>600×650</td><td>350</td><td>450</td><td>10</td></tr><tr><td>SHD-75</td><td class="cap">75</td><td>650×700</td><td>450</td><td>550</td><td>15</td></tr><tr><td>SHD-100</td><td class="cap">100</td><td>750×800</td><td>500</td><td>650</td><td>15</td></tr><tr><td>SHD-150</td><td class="cap">150</td><td>900×1000</td><td>450</td><td>500</td><td>20</td></tr><tr><td>SHD-200</td><td class="cap">200</td><td>1000×1000</td><td>600</td><td>650</td><td>20</td></tr><tr><td>SHD-250</td><td class="cap">250</td><td>1000×1000</td><td>500</td><td>550</td><td>25</td></tr><tr><td>SHD-300</td><td class="cap">300</td><td>1200×1000</td><td>500</td><td>1000</td><td>30</td></tr><tr><td>SHD-400</td><td class="cap">400</td><td>1500×1200</td><td>600</td><td>1000</td><td>40</td></tr><tr><td>SHD-500</td><td class="cap">500</td><td>1500×1200</td><td>600</td><td>1150</td><td>50</td></tr></tbody></table></div>
-  </details><details class="chart rv">
+  </details><details class="chart rv" id="chart-ct">
     <summary>
       <span class="cs-fam">C-type</span>
       <span class="cs-stats">9 models · 5–100 T · open-front bench presses</span>
       <span class="cs-tog"><span class="closed">View model chart</span><span class="opened">Hide chart</span> <i>▾</i></span>
     </summary>
     <div class="tablewrap rv"><table class="data"><thead><tr><th>Model</th><th>Tons</th><th>Ram–bed (mm)</th><th>Table (mm)</th><th>Strokes/min @25 mm</th><th>Motor (HP)</th><th>Stroke adjust (mm)</th></tr></thead><tbody><tr><td>SHC-5</td><td class="cap">5</td><td>153</td><td>305×178</td><td>30</td><td>0.75</td><td>15–75</td></tr><tr><td>SHC-10</td><td class="cap">10</td><td>204</td><td>406×254</td><td>30</td><td>1</td><td>15–75</td></tr><tr><td>SHC-15</td><td class="cap">15</td><td>254</td><td>508×305</td><td>30</td><td>2</td><td>15–100</td></tr><tr><td>SHC-20</td><td class="cap">20</td><td>254</td><td>508×305</td><td>30</td><td>2</td><td>15–100</td></tr><tr><td>SHC-30</td><td class="cap">30</td><td>280</td><td>558×355</td><td>25</td><td>3</td><td>15–100</td></tr><tr><td>SHC-40</td><td class="cap">40</td><td>317</td><td>584×381</td><td>28</td><td>3</td><td>15–100</td></tr><tr><td>SHC-50</td><td class="cap">50</td><td>332</td><td>660×406</td><td>30</td><td>5</td><td>15–100</td></tr><tr><td>SHC-80</td><td class="cap">80</td><td>381</td><td>762×508</td><td>30</td><td>7.5</td><td>15–100</td></tr><tr><td>SHC-100</td><td class="cap">100</td><td>406</td><td>813×584</td><td>26</td><td>7.5</td><td>15–100</td></tr></tbody></table></div>
-  </details><details class="chart rv">
+  </details><details class="chart rv" id="chart-rb">
     <summary>
       <span class="cs-fam">Rubber compression moulding</span>
       <span class="cs-stats">5 models · 60–250 T · daylight to 460 mm</span>
@@ -316,50 +399,47 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   <div class="rows">
 <a class="row rv" id="cylinders" href="contact.html?product=cylinders">
       <span class="num">02</span>
-      <figure class="pthumb"><img src="img/products/cylinders-pair-ready.jpg" alt="Finished hydraulic cylinders ready for dispatch"></figure>
+      <figure class="pthumb"><img src="img/products/cylinders-pair-ready-sm.webp" alt="Jagdamba heavy-duty hydraulic cylinders, painted and ready for dispatch" loading="lazy" decoding="async" style="object-fit:cover;background:#fff"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="10" y="28" width="32" height="16"/><path d="M10 31h-3v10h3M42 33h20M42 39h20"/><circle class="o" cx="64" cy="36" r="5"/><path class="o" d="M26 28v16"/></svg></span>
       <span><span class="ttl">Hydraulic & pneumatic cylinders</span><br><span class="desc">Mill duty, heavy duty, tie-rod, telescopic and fully custom — for mobile and industrial applications, OEM and end user. PTFE low-friction seals, bronze guide tapes, long service life.</span></span>
       <span class="desc" style="max-width:none">Steel, cement, chemical & power plants; wagon tipplers, side-arm chargers, stacker reclaimers; earth-moving and loader cylinders.</span>
       <span class="spec">OEM + custom<br><b>import substitute</b></span>
     </a><a class="row rv" id="power-packs" href="contact.html?product=power-packs">
       <span class="num">03</span>
-      <figure class="pthumb"><img src="img/products/powerpack-render.jpg" alt="Hydraulic power pack units"></figure>
+      <figure class="pthumb"><img src="img/power-pack-sm.webp" alt="Hydraulic power pack with motor, pump and valve stack" loading="lazy" decoding="async" style="object-fit:cover;background:#fff"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="12" y="34" width="36" height="22"/><circle cx="30" cy="24" r="9"/><path d="M30 33v1M22 56v4M40 56v4"/><path class="o" d="M48 40h12v10H48zM54 40v-8"/></svg></span>
-      <span><span class="ttl">Hydraulic power packs</span><br><span class="desc">Low-noise power units for lifting platforms, elevators, wagon tipplers, presses, machine tools, mobile and flameproof (FLP) applications — internationally reputed components, sized to your duty cycle.</span></span>
+      <span><span class="ttl">Hydraulic power packs</span><br><span class="desc">Low-noise power units for lifting platforms, elevators, wagon tipplers, presses, machine tools, mobile and flameproof (FLP) applications, built with internationally reputed components and sized to your duty cycle.</span></span>
       <span class="desc" style="max-width:none">AC and DC packs, hand pumps, jacks, tippler power packs — cost-effective without compromising quality.</span>
       <span class="spec">Lifts · tipplers · presses<br><b>built to duty cycle</b></span>
     </a><a class="row rv" id="manifolds" href="contact.html?product=manifolds">
       <span class="num">04</span>
-      <figure class="pthumb"><img src="img/products/manifold-render.jpg" alt="Precision-machined hydraulic manifold block"></figure>
+      <figure class="pthumb"><img src="img/manifold-02-sm.webp" alt="Manifold block assembly with solenoid valves" loading="lazy" decoding="async" style="object-fit:cover;background:#fff"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><rect x="16" y="18" width="40" height="36"/><circle class="o" cx="28" cy="30" r="4"/><circle class="o" cx="44" cy="42" r="4"/><path d="M28 34v8h12M44 38v-8H32M16 26h-6M56 46h6"/></svg></span>
       <span><span class="ttl">Manifold blocks</span><br><span class="desc">From the smallest unit to large system manifolds. We design, develop and manufacture to your requirement — and replace existing OEM manifolds one-for-one with quality-matched blocks.</span></span>
       <span class="desc" style="max-width:none">Standard range: lift block, PCM block, regeneration block, sequence block, 1–4 station blocks.</span>
       <span class="spec">Lift · PCM · sequence<br><b>1–4 station</b></span>
     </a><a class="row rv" id="kits" href="contact.html?product=kits">
       <span class="num">05</span>
-      <figure class="pthumb"><img src="img/products/cylinder-closeup.jpg" alt="Hydraulic cylinder kit components"></figure>
+      <figure class="pthumb"><img src="img/cylinder-cutaway-sm.webp" alt="Cylinder cutaway: piston, seals, gland and rod" loading="lazy" decoding="async" style="object-fit:contain;background:#fff"></figure>
       <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="24" cy="36" r="12"/><circle cx="24" cy="36" r="5"/><circle class="o" cx="50" cy="26" r="8"/><circle cx="52" cy="48" r="7"/><circle cx="52" cy="48" r="3"/></svg></span>
       <span><span class="ttl">Hydraulic cylinder kits</span><br><span class="desc">Our newest line: mill-duty, welded-construction and heavy-duty kits. Each kit complete with back end, gland (head) and pistons — supplied with or without seals.</span></span>
       <span class="desc" style="max-width:none">Top-grade kits for builders and repairers who machine their own tubes.</span>
       <span class="spec">New line<br><b>ready stock</b></span>
     </a><a class="row rv" id="lifts" href="contact.html?product=lifts">
       <span class="num">06</span>
-      <figure class="pthumb"><img src="img/products/press-4column-front.jpg" alt="Hydraulic lift structure on the shop floor"></figure>
-      <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M16 62V12h40v50M16 62h40"/><rect class="o" x="26" y="34" width="20" height="20"/><path class="o" d="M36 34V22M32 26l4-4 4 4"/></svg></span>
+      <figure class="pthumb"><img src="img/goods-lift-sm.webp" alt="Hydraulic goods lift with platform and guide mast" loading="lazy" decoding="async" style="object-fit:contain;background:#fff;padding:.4rem"></figure>
       <span><span class="ttl">Goods, cargo & passenger lifts</span><br><span class="desc">Hydraulic goods and cargo lifts engineered for factories and warehouses, plus hydraulic passenger lift systems — smooth, compact machine-room-friendly drives.</span></span>
-      <span class="desc" style="max-width:none">Complete with cylinder, power pack, manifold and controls from one workshop.</span>
+      <span class="desc" style="max-width:none">Complete with cylinder, power pack, manifold and controls from one workshop. We also build hydraulic jacking systems that level vehicles on uneven ground.</span>
       <span class="spec">Factory & warehouse<br><b>single-source supply</b></span>
     </a><a class="row rv" id="gates" href="contact.html?product=gates">
       <span class="num">07</span>
-      <figure class="pthumb"><img src="img/products/hydraulic-jacks-range.jpg" alt="Hydraulic gate actuator hardware"></figure>
-      <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M12 58V18M60 58V18M12 58h48"/><rect x="18" y="24" width="28" height="34"/><path class="o" d="M46 41h10M52 36l5 5-5 5"/></svg></span>
-      <span><span class="ttl">Hydraulic gates & actuators</span><br><span class="desc">Bunker-mouth and industrial gates with fail-safe automatic closure on power failure, remote electric control, CCTV + PA monitoring and a dust-proof AC operator cabin — built around our own cylinders and packs.</span></span>
-      <span class="desc" style="max-width:none">Fail-safe · CCTV &amp; PA · remote panel · heavy-duty wear-resistant build.</span>
-      <span class="spec">Industrial & irrigation<br><b>turnkey</b></span>
+      <figure class="pthumb"><img src="img/gate-sm.webp" alt="Hydraulically operated sluice gate (CAD model)" loading="lazy" decoding="async" style="object-fit:contain;background:#fff;padding:.4rem"></figure>
+      <span><span class="ttl">Hydraulic gates & actuators</span><br><span class="desc">Bunker-mouth, hydropower and industrial gates with fail-safe automatic closure on power failure, remote electric control, CCTV and PA monitoring, and a dust-proof AC operator cabin, all built around our own cylinders and packs. Recent project: a hydraulic gate for hydropower generation, designed, installed and tested.</span></span>
+      <span class="desc" style="max-width:none">Fail-safe · CCTV &amp; PA · remote panel · heavy-duty, wear-resistant build.</span>
+      <span class="spec">Bunker · hydropower · irrigation<br><b>turnkey</b></span>
     </a><a class="row rv" id="components" href="contact.html?product=components">
       <span class="num">08</span>
-      <figure class="pthumb"><img src="img/products/valve-block-atos.jpg" alt="Hydraulic valve block and components"></figure>
-      <span class="ico"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="20"/><circle class="o" cx="36" cy="36" r="12"/><circle cx="36" cy="36" r="5"/><path d="M36 8v8M36 56v8M8 36h8M56 36h8" opacity=".5"/></svg></span>
+      <figure class="pthumb"><img src="img/products/valve-block-atos-sm.webp" alt="Directional valves of a reputed make mounted on a Jagdamba manifold" loading="lazy" decoding="async" style="object-fit:cover"></figure>
       <span><span class="ttl">Components & consumables</span><br><span class="desc">Hydraulic accessories and seals: V, U and Vdas seals, O-rings, wipers, Sharron seal kits, guide tape, bronze-filled PTFE. Plus honed tubes and hard-chrome plated rods, cut to size.</span></span>
       <span class="desc" style="max-width:none">Valves and pumps of reputed makes (Polyhydron, Yuken, Rexroth class), DCVs, check valves, gear pumps, filters, gauges, hoses and fittings.</span>
       <span class="spec">Seals · tubes · rods<br><b>over the counter</b></span>
@@ -367,20 +447,19 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
   </div>
 </section>
 
-
 <section class="sect container" id="defence" style="padding-top:0">
   <div class="sect-head rv">
     <div><p class="label">09 · Defence &amp; special purpose</p>
       <h2>Built for the <em>services</em>.</h2></div>
-    <p>Special-purpose machines engineered to defence programme specifications — delivered with documentation, trials and the discretion the work demands.</p>
+    <p>Special-purpose machines engineered to defence programme specifications, delivered with documentation, trials and the discretion the work demands.</p>
   </div>
   <div class="cardgrid c4">
     <div class="card rv"><span class="n">D-01</span><h3>FISC tube forming</h3><p>Special-purpose forming presses for FISC tube production, built to programme drawings and tolerances.</p></div>
-    <div class="card rv"><span class="n">D-02</span><h3>Missile warhead assembly</h3><p>Assembly presses for warhead sections — controlled force application with documented, repeatable cycles.</p></div>
+    <div class="card rv"><span class="n">D-02</span><h3>Missile warhead assembly</h3><p>Assembly presses for warhead sections, with controlled force application and documented, repeatable cycles.</p></div>
     <div class="card rv"><span class="n">D-03</span><h3>Powder-compacting FLP presses</h3><p>Flameproof presses for energetic powder compacting, with FLP-rated power packs and controls.</p></div>
-    <div class="card rv"><span class="n">D-04</span><h3>Defence power packs</h3><p>Special hydraulic power packs for defence platforms and test rigs — including flameproof builds.</p></div>
+    <div class="card rv"><span class="n">D-04</span><h3>Defence power packs</h3><p>Special hydraulic power packs for defence platforms and test rigs, including flameproof builds.</p></div>
   </div>
-  <p class="tnote rv" style="margin-top:var(--s4)">Defence enquiries are handled directly by the directors — <a href="contact.html?product=defence" style="color:var(--org-deep)">write to us</a> with your programme reference.</p>
+  <p class="tnote rv" style="margin-top:var(--s4)">Defence enquiries are handled directly by the directors. <a href="contact.html?product=defence" style="color:var(--org-text);font-weight:600">Write to us</a> with your programme reference.</p>
 </section>
 
 <section class="cta-strip container">
@@ -422,6 +501,12 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 
+<script>
+document.querySelectorAll('a[href^="#chart-"]').forEach(a=>a.addEventListener('click',e=>{
+  const d=document.querySelector(a.getAttribute('href')); if(!d) return;
+  e.preventDefault(); d.open=true; d.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+}));
+</script>
 <div class="qbar" id="qbar" role="status">
   <span class="mono" style="letter-spacing:.06em">Selected</span>
   <b id="qbarModel">—</b>
@@ -430,8 +515,8 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </div>
 <style>
 table.data tr[data-model]{cursor:pointer}
-table.data tr[data-model]:focus-visible{outline:2px solid var(--org);outline-offset:-2px}
-table.data tr.sel td{background:#fdeee6}
+table.data tr[data-model]:focus-visible{outline:2px solid var(--org-text);outline-offset:-2px}
+table.data tr.sel td{background:#fff5d1}
 .qbar{position:fixed;left:50%;transform:translate(-50%,140%);bottom:18px;z-index:95;display:flex;align-items:center;gap:var(--s4);
   background:var(--charcoal);color:#eceae6;padding:.7rem .8rem .7rem 1.3rem;border-radius:3px;box-shadow:0 18px 50px rgba(0,0,0,.3);
   transition:transform .45s var(--ease);max-width:calc(100vw - 2rem)}
