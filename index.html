@@ -927,7 +927,7 @@ mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ if(mnav.c
       import('three/addons/environments/RoomEnvironment.js'),
       import('three/addons/geometries/RoundedBoxGeometry.js'),
     ]).then(([T,RE,RB])=>({THREE:T,RoomEnvironment:RE.RoomEnvironment,RoundedBoxGeometry:RB.RoundedBoxGeometry})));
-  const idle=window.requestIdleCallback||(f=>setTimeout(f,200));
+  const idle=window.requestIdleCallback?(f=>requestIdleCallback(f,{timeout:1500})):(f=>setTimeout(f,200));
   const go=()=>{
     if(heroHost) load().then(initHero).catch(e=>console.warn('3D press unavailable, keeping photo',e));
     if(partsHost) new IntersectionObserver((en,ob)=>{ if(en[0].isIntersecting){ ob.disconnect(); load().then(initParts).catch(e=>console.warn(e)); } },{rootMargin:'400px'}).observe(partsHost);
