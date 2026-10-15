@@ -192,6 +192,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
 @media(max-width:479px){.nav .btn{display:none}}
 .brand img.sq{width:26px;height:auto;flex:none;display:block;background:none}
+.foot-lockup{display:block;width:200px;height:auto;margin-bottom:1rem}
 </style>
 
 <style>
@@ -271,6 +272,38 @@ em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
   </div>
 </section>
 
+<section class="sect container" id="servo-retrofit" style="padding-top:0">
+  <div class="sect-head rv">
+    <div><p class="label">Hybrid servo system for retrofitting</p><h2>Save up to <em>70%</em> of energy costs.</h2></div>
+    <p>The Smart Servo Pump replaces an existing pump-motor assembly and proportional valves with a high-performance servo pump and drive. Fit it to a new machine or retrofit it to one you already run.</p>
+  </div>
+  <div class="servo-grid rv">
+    <figure class="servo-graph"><img src="img/servo-energy-graph-sm.webp" srcset="img/servo-energy-graph-sm.webp 800w, img/servo-energy-graph.webp 1600w" sizes="(min-width:980px) 55vw, 100vw" alt="Energy consumption over a machine cycle: fixed-displacement pump, variable pump and energy-efficient servo pump. The servo pump draws far less in holding and idle phases." loading="lazy" decoding="async"><figcaption>Energy over one cycle: fixed pump vs variable pump vs servo pump</figcaption></figure>
+    <div class="servo-points">
+      <img class="servo-kit" src="img/renders/servo-kit-sm.webp" alt="Smart Servo Pump kit: servo motor with hydraulic pump" loading="lazy" decoding="async">
+      <ul>
+        <li><b>Energy only on demand</b> and zero draw during idle periods, saving up to 70% depending on the application.</li>
+        <li><b>Built-in closed-loop PQ control</b> in the servo drive, with no proportional valves or extra PLCs.</li>
+        <li><b>Up to 60% less oil heating</b>, lower noise and smoother operation.</li>
+        <li><b>Less maintenance</b>, with fewer hydraulic components, plus online diagnostics by PC, laptop or optional HMI.</li>
+        <li><b>Fits any hydraulic machine:</b> metal-forming presses, plastic injection and blow moulding.</li>
+      </ul>
+      <a class="btn" href="contact.html?product=retrofit">Ask about a retrofit <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+<style>
+.servo-grid{display:grid;gap:var(--s5);align-items:start}
+@media(min-width:980px){.servo-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
+.servo-graph{margin:0;border:1px solid var(--hair);border-radius:4px;background:#fff;padding:var(--s3)}
+.servo-graph img{width:100%;height:auto}
+.servo-graph figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--ink-60);margin-top:.6rem}
+.servo-kit{width:min(260px,70%);height:auto;margin-bottom:var(--s3)}
+.servo-points ul{list-style:none;border-top:1px solid var(--hair);margin-bottom:var(--s4)}
+.servo-points li{padding:.8rem 0;border-bottom:1px solid var(--hair);font-size:var(--t-sm);color:var(--ink-60);line-height:1.6}
+.servo-points li b{color:var(--ink);font-weight:600}
+</style>
+
 <section class="sect band">
   <div class="container">
     <div class="sect-head rv">
@@ -298,7 +331,7 @@ em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
 <footer>
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
-    <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
+    <div><img class="foot-lockup" src="img/logo/lockup-dark.webp" alt="Shree Jagdamba Hydropneumatic, Nagpur" width="900" height="248" loading="lazy"><b>Shree Jagdamba Hydropneumatic Inc.</b>
       Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>

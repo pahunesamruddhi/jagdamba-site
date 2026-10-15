@@ -192,6 +192,7 @@ footer{background:var(--charcoal);color:#84868c;padding:var(--s7) var(--pad) var
 em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
 @media(max-width:479px){.nav .btn{display:none}}
 .brand img.sq{width:26px;height:auto;flex:none;display:block;background:none}
+.foot-lockup{display:block;width:200px;height:auto;margin-bottom:1rem}
 </style>
 
 </head>
@@ -223,7 +224,7 @@ em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
               <option>Hydraulic power pack</option><option>Manifold blocks</option><option>Cylinder kits</option>
               <option>Hydraulic goods / cargo lifts</option><option>Hydraulic passenger lifts</option><option>Hydraulic gates</option>
               <option>Hydraulic accessories / seals</option><option>Honed tubes</option><option>Plated rods</option>
-              <option>Defence / special purpose</option><option>Repair / service</option><option>Exhibition / stand meeting</option><option>Other</option>
+              <option>Hydraulic jacks &amp; tools</option><option>Hybrid-servo retrofit</option><option>TLT line machines</option><option>Defence / special purpose</option><option>Repair / service</option><option>Exhibition / stand meeting</option><option>Other</option>
             </select>
           </div>
           <div class="field"><label for="f-msg">Requirement</label><textarea id="f-msg" rows="4" placeholder="e.g. 200 T deep draw press for SS utensils, 900×1000 table"></textarea></div>
@@ -254,7 +255,7 @@ em{-webkit-box-decoration-break:clone;box-decoration-break:clone}
 <footer>
   <a class="foot-big" href="index.html" aria-label="Jagdamba — home">Jagdamba</a>
   <div class="foot-cols container" style="padding-inline:0">
-    <div><b>Shree Jagdamba Hydropneumatic Inc.</b>
+    <div><img class="foot-lockup" src="img/logo/lockup-dark.webp" alt="Shree Jagdamba Hydropneumatic, Nagpur" width="900" height="248" loading="lazy"><b>Shree Jagdamba Hydropneumatic Inc.</b>
       Plot No. A-11/21, 22 MIDC, Butibori,<br>Tah. Hingna, Nagpur — 441122<br>Maharashtra, India<br>
       Mon–Sun 9 am – 7 pm · Wed closed</div>
     <div><b>Company</b>
@@ -292,7 +293,7 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   const msg=document.getElementById('f-msg'), sel=document.getElementById('f-prod');
   if(model){ msg.value='Regarding model '+model+' — '; sel.value='Hydraulic presses'; msg.focus(); }
   else if(prod && sel){
-    const map={'defence':'Defence / special purpose','presses':'Hydraulic presses','cylinders':'Hydraulic cylinders','power-packs':'Hydraulic power pack','manifolds':'Manifold blocks','kits':'Cylinder kits','lifts':'Hydraulic goods / cargo lifts','gates':'Hydraulic gates','components':'Hydraulic accessories / seals'};
+    const map={'jacks':'Hydraulic jacks & tools','retrofit':'Hybrid-servo retrofit','tlt':'TLT line machines','defence':'Defence / special purpose','presses':'Hydraulic presses','cylinders':'Hydraulic cylinders','power-packs':'Hydraulic power pack','manifolds':'Manifold blocks','kits':'Cylinder kits','lifts':'Hydraulic goods / cargo lifts','gates':'Hydraulic gates','components':'Hydraulic accessories / seals'};
     if(map[prod]) sel.value=map[prod];
   }
 })();
