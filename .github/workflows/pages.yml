@@ -2,7 +2,7 @@ name: Deploy static site to Pages
 
 on:
   push:
-    branches: ["jagdamba-site-revision-2-yellow"]
+    branches: ["jagdamba-site-revision-3"]
   workflow_dispatch:
 
 permissions:
